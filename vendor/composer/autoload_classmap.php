@@ -189,6 +189,8 @@ return array(
     'Dotenv\\Util\\Regex' => $vendorDir . '/vlucas/phpdotenv/src/Util/Regex.php',
     'Dotenv\\Util\\Str' => $vendorDir . '/vlucas/phpdotenv/src/Util/Str.php',
     'Dotenv\\Validator' => $vendorDir . '/vlucas/phpdotenv/src/Validator.php',
+    'Genero\\Sage\\WooCommerce\\WooCommerce' => $vendorDir . '/generoi/sage-woocommerce/src/WooCommerce.php',
+    'Genero\\Sage\\WooCommerce\\WooCommerceServiceProvider' => $vendorDir . '/generoi/sage-woocommerce/src/WooCommerceServiceProvider.php',
     'GrahamCampbell\\ResultType\\Error' => $vendorDir . '/graham-campbell/result-type/src/Error.php',
     'GrahamCampbell\\ResultType\\Result' => $vendorDir . '/graham-campbell/result-type/src/Result.php',
     'GrahamCampbell\\ResultType\\Success' => $vendorDir . '/graham-campbell/result-type/src/Success.php',

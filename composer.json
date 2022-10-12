@@ -40,6 +40,7 @@
   },
   "require": {
     "php": "^7.4|^8.0",
+    "generoi/sage-woocommerce": "^1.0",
     "roots/acorn": "^2.1"
   },
   "require-dev": {
