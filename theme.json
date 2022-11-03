@@ -1153,6 +1153,11 @@
           "name": "Text",
           "slug": "text",
           "color": "#333333"
+        },
+        {
+          "name": "GoogleRatingStar",
+          "slug": "googleratingstar",
+          "color": "#e08107"
         }
       ]
     },
@@ -1195,6 +1200,71 @@
       ],
       "fontSizes": [
         {
+          "name": "xs",
+          "slug": "xs",
+          "size": "0.75rem"
+        },
+        {
+          "name": "sm",
+          "slug": "sm",
+          "size": "0.875rem"
+        },
+        {
+          "name": "base",
+          "slug": "base",
+          "size": "1rem"
+        },
+        {
+          "name": "lg",
+          "slug": "lg",
+          "size": "1.125rem"
+        },
+        {
+          "name": "xl",
+          "slug": "xl",
+          "size": "1.25rem"
+        },
+        {
+          "name": "2xl",
+          "slug": "2xl",
+          "size": "1.5rem"
+        },
+        {
+          "name": "3xl",
+          "slug": "3xl",
+          "size": "1.875rem"
+        },
+        {
+          "name": "4xl",
+          "slug": "4xl",
+          "size": "2.25rem"
+        },
+        {
+          "name": "5xl",
+          "slug": "5xl",
+          "size": "3rem"
+        },
+        {
+          "name": "6xl",
+          "slug": "6xl",
+          "size": "3.75rem"
+        },
+        {
+          "name": "7xl",
+          "slug": "7xl",
+          "size": "4.5rem"
+        },
+        {
+          "name": "8xl",
+          "slug": "8xl",
+          "size": "6rem"
+        },
+        {
+          "name": "9xl",
+          "slug": "9xl",
+          "size": "8rem"
+        },
+        {
           "name": "default",
           "slug": "default",
           "size": "var(--default-font-size)"
@@ -1202,17 +1272,12 @@
         {
           "name": "h2",
           "slug": "h2",
-          "size": "40px"
+          "size": "var(--default-h2-size)"
         },
         {
           "name": "h1",
           "slug": "h1",
-          "size": "48px"
-        },
-        {
-          "name": "h3",
-          "slug": "h3",
-          "size": "32px"
+          "size": "var(--default-h1-size)"
         }
       ]
     }
