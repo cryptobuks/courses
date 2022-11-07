@@ -1150,6 +1150,11 @@
           "color": "var(--secondary)"
         },
         {
+          "name": "Hover",
+          "slug": "hover",
+          "color": "var(--hover)"
+        },
+        {
           "name": "Text",
           "slug": "text",
           "color": "#333333"
