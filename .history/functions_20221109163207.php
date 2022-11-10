@@ -1218,12 +1218,12 @@ add_action( 'wp_head', function () {
 		font-weight:400!important;
 		color: #131313!important;
 	}
-
-	body .wfacp_form_cart table.shop_table tbody tr.cart_item td span:not(.wfacp-pro-count) {
-		color:#131313!important;
-		font-size:16px;
-		font-weight:400;
+	body table.shop_table tr.order-total td strong>span.amount * {
+		    font-size: 24px!important;
+            color: #131313!important;
+			font-weight:600;
 	}
+
 
 	body .wfacp_form_cart table.shop_table tr.order-total th {
 		font-size:25px;

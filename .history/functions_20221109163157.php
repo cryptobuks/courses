@@ -1212,13 +1212,12 @@ add_action( 'wp_head', function () {
 	body .woocommerce-checkout #payment ul.payment_methods li .stripe-credit-card-brand {
 		display:none;
 	}
-	
-	body #wfacp-e-form .wfacp_main_form .wfacp_section_title {
-		font-size:32px!important;
-		font-weight:400!important;
-		color: #131313!important;
-	}
 
+	body table.shop_table tr.order-total td strong>span.amount * {
+		    font-size: 24px!important;
+            color: #131313!important;
+			font-weight:600;
+	}
 	body .wfacp_form_cart table.shop_table tbody tr.cart_item td span:not(.wfacp-pro-count) {
 		color:#131313!important;
 		font-size:16px;
