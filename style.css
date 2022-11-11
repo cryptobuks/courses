@@ -420,6 +420,10 @@ h2 {
   aspect-ratio: 1 / 1;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .h-full {
   height: 100%;
 }
@@ -454,10 +458,6 @@ h2 {
 
 .h-5 {
   height: 1.25rem;
-}
-
-.h-screen {
-  height: 100vh;
 }
 
 .h-24 {
@@ -500,12 +500,12 @@ h2 {
   width: 50%;
 }
 
-.max-w-pageWidth {
-  max-width: 1120px;
-}
-
 .max-w-contentwidth {
   max-width: 750px;
+}
+
+.max-w-pageWidth {
+  max-width: 1120px;
 }
 
 .max-w-full {
@@ -667,6 +667,10 @@ h2 {
   background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -694,10 +698,6 @@ h2 {
 .bg-green-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
-}
-
-.bg-secondary {
-  background-color: var(--secondary);
 }
 
 .fill-primary {
@@ -787,14 +787,14 @@ h2 {
   vertical-align: middle;
 }
 
-.\!text-3xl {
-  font-size: 1.875rem !important;
-  line-height: 2.25rem !important;
-}
-
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.\!text-3xl {
+  font-size: 1.875rem !important;
+  line-height: 2.25rem !important;
 }
 
 .text-xl {
@@ -1966,7 +1966,7 @@ li {
   display: inline-block;
   font-size: 17px;
   font-weight: 500;
-  padding: 8px;
+  padding: 4px;
 }
 
 .countdown-number-black {
@@ -2098,14 +2098,6 @@ li {
 
   .md\:w-3\/5 {
     width: 60%;
-  }
-
-  .md\:\!w-2\/5 {
-    width: 40% !important;
-  }
-
-  .md\:\!w-3\/5 {
-    width: 60% !important;
   }
 
   .md\:p-8 {

@@ -7,14 +7,14 @@
     </div>
     <div class="flex flex-wrap">
         @if($expertMainPhoto)
-        <div class="md:!w-1/2 w-full md:!mb-0 mb-10">
+        <div class="md:!w-2/5 w-full md:!mb-0 mb-10">
             <img class="w-full" src="{{$expertMainPhoto}}">
             </img>
             @include('partials.expert-info')
         </div>
         @endif
         @if($productTitle)
-        <div id="product-info" class="border-4 border-primary rounded border-t-40 md:!w-1/2 w-full">
+        <div id="product-info" class="border-4 border-primary rounded border-t-40 md:!w-3/5 w-full">
             <div class="bg-primary p-4">
                 <div class="text-white text-2xl text-center font-bold">{{$productTitle}}</div>
             </div>
