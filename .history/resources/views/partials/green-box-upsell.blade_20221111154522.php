@@ -49,7 +49,7 @@
             </button>
         </a>
         <div class="w-full text-center">
-             <a href="?wfocu-reject-link=yes" class="mt-6 hover:no-underline !underline text-black">{{$greenBoxNoThanks}}  
+             <a href="?wfocu-reject-link=yes" class="mt-6  !underline text-black">{{$greenBoxNoThanks}}  
              </a>
         </div>
         
