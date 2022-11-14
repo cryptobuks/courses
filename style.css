@@ -599,6 +599,14 @@ h2 {
   border-radius: 0.375rem;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .border-2 {
   border-width: 2px;
 }
@@ -1802,6 +1810,11 @@ li {
 
 .gform_wrapper.gravity-theme .gfield_label {
   display: none !important;
+}
+
+.gform_wrapper.gravity-theme .gform_footer {
+  width: 50 !important;
+  margin: auto !important;
 }
 
 /*UPSELL*/
