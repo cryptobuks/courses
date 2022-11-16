@@ -38,7 +38,7 @@ $(document).ready(function() {
     $(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").insertBefore(".wfacp-section.wfacp-hg-by-box.step_0.form_section_single_step_0_embed_forms_2 ");
     $(".wfacp-order-summary-label").text("Order Summary");
 
-    $('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').slice(1).remove();
+    jQuery('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').slice(1).remove();
 
     //$(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").hide();    
     //$("#money-back").insertAfter(".wfacp-order-place-btn-wrap");   
