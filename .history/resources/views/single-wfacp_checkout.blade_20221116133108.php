@@ -100,7 +100,7 @@ else if ($(window).width() > 767) {
         $("#testimonial").insertAfter("#shortcode-mini-cart");
 
 		/* PRESTAVI GOOGLE/APPLE PAY POD BUY BUTTON > 767PX */
-		$("#wc-stripe-payment-request-wrapper").insertBefore(".wfacp-section.wfacp-hg-by-box.step_0.form_section_single_step_0_embed_forms_2");
+		$("#wc-stripe-payment-request-wrapper").insertBefore("#wfacp-e-form");
         $("#wc-stripe-payment-request-button-separator").insertAfter("#wc-stripe-payment-request-wrapper");
 		
 		/* PRESTAVI BUMPE POD TIMER > 767PX */

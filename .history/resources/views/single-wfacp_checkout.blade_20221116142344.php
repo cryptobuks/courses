@@ -89,7 +89,7 @@ else if ($(window).width() > 767) {
         $("#wc-stripe-payment-request-button-separator").insertAfter("#wc-stripe-payment-request-wrapper");
 
 		/* PRESTAVI BUMPE NAD MINI CART < 768PX */
-        $(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").insertAfter(".wfacp_form_cart");
+        $(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").insertAfter(".wfacp-section.wfacp-hg-by-box.step_0.form_section_single_step_0_embed_forms_2");
 	 
 	 	/* ODSTRANI VSE BUMP WRAPPERJE RAZEN ENEGA - DA SE NE PODVAJAJO */
          $('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').slice(1).remove();
@@ -100,7 +100,7 @@ else if ($(window).width() > 767) {
         $("#testimonial").insertAfter("#shortcode-mini-cart");
 
 		/* PRESTAVI GOOGLE/APPLE PAY POD BUY BUTTON > 767PX */
-		$("#wc-stripe-payment-request-wrapper").insertBefore(".wfacp-section.wfacp-hg-by-box.step_0.form_section_single_step_0_embed_forms_2");
+		$("#wc-stripe-payment-request-wrapper").insertBefore("#wfacp-e-form");
         $("#wc-stripe-payment-request-button-separator").insertAfter("#wc-stripe-payment-request-wrapper");
 		
 		/* PRESTAVI BUMPE POD TIMER > 767PX */

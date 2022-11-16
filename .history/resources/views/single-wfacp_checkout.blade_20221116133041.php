@@ -100,7 +100,7 @@ else if ($(window).width() > 767) {
         $("#testimonial").insertAfter("#shortcode-mini-cart");
 
 		/* PRESTAVI GOOGLE/APPLE PAY POD BUY BUTTON > 767PX */
-		$("#wc-stripe-payment-request-wrapper").insertBefore(".wfacp-section.wfacp-hg-by-box.step_0.form_section_single_step_0_embed_forms_2");
+		$("#wc-stripe-payment-request-wrapper").insertBefore("#wfacp-e-form");
         $("#wc-stripe-payment-request-button-separator").insertAfter("#wc-stripe-payment-request-wrapper");
 		
 		/* PRESTAVI BUMPE POD TIMER > 767PX */
@@ -116,11 +116,11 @@ else if ($(window).width() > 767) {
 <div class="flex justify-between p-4" id="money-back">
     <div   class="flex mt-4">
         <img class="h-8" src="/wp-content/uploads/money-bag-1.png" ></img>
-        <div class="text-black text-base ml-2 font-bold"> 90-Day Money Back Guarantee</div>
+        <div class="text-black text-md ml-2 font-bold"> 90-Day Money Back Guarantee</div>
     </div>
     <div  id="secure" class="flex mt-4">
         <img class="h-8" src="/wp-content/uploads/padlock-1-1.png" ></img>
-        <div class="text-black text-base ml-2 font-bold"> 100% Secure Purchase</div>
+        <div class="text-black text-md ml-2 font-bold"> 100% Secure Purchase</div>
     </div>
 </div>
 
