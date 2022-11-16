@@ -119,7 +119,7 @@ else if ($(window).width() > 767) {
         <div class="text-black text-md ml-2 font-bold"> 90-Day Money Back Guarantee</div>
     </div>
     <div  id="secure" class="flex mt-4">
-        <img class="h-4" src="/wp-content/uploads/padlock-1-1.png" ></img>
+        <img class="h-4" src="/wp-content/themes/courses-1/resources/images/money-back.png" ></img>
         <div class="text-black text-md ml-2 font-bold"> 100% Secure Purchase</div>
     </div>
 </div>
