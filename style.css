@@ -259,12 +259,21 @@ h2 {
   position: static;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
 
 .relative {
   position: relative;
+}
+
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
 }
 
 .bottom-4 {
@@ -281,6 +290,10 @@ h2 {
 
 .top-4 {
   top: 1rem;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .-left-1\/4 {
@@ -301,6 +314,10 @@ h2 {
 
 .z-10 {
   z-index: 10;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .m-auto {
@@ -332,6 +349,10 @@ h2 {
   margin-bottom: 5rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -342,10 +363,6 @@ h2 {
 
 .mr-2 {
   margin-right: 0.5rem;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
 }
 
 .ml-4 {
@@ -420,6 +437,10 @@ h2 {
   height: 100vh;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
 .h-full {
   height: 100%;
 }
@@ -440,12 +461,12 @@ h2 {
   height: 3rem;
 }
 
-.h-14 {
-  height: 3.5rem;
+.h-2 {
+  height: 0.5rem;
 }
 
-.h-4 {
-  height: 1rem;
+.h-14 {
+  height: 3.5rem;
 }
 
 .h-10 {
@@ -541,6 +562,10 @@ h2 {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.resize {
+  resize: both;
 }
 
 .flex-row {
@@ -771,6 +796,10 @@ h2 {
   padding-top: 1rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -793,9 +822,18 @@ h2 {
   line-height: 2.25rem !important;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-\[8px\] {
+  font-size: 8px;
 }
 
 .text-2xl {
@@ -808,18 +846,9 @@ h2 {
   line-height: 2.25rem;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.text-\[8px\] {
-  font-size: 8px;
 }
 
 .text-5xl {
@@ -897,14 +926,14 @@ h2 {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-stone-500 {
-  --tw-text-opacity: 1;
-  color: rgb(120 113 108 / var(--tw-text-opacity));
-}
-
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-stone-500 {
+  --tw-text-opacity: 1;
+  color: rgb(120 113 108 / var(--tw-text-opacity));
 }
 
 .text-green-600 {
@@ -1795,6 +1824,8 @@ li {
 .gform_wrapper.gravity-theme .gform_footer,
 .gform_wrapper.gravity-theme .gform_page_footer {
   justify-content: center;
+  margin: auto !important;
+  width: 50% !important;
 }
 
 .gform_wrapper.gravity-theme input[type="email"] {
@@ -1811,11 +1842,6 @@ li {
 
 .gform_wrapper.gravity-theme .gfield_label {
   display: none !important;
-}
-
-.gform_wrapper.gravity-theme .gform_footer {
-  width: 50 !important;
-  margin: auto !important;
 }
 
 /*UPSELL*/
@@ -2024,6 +2050,10 @@ li {
 
   .countdown-text {
     font-size: 8px;
+  }
+
+  .gform_wrapper.gravity-theme .gform_footer {
+    margin: 100% !important;
   }
 }
 

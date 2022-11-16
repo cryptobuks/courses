@@ -1201,6 +1201,11 @@
           "name": "Ui-monospace",
           "slug": "mono",
           "fontFamily": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace"
+        },
+        {
+          "name": "Var(--default-font-family)",
+          "slug": "default",
+          "fontFamily": "var(--default-font-family)"
         }
       ],
       "fontSizes": [

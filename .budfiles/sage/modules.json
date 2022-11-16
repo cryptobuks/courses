@@ -23,6 +23,7 @@
   "modules": {
     "byIdentifier": {
       "./node_modules/babel-loader/lib/index.js??babel!./resources/scripts/app.js": 537,
+      "./node_modules/babel-loader/lib/index.js??babel!./resources/scripts/app.js|b53e8a2c1ceeaacc5904af8f13cef95c": 761,
       "./node_modules/babel-loader/lib/index.js??babel!./resources/scripts/editor.js|f1d31d6f7a34c66ea56d009c9356170e": 784,
       "./node_modules/mini-css-extract-plugin/dist/loader.js??minicss!./node_modules/css-loader/dist/cjs.js??css!./node_modules/postcss-loader/dist/cjs.js??postcss!./resources/styles/app.css": 362,
       "./node_modules/mini-css-extract-plugin/dist/loader.js??minicss!./node_modules/css-loader/dist/cjs.js??css!./node_modules/postcss-loader/dist/cjs.js??postcss!./resources/styles/editor.css": 576,
@@ -30,9 +31,9 @@
     },
     "usedIds": [
       362,
-      537,
       575,
       576,
+      761,
       784
     ]
   }
