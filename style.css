@@ -421,6 +421,10 @@ h2 {
   display: flex;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
 .contents {
   display: contents;
 }
@@ -822,11 +826,6 @@ h2 {
   line-height: 2.25rem !important;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -844,6 +843,11 @@ h2 {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-lg {
@@ -2059,6 +2063,10 @@ li {
 
 .aligncenter {
   margin: auto;
+}
+
+.wfob_text_inner > p {
+  font-size: 14px !important;
 }
 
 .hover\:translate-y-1:hover {
