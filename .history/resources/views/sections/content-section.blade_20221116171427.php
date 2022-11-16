@@ -1,4 +1,5 @@
 <section class="flex justify-center">
-    <div class="width-780">
+    <div class=" max-w-contentwidth mt-20">
         {!! $firstContent !!}</div>
+        
 </section>
