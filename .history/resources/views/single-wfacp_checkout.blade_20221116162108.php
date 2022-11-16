@@ -38,7 +38,7 @@ $(document).ready(function() {
     $(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").insertBefore(".wfacp-section.wfacp-hg-by-box.step_0.form_section_single_step_0_embed_forms_2 ");
     $(".wfacp-order-summary-label").text("Order Summary");
 
-    $('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').slice(0).css( "background", "red" );
+    $('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').slice(1).css( "background", "red" );
     //$(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").hide();    
     //$("#money-back").insertAfter(".wfacp-order-place-btn-wrap");   
 
@@ -63,7 +63,7 @@ if ($(window).width() < 768) {
         $(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").insertAfter(".wfacp_form_cart");
 	 
 	 	/* ODSTRANI VSE BUMP WRAPPERJE RAZEN ENEGA - DA SE NE PODVAJAJO */
-     //    $('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').slice(1).remove();
+         $('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').slice(1).remove();
 	    
 	}
 	
@@ -77,7 +77,7 @@ else if ($(window).width() > 767) {
         $(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").insertAfter("#checkout-timer");
         
         /* ODSTRANI VSE BUMP WRAPPERJE RAZEN ENEGA - DA SE NE PODVAJAJO */
-    //    $('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').eq(1).remove();
+        $('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').eq(1).remove();
 
 	}
     $(document).ready(function() {
@@ -93,7 +93,7 @@ else if ($(window).width() > 767) {
         $(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").insertAfter(".wfacp_form_cart");
 	 
 	 	/* ODSTRANI VSE BUMP WRAPPERJE RAZEN ENEGA - DA SE NE PODVAJAJO */
-      //   $('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').slice(2).remove();
+         $('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').slice(2).remove();
 	}
 	
 	else if ($(window).width() > 767) {
@@ -108,7 +108,7 @@ else if ($(window).width() > 767) {
 		$(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").insertAfter("#checkout-timer");
 		
 		/* ODSTRANI VSE BUMP WRAPPERJE RAZEN ENEGA - DA SE NE PODVAJAJO */
-	//	$('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').slice(-1).remove();
+		$('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').slice(-1).remove();
 	}
   });
 })

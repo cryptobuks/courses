@@ -1027,6 +1027,8 @@ function frontend_scripts_and_styles() {
   add_action( 'wp_enqueue_scripts', 'frontend_scripts_and_styles' );
 
 /* FUNNELKIT CHECKOUT EDITOR - SCRIPT AND CSS */
+add_action( 'wp_footer', function () {
+	?>
 
 
 add_action( 'wp_head', function () {

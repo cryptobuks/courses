@@ -152,7 +152,7 @@ function customizer_settings( $wp_customize ){
 
     $wp_customize->add_control( 'default_h1_size', array(
         'label'        => 'h1',
-        'section'    => 'fonts',
+        'section'    => 'cd_fonts',
         'settings'   => 'default_h1_size',
     ) );
 
@@ -163,7 +163,7 @@ function customizer_settings( $wp_customize ){
 
     $wp_customize->add_control( 'default_h2_size', array(
         'label'        => 'h2',
-        'section'    => 'fonts',
+        'section'    => 'cd_fonts',
         'settings'   => 'default_h2_size',
     ) );
     $wp_customize->add_setting( 'font_family' , array(
@@ -1027,6 +1027,58 @@ function frontend_scripts_and_styles() {
   add_action( 'wp_enqueue_scripts', 'frontend_scripts_and_styles' );
 
 /* FUNNELKIT CHECKOUT EDITOR - SCRIPT AND CSS */
+add_action( 'wp_footer', function () {
+	?>
+
+    <script>
+       (function ($) {
+		   
+            $(document).ready(function () {
+				    $("#div_block-135-1620").insertBefore("#payment");
+					$(".wfacp_internal_form_wrap.wfacp-comm-title.none.margin-top h2").text("Order Summary");
+					$("#wfob_wrap").hide();
+
+                    var paymentLi = '#payment ul.wc_payment_methods li';
+                    $(paymentLi).each(function () {
+                        $this = $(this);
+
+                        if ($this.hasClass('payment_li_active')) {
+                            $this.removeClass("payment_li_active");
+                        }
+                        if ($(this).children("input[type=radio]").is(':checked')) {
+                            $this.addClass("payment_li_active");
+                        }
+
+                    });
+					$(window).resize(function() {
+					if ($(window).width() < 768) {
+						$(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").insertBefore(".wfacp-section.wfacp-hg-by-box.step_0.form_section_single_step_0_embed_forms_2 ");
+					}
+				})
+
+                }
+
+                $(document.body).on('updated_checkout', function () {
+                    add_active_class();
+					$("#div_block-135-1620").insertBefore("#payment");
+				    $("#image-171-1620").insertBefore("#payment_method_stripe");	
+					$("#image-172-1620").insertBefore("#payment_method_paypal");
+					$(".wfacp_internal_form_wrap.wfacp-comm-title.none.margin-top h2").text("Order Summary");
+					
+				
+					//$("#headline-114-52320").insertAfter('.wc_payment_methods.payment_methods.methods').css("display","inline-flex");
+
+                });
+
+                $(document.body).on('change', '#payment ul.wc_payment_methods li > input[type="radio"]', function () {
+                    add_active_class();
+                });
+        })(jQuery);
+ 
+    </script>
+	<?php
+
+} );
 
 
 add_action( 'wp_head', function () {
