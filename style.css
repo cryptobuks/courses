@@ -85,7 +85,11 @@ h2 {
 
   src: url(/wp-content/themes/courses-1/resources/fonts/Barlow-Bold.ttf);
 
-  font-weight: 800;
+  font-weight: 700;
+}
+
+html {
+  font-family: "barlow";
 }
 
 *, ::before, ::after {

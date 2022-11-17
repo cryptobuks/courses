@@ -57,7 +57,7 @@
     font-weight: 700;
   }
   html {
-    font-family: "barlow";
+    font-family: var(--default-font-family);
   }
 }
 

@@ -233,7 +233,7 @@ function cd_customizer_css()
                 --secondary: <?php echo get_theme_mod('--secondary_color', '#fff5d2'); ?>;
                 --hover: <?php echo get_theme_mod('hover_color', '#e08107'); ?>;
                 --default-font-size: <?php echo get_theme_mod('font_size', '20px'); ?>;
-                --default-font-family: <?php echo get_theme_mod('font_family', 'barlow'); ?>; 
+                --default-font-family: <?php echo get_theme_mod('font_family', 'proximanova'); ?>; 
                 --default-h1-size: <?php echo get_theme_mod('default_h1_size', '40px'); ?>; 
                 --default-h2-size: <?php echo get_theme_mod('default_h2_size', '40px'); ?>;
                 --border-radius: <?php echo get_theme_mod('border_radius', '2px'); ?>;
