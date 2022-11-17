@@ -1,4 +1,4 @@
-<button id="moving-buy-button" class="relative block  w-1/2 text-center cursor-pointer" onclick="toggleModal('modal-id')">
+<button id="moving-buy-button" class="relative block  w-1/2 text-center cursor-pointer">
       <!-- black background shadow -->
       <div class="relative  bottom-4  bg-primary border-2 border-black rounded-full" />
       <!-- text -->

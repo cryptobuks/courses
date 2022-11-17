@@ -58,20 +58,18 @@
   }
   @font-face {
     font-family: "barlow";
-    src: url(/wp-content/themes/courses-1/resources/fonts/Barlow-Italic.ttf);
-    font-style: italic;
-  }
-  @font-face {
-    font-family: "barlow";
-    src: url(/wp-content/themes/courses-1/resources/fonts/Barlow-BoldItalic.ttf);
+    src: url(/wp-content/themes/courses-1/resources/fonts/Barlow-Bold.ttf);
     font-weight: 700;
-    font-style: italic;
   }
   @font-face {
     font-family: "barlow";
-    src: url(/wp-content/themes/courses-1/resources/fonts/Barlow-SemiBoldItalic.ttf);
-    font-weight: bold;
-    font-style: italic;
+    src: url(/wp-content/themes/courses-1/resources/fonts/Barlow-Bold.ttf);
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "barlow";
+    src: url(/wp-content/themes/courses-1/resources/fonts/Barlow-Bold.ttf);
+    font-weight: 700;
   }
   html {
     font-family: "barlow";
@@ -1063,7 +1061,6 @@ li {
   font-size: 17px;
   font-weight: 500;
   padding: 4px;
-  width: 50px;
 }
 .countdown-number-black {
   border-radius: 4px;

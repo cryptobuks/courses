@@ -88,6 +88,34 @@ h2 {
   font-weight: 700;
 }
 
+@font-face {
+  font-family: "barlow";
+
+  src: url(/wp-content/themes/courses-1/resources/fonts/Barlow-Italic.ttf);
+
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "barlow";
+
+  src: url(/wp-content/themes/courses-1/resources/fonts/Barlow-BoldItalic.ttf);
+
+  font-weight: 700;
+
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "barlow";
+
+  src: url(/wp-content/themes/courses-1/resources/fonts/Barlow-SemiBoldItalic.ttf);
+
+  font-weight: bold;
+
+  font-style: italic;
+}
+
 html {
   font-family: "barlow";
 }
@@ -594,8 +622,8 @@ html {
   width: 0px;
 }
 
-.w-8 {
-  width: 2rem;
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-14 {
@@ -2196,6 +2224,7 @@ li {
   font-size: 17px;
   font-weight: 500;
   padding: 4px;
+  width: 50px;
 }
 
 .countdown-number-black {
@@ -2402,6 +2431,14 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
     padding: 1rem;
   }
 
+  .md\:pl-10 {
+    padding-left: 2.5rem;
+  }
+
+  .md\:pr-10 {
+    padding-right: 2.5rem;
+  }
+
   .md\:\!pl-10 {
     padding-left: 2.5rem !important;
   }
@@ -2417,6 +2454,11 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .md\:text-xl {
@@ -2436,11 +2478,6 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
   .md\:\!text-2xl {
     font-size: 1.5rem !important;
     line-height: 2rem !important;
-  }
-
-  .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 }
 

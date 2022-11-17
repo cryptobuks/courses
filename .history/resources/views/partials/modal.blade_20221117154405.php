@@ -10,12 +10,12 @@
         <div class="meter animate w-full !h-0.5 box-border">
             <span></span>
         </div>
-        <div class="md:pl-10 md:pr-10 p-4">
+        <div class="pl-10 pr-10">
             <div class="text-sm mt-2 mb-4"> Step 1 of 2 </div>
-            <h3 class="md:text-4xl text-lg font-semibold mb-4">
+            <h3 class="text-4xl font-semibold">
             Where Should I Send the {{$productTitle}} ?
             </h3>
-            <div class="relative flex-auto">
+            <div class="relative p-6 flex-auto">
             <?php $form_shortcode = $formShortcode; echo do_shortcode($form_shortcode)?>
             </div>
         </div>

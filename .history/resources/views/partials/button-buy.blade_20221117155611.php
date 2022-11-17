@@ -1,5 +1,5 @@
 <section class="w-full mx-auto animate-rocking">
-    <!--<a href="{{ $link }}">-->
+    <a href="{{ $link }}">
         @include('partials.button-buy-inside')
-    <!--</a>-->
+    </a>
 </section>

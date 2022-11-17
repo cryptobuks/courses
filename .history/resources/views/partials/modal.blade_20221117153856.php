@@ -4,21 +4,21 @@
     <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none ">
       <!--header-->
       <div class="grid text-center  justify-between  rounded-t relative">
-        <button class="text-white bg-primary font-bold uppercase p-2 rounded-full w-10 text-sm absolute right-4 top-2 z-50" type="button" onclick="toggleModal('modal-id')">
+        <button class="text-white bg-primary font-bold uppercase p-2 rounded-full w-8 text-sm absolute right-4 top-2 z-50" type="button" onclick="toggleModal('modal-id')">
           X
         </button>
         <div class="meter animate w-full !h-0.5 box-border">
             <span></span>
         </div>
-        <div class="md:pl-10 md:pr-10 p-4">
+        <div>
             <div class="text-sm mt-2 mb-4"> Step 1 of 2 </div>
-            <h3 class="md:text-4xl text-lg font-semibold mb-4">
+            <h3 class="text-3xl font-semibold">
             Where Should I Send the {{$productTitle}} ?
             </h3>
-            <div class="relative flex-auto">
+            </div>
+            <div class="relative p-6 flex-auto">
             <?php $form_shortcode = $formShortcode; echo do_shortcode($form_shortcode)?>
             </div>
-        </div>
         </div>
 
     </div>
