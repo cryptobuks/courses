@@ -19,7 +19,7 @@
                 <div class="text-white text-2xl text-center font-bold">{{$productTitle}}</div>
             </div>
                 <div class=" block rounded p-4 md:!pl-10 md:!pr-10">
-                    <div class="flex justify-center mb-4 whitespace-nowrap">
+                    <div class="flex justify-center mb-4 whitespace-nowrap	">
                     <?php
                 $post_object = get_field('selected_product');
                 $price = get_post_meta( $post_object -> ID, '_regular_price', true);

@@ -1102,7 +1102,7 @@ li {
     font-size: 8px;
   }
   .gform_wrapper.gravity-theme .gform_footer {
-    width: 100% !important;
+    margin: 100% !important;
   }
 }
 

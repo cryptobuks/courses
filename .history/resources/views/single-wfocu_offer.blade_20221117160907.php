@@ -31,7 +31,6 @@ $imageRumen=$imageYellowBox;
 @include('partials.green-box-upsell')
 @include('sections.testimonial-section')
 @include('partials.green-box-upsell')
-@include('sections.footer')
 </section>
 
 @endsection

@@ -19,7 +19,7 @@
                 <div class="text-white text-2xl text-center font-bold">{{$productTitle}}</div>
             </div>
                 <div class=" block rounded p-4 md:!pl-10 md:!pr-10">
-                    <div class="flex justify-center mb-4 whitespace-nowrap">
+                    <div class="flex justify-center mb-4">
                     <?php
                 $post_object = get_field('selected_product');
                 $price = get_post_meta( $post_object -> ID, '_regular_price', true);
@@ -41,5 +41,10 @@
         @endif
     </div>
 </section>
+
+
+<button class="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal('modal-id')">
+  Open regular modal
+</button>
 
 

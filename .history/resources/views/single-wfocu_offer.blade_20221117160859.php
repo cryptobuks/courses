@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-@include('partials.scrolling-progress-bar')
+@include('sections.top-bar-upsell')
 
 @php
 $link="?wfocu-accept-link=yes"
@@ -31,7 +31,6 @@ $imageRumen=$imageYellowBox;
 @include('partials.green-box-upsell')
 @include('sections.testimonial-section')
 @include('partials.green-box-upsell')
-@include('sections.footer')
 </section>
 
 @endsection

@@ -9,7 +9,7 @@
         $price_sales = get_post_meta( $post_object -> ID, '_sale_price', true);?>
         <div class="flex flex-column justify-center">
         <div class="flex">
-            <div class="h-6 mt-1 whitespace-nowrap">@include('icons.shopping-cart')</div>
+            <div class="h-6 mt-1 whitespace-nowrap	">@include('icons.shopping-cart')</div>
             <?php if($price_sales > 0){
                 echo "<div class='md:text-3xl text-xl mr-2 ml-2 font-bold !no-underline uppercase text-black'> Join the challange "  . "$"  . $price_sales . "&nbsp" . "</div>" ."</div>" . "<div class='text-xl mr-2 ml-2 font-medium line-through pt-1'>" . "$" . $price . "</div>";
             }

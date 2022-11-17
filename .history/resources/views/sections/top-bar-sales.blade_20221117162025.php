@@ -7,7 +7,7 @@
                 {{$topBarText}} 
                 @include('partials.countdown-sales')   
             </div>
-            <button class=" hover:bg-hover bg-primary p-2 pl-4 pr-4 rounded-full text-white text-base ml-4 h-fit md:h-auto" onclick="toggleModal('modal-id')">SIGN UP TODAY </button>
+            <button class=" hover:bg-hover bg-primary p-2 pl-4 pr-4 rounded-full text-white text-base ml-4 " onclick="toggleModal('modal-id')">SIGN UP TODAY </button>
         </div>
         <div class="text-white text-xl hidden sm:flex">
             <div class="fill-white h-5 mr-2 mt-1">
