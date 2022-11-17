@@ -64,30 +64,6 @@ h2 {
   }
 }
 
-@font-face {
-  font-family: "barlow";
-
-  src: url(/wp-content/themes/courses-1/resources/fonts/Barlow-Regular.ttf);
-
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "barlow";
-
-  src: url(/wp-content/themes/courses-1/resources/fonts/Barlow-SemiBold.ttf);
-
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "barlow";
-
-  src: url(/wp-content/themes/courses-1/resources/fonts/Barlow-Bold.ttf);
-
-  font-weight: 700;
-}
-
 html {
   font-family: "barlow";
 }
