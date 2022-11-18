@@ -344,6 +344,14 @@ html {
   right: 0px;
 }
 
+.right-1 {
+  right: 0.25rem;
+}
+
+.-top-5 {
+  top: -1.25rem;
+}
+
 .bottom-4 {
   bottom: 1rem;
 }
@@ -612,6 +620,12 @@ html {
   width: auto;
 }
 
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -717,6 +731,10 @@ html {
 
 .justify-items-center {
   justify-items: center;
+}
+
+.gap-y-2 {
+  row-gap: 0.5rem;
 }
 
 .overflow-hidden {
@@ -845,6 +863,11 @@ html {
   background-color: var(--primary);
 }
 
+.bg-pink-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 72 153 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -891,6 +914,10 @@ html {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .p-6 {
@@ -979,6 +1006,11 @@ html {
   line-height: 1.5rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -996,11 +1028,6 @@ html {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .text-lg {
@@ -2394,6 +2421,16 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
 
   .md\:p-4 {
     padding: 1rem;
+  }
+
+  .md\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .md\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .md\:pl-10 {
