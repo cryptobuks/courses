@@ -654,10 +654,6 @@ html {
   max-width: 1120px;
 }
 
-.max-w-3xl {
-  max-width: 48rem;
-}
-
 .max-w-full {
   max-width: 100%;
 }
@@ -926,16 +922,6 @@ html {
 
 .p-8 {
   padding: 2rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem;
 }
 
 .px-4 {
@@ -2247,7 +2233,7 @@ li {
 
 .countdown-text {
   display: block;
-  font-size: 10px;
+  font-size: 10px !important;
 }
 
 @media (max-width: 768px) {
@@ -2303,6 +2289,10 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
 .form-row.place-order
   > .wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway {
   display: none !important;
+}
+
+#wc-stripe-payment-request-button-separator {
+  margin-bottom: 0px !important;
 }
 
 .hover\:translate-y-1:hover {

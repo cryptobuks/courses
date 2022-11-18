@@ -952,6 +952,11 @@ li {
   background-color: #ffe4bf;
 }
 
+.single-wffn_landing.meter > span:after,
+.animate > span > span {
+  border-top-left-radius: 10px !important;
+}
+
 .meter2 {
   box-sizing: content-box;
   height: 32px; /* Can be anything */

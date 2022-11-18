@@ -7,14 +7,12 @@
         $post_object = get_field('selected_product');
         $price = get_post_meta( $post_object -> ID, '_regular_price', true);
         $price_sales = get_post_meta( $post_object -> ID, '_sale_price', true);?>
-        <div class="flex flex-col md:flex-row items-center">
-            <div class="flex flex-row">
-                <div class="h-6 mt-1 whitespace-nowrap">@include('icons.shopping-cart')</div>
-               <div class='md:text-3xl text-xl mr-2 ml-2 font-bold !no-underline uppercase text-black'> Join the challange </div>
-            </div>
-            
+        <div class="flex flex-row justify-center">
+        <div class="flex flex-row">
+            <div class="h-6 mt-1 whitespace-nowrap">@include('icons.shopping-cart')</div>
+            <div class='md:text-3xl text-xl mr-2 ml-2 font-bold !no-underline uppercase text-black'> Join the challange </div>
             <?php if($price_sales > 0){
-                echo "<div class='flex md:text-3xl text-xl mr-2 ml-2 font-bold !no-underline uppercase text-black items-center'>" .  "$"  . $price_sales . "&nbsp" . "<div class='text-xl mr-2 ml-2 font-semibold line-through pt-1'>" . "$" . $price . "</div>" . "</div>" ;
+                echo "<div class='flex'>" .  "$"  . $price_sales . "&nbsp" . "</div>" . "<div class='text-xl mr-2 ml-2 font-medium line-through pt-1'>" . "$" . $price . "</div>";
             }
         else{
             echo $price . "$";
