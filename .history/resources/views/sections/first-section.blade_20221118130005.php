@@ -41,7 +41,7 @@
                         
                 </div>  
             </div>
-            <div class="fill-primary mt-12 flex h-4 items-center justify-center">
+            <div class="fill-primary mt-10 flex h-4 items-center">
                 <div class="mr-0.5 h-full !fill-yellow-400">@include('icons.rating-star')</div>
                 <div class="mr-0.5 h-full !fill-yellow-400">@include('icons.rating-star')</div>
                 <div class="mr-0.5 h-full !fill-yellow-400">@include('icons.rating-star')</div>

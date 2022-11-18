@@ -14,8 +14,8 @@
         </div>
         @endif
         @if($productTitle)
-        <div class="md:!w-1/2 w-full">
-            <div id="product-info" class="border-4 border-primary rounded border-t-40 ">
+        <div class="border-4 border-primary rounded border-t-40 md:!w-1/2 w-full">
+            <div id="product-info" >
                 <div class="bg-primary p-4 relative">
                     @include('partials.black-friday')
                     <div class="text-white text-2xl text-center font-bold">{{$productTitle}}</div>
@@ -41,16 +41,17 @@
                         
                 </div>  
             </div>
-            <div class="fill-primary mt-12 flex h-4 items-center justify-center">
-                <div class="mr-0.5 h-full !fill-yellow-400">@include('icons.rating-star')</div>
-                <div class="mr-0.5 h-full !fill-yellow-400">@include('icons.rating-star')</div>
-                <div class="mr-0.5 h-full !fill-yellow-400">@include('icons.rating-star')</div>
-                <div class="mr-0.5 h-full !fill-yellow-400">@include('icons.rating-star')</div>
-                <div class="mr-0.5 h-full !fill-yellow-400">@include('icons.rating-star')</div>
-                <div class="font-bold">4.8 / 5</div>
+            <div>
+                <div class="fill-primary mt-2 flex h-4 items-center">
+                    <div class="mr-0.5 h-full !fill-yellow-400">@include('icons.rating-star')</div>
+                    <div class="mr-0.5 h-full !fill-yellow-400">@include('icons.rating-star')</div>
+                    <div class="mr-0.5 h-full !fill-yellow-400">@include('icons.rating-star')</div>
+                    <div class="mr-0.5 h-full !fill-yellow-400">@include('icons.rating-star')</div>
+                    <div class="mr-0.5 h-full !fill-yellow-400">@include('icons.rating-star')</div>
+                    <div class="font-bold">4.8 / 5</div>
+                </div>
             </div>
         </div>
-
         @endif
 
     </div>
