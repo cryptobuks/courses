@@ -15,7 +15,7 @@
         @endif
         @if($productTitle)
         <div id="product-info" class="border-4 border-primary rounded border-t-40 md:!w-1/2 w-full">
-            <div class="bg-primary p-4 relative">
+            <div class="bg-primary p-4">
                 @include('partials.black-friday')
                 <div class="text-white text-2xl text-center font-bold">{{$productTitle}}</div>
             </div>
