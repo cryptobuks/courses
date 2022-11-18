@@ -1044,10 +1044,6 @@ html {
   font-weight: 600;
 }
 
-.font-medium {
-  font-weight: 500;
-}
-
 .\!font-extrabold {
   font-weight: 800 !important;
 }
@@ -1058,6 +1054,10 @@ html {
 
 .font-black {
   font-weight: 900;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .uppercase {
@@ -2403,6 +2403,10 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
 
   .md\:\!w-auto {
     width: auto !important;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
   }
 
   .md\:p-8 {
