@@ -1140,5 +1140,5 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
 }
 
 #wc-stripe-payment-request-button-separator {
-  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
 }
