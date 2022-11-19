@@ -2398,7 +2398,7 @@ body #wfacp-e-form .wfacp_main_form ul li {
   background-size: 50px 50px;
   animation: move 2s linear infinite;
   overflow: hidden;
-  width: 65%;
+  width: 50%;
   background-color: #ffe4bf;
 }
 
@@ -2506,6 +2506,10 @@ body #wfacp-e-form .wfacp_main_form ul li {
 
   .md\:w-3\/5 {
     width: 60%;
+  }
+
+  .md\:w-80 {
+    width: 20rem;
   }
 
   .md\:\!w-auto {
