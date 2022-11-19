@@ -2308,7 +2308,7 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
   display: none !important;
 }
 
-.woocommerce-page img {
+.single-wffn_ty .woocommerce-page img {
   height: 2.5rem !important;
 }
 
@@ -2457,10 +2457,6 @@ body
 
   .md\:p-8 {
     padding: 2rem;
-  }
-
-  .md\:p-4 {
-    padding: 1rem;
   }
 
   .md\:py-4 {

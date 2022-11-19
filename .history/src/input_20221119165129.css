@@ -1143,7 +1143,7 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
   display: none !important;
 }
 
-.single-wffn_ty .woocommerce-page img {
+body .single-wffn_ty .woocommerce-page img {
   height: 2.5rem !important;
 }
 
