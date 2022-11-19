@@ -2300,10 +2300,6 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
   display: none !important;
 }
 
-#wc-stripe-payment-request-button-separator {
-  margin-bottom: 0px !important;
-}
-
 .woocommerce-page img {
   height: 2.5rem !important;
 }
@@ -2314,6 +2310,19 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
   input[type="checkbox"]:checked:before {
   left: -2px !important;
   margin-top: -4px !important;
+}
+
+body .wfacp-e-form .clearfix:before {
+  display: none !important;
+}
+
+body .wfacp_main_form .wfob_bump_wrapper {
+  margin-bottom: 0px !important;
+}
+
+body
+  .wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway {
+  margin-top: 0px !important;
 }
 
 .hover\:translate-y-1:hover {

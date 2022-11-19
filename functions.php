@@ -1869,3 +1869,19 @@ function wc_filter_orders_by_payment() {
 
 //PRICE DOESN'T CHANGE BASED ON TAX
 add_filter( 'woocommerce_adjust_non_base_location_prices', '__return_false' );
+
+//Show Bump on load page and disable Css printing in ajax call
+add_filter( 'wfob_show_on_load', function ( $url ) {
+	if ( wp_doing_ajax() ) {
+		return false;
+	}
+
+	return true;
+}, 10 );
+
+add_filter( 'wfacp_disabled_order_bump_css_printing', function ($status) {
+	if(wp_doing_ajax()){
+		return true;
+	}
+	return $status;
+} );

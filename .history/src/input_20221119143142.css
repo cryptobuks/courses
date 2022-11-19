@@ -1161,7 +1161,3 @@ body .wfacp-e-form .clearfix:before {
 body .wfacp_main_form .wfob_bump_wrapper {
   margin-bottom: 0px !important;
 }
-body
-  .wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway {
-  margin-top: 0px !important;
-}

@@ -95,7 +95,7 @@ function customizer_settings( $wp_customize ){
 
     $wp_customize->add_setting( 'secondary_color' , array(
 
-        'default'   => '#fff5d2',
+        'default'   => '#fdeed980',
         'transport' => 'refresh',
         
     ));
@@ -145,7 +145,27 @@ function customizer_settings( $wp_customize ){
         'section'    => 'fonts',
         'settings'   => 'font_size',
     ));
+	$wp_customize->add_setting( 'default_h1_size' , array(
+        'default'     => '40px',
+        'transport'   => 'refresh',
+    ) );
 
+    $wp_customize->add_control( 'default_h1_size', array(
+        'label'        => 'h1',
+        'section'    => 'fonts',
+        'settings'   => 'default_h1_size',
+    ) );
+
+    $wp_customize->add_setting( 'default_h2_size' , array(
+        'default'     => '40px',
+        'transport'   => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'default_h2_size', array(
+        'label'        => 'h2',
+        'section'    => 'fonts',
+        'settings'   => 'default_h2_size',
+    ) );
     $wp_customize->add_setting( 'font_family' , array(
 
         'default'   => 'Barlow',
@@ -213,7 +233,7 @@ function cd_customizer_css()
                 --secondary: <?php echo get_theme_mod('--secondary_color', '#fff5d2'); ?>;
                 --hover: <?php echo get_theme_mod('hover_color', '#e08107'); ?>;
                 --default-font-size: <?php echo get_theme_mod('font_size', '20px'); ?>;
-                --default-font-family: <?php echo get_theme_mod('font_family', 'Barlow'); ?>; 
+                --default-font-family: <?php echo get_theme_mod('font_family', 'barlow'); ?>; 
                 --default-h1-size: <?php echo get_theme_mod('default_h1_size', '40px'); ?>; 
                 --default-h2-size: <?php echo get_theme_mod('default_h2_size', '40px'); ?>;
                 --border-radius: <?php echo get_theme_mod('border_radius', '2px'); ?>;
@@ -273,9 +293,9 @@ function my_acf_add_local_field_groups() {
 		'title' => 'Sales Pages',
 		'fields' => array (
 			array (
-				'key' => 'field_1_1',
+				'key' => 'field_1_1_0',
 				'label' => 'Heading',
-				'name' => 'heading',
+				'name' => 'main_heading',
 				'type' => 'text',
             ),
 			array (
@@ -319,15 +339,7 @@ function my_acf_add_local_field_groups() {
 				'key' => 'field_1_8',
 				'label' => 'Product includes',
 				'name' => 'product_includes',
-				'type' => 'repeater',
-                'sub_fields' => array (
-                    array (
-                        'key' => 'field_1_8_1',
-                        'label' => 'Product includes content',
-				        'name' => 'product_includes_content',
-				        'type' => 'wysiwyg',
-                    ),
-				),
+				'type' => 'wysiwyg',
 			),
             array (
 				'key' => 'field_1_9',
@@ -418,6 +430,14 @@ function my_acf_add_local_field_groups() {
 				'type' => 'wysiwyg',
 			),
 			array (
+				'key' => 'field_1_22',
+				'label' => 'Testimonials',
+				'name' => 'testimonials',
+				'type' => 'post_object',
+                'multiple' => True,
+                'post_type' => 'testimonials',
+            ),
+			array (
 				'key' => 'field_1_23',
 				'label' => 'Toggle testimonial',
 				'name' => 'toggle_testimonial',
@@ -449,6 +469,13 @@ function my_acf_add_local_field_groups() {
 				'name' => 'money_back',
 				'type' => 'wysiwyg',
 			),
+            array (
+				'key' => 'field_1_26_1',
+				'label' => 'Money back image',
+				'name' => 'money_back_image',
+				'type' => 'image',
+			),
+
             
             array (
 				'key' => 'field_1_27',
@@ -468,7 +495,7 @@ function my_acf_add_local_field_groups() {
 			),
             
             array (
-				'key' => 'field_1_27',
+				'key' => 'field_1_27_1',
 				'label' => 'Toggle Limited offer',
 				'name' => 'toggle_limited_offer',
 				'type' => 'true_false',
@@ -477,50 +504,7 @@ function my_acf_add_local_field_groups() {
                 'ui_on_text' => 'Display',
                 'ui_off_text' => 'Hide',
 			),
-			array (
-				'key' => 'field_1_14_1',
-				'label' => 'Title yellow box',
-				'name' => 'title_yellow_box',
-				'type' => 'text',
-			),
-            array (
-				'key' => 'field_1_14_2',
-				'label' => 'Toggle title yellow box',
-				'name' => 'toggle_title_yellow_box',
-				'type' => 'true_false',
-                'default_value' => 0,
-		        'ui' => 1,
-		        'ui_on_text' => 'Display',
-		        'ui_off_text' => 'Hide',
-			),
-            array (
-				'key' => 'field_1_14_3',
-				'label' => 'Subtitle yellow box',
-				'name' => 'subtitle_yellow_box',
-				'type' => 'text',
-			),
-            array (
-				'key' => 'field_1_14_4',
-				'label' => 'Toggle subtitle yellow box',
-				'name' => 'toggle_subtitle_yellow_box',
-				'type' => 'true_false',
-                'default_value' => 0,
-                'ui' => 1,
-                'ui_on_text' => 'Display',
-                'ui_off_text' => 'Hide',
-			),
-            array (
-				'key' => 'field_1_18',
-				'label' => 'Image yellow box',
-				'name' => 'image_yellow_box',
-				'type' => 'image',
-			),
-            array (
-				'key' => 'field_1_19',
-				'label' => 'Text yellow box',
-				'name' => 'text_yellow_box',
-				'type' => 'wysiwyg',
-			),
+			
             array (
 				'key' => 'field_1_29',
 				'label' => 'What you get title',
@@ -553,7 +537,7 @@ function my_acf_add_local_field_groups() {
 				'key' => 'field_1_33',
 				'label' => 'What you get text',
 				'name' => 'what_you_get_text',
-				'type' => 'text',
+				'type' => 'wysiwyg',
 			),
 			array (
 				'key' => 'field_1_34',
@@ -682,6 +666,14 @@ function my_acf_add_local_field_groups3() {
 				'type' => 'wysiwyg',
 			),
 			array (
+				'key' => 'field_3_4_1',
+				'label' => 'Testimonials',
+				'name' => 'testimonials',
+				'type' => 'post_object',
+                'multiple' => True,
+                'post_type' => 'testimonials',
+            ),
+			/*array (
 				'key' => 'field_3_4',
 				'label' => 'Testimonial checkout',
 				'name' => 'testimonial_checkout',
@@ -711,6 +703,26 @@ function my_acf_add_local_field_groups3() {
 						'name' => 'testimonial_image_checkout',
 						'type' => 'image',
 					),
+				),
+			),*/
+			array (
+				'key' => 'field_3_5',
+				'label' => 'FAQ',
+				'name' => 'product_faq',
+				'type' => 'repeater',
+                'sub_fields' => array (
+                    array (
+                        'key' => 'field_3_5_1',
+                        'label' => 'Product FAQ Question',
+				        'name' => 'product_faq_question',
+				        'type' => 'text',
+                    ),
+                    array (
+                        'key' => 'field_3_5_2',
+                        'label' => 'Product FAQ Anwser',
+				        'name' => 'product_faq_anwser',
+				        'type' => 'text',
+                    ),
 				),
 			),
 		),
@@ -747,13 +759,13 @@ function my_acf_add_local_field_groups4() {
             ),
             array (
 				'key' => 'field_4_2',
-				'label' => 'Upsell name',
+				'label' => 'Headline',
 				'name' => 'upsell_name',
 				'type' => 'text',
             ),
             array (
 				'key' => 'field_4_3',
-				'label' => 'First headline',
+				'label' => 'Second upsell subject',
 				'name' => 'first_headline',
 				'type' => 'text',
 			),
@@ -838,6 +850,14 @@ function my_acf_add_local_field_groups4() {
 				'type' => 'wysiwyg',
 			),
 			array (
+				'key' => 'field_4_13_1',
+				'label' => 'Testimonials',
+				'name' => 'testimonials',
+				'type' => 'post_object',
+                'multiple' => True,
+                'post_type' => 'testimonials',
+            ),
+			array (
 				'key' => 'field_4_14',
 				'label' => 'Green box title',
 				'name' => 'green_box_title',
@@ -921,6 +941,61 @@ function my_acf_add_local_field_groups5() {
 
 add_action('acf/init', 'my_acf_add_local_field_groups5');
 
+function my_acf_add_local_field_groups6() {
+	
+	acf_add_local_field_group(array(
+		'key' => 'group_6',
+		'title' => 'Thank you page',
+		'fields' => array (
+            array (
+				'key' => 'field_6_1',
+				'label' => 'First headline',
+				'name' => 'first_headline_thank_you',
+				'type' => 'text',
+            ),
+            array (
+				'key' => 'field_6_2',
+				'label' => 'Fist content',
+				'name' => 'first_content_thank_you',
+				'type' => 'wysiwyg',
+			),
+
+			array (
+				'key' => 'field_6_3',
+				'label' => 'Button text',
+				'name' => 'button_text_thank_you',
+				'type' => 'text',
+			),
+			array (
+				'key' => 'field_6_4',
+				'label' => 'Button link',
+				'name' => 'button_link_thank_you',
+				'type' => 'link',
+			),
+			array (
+				'key' => 'field_6_5',
+				'label' => 'Second content',
+				'name' => 'second_content_thank_you',
+				'type' => 'text',
+			),
+			
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'wffn_ty',
+				),
+			),
+		),
+	),
+);
+	
+}
+
+add_action('acf/init', 'my_acf_add_local_field_groups6');
+
 
 
 if( function_exists('acf_add_options_page') ) {
@@ -934,80 +1009,65 @@ if( function_exists('acf_add_options_page') ) {
 	));
 	
 }
-function myplugin_settings() {  
-    // Add tag metabox to page
-   	// register_taxonomy_for_object_type('post_tag', 'page'); 
-    // Add category metabox to page
-    register_taxonomy_for_object_type('category', 'page');  
 
 
-}
- // Add to the admin_init hook of your theme functions.php file 
-add_action( 'init', 'myplugin_settings' );
+function frontend_scripts_and_styles() {
 
-
+	if ( $GLOBALS['pagenow'] !== 'wp-login.php' && ! is_admin() ) {
+  
+	  // Deregister WordPress jQuery
+	  wp_deregister_script( 'jquery' );
+	  // Load CDN
+	  wp_register_script( 'jquery', '//code.jquery.com/jquery-3.6.0.min.js', null, '3.6.0', false );
+	  wp_enqueue_script( 'jquery' );
+  
+	}
+  }
+  
+  add_action( 'wp_enqueue_scripts', 'frontend_scripts_and_styles' );
 
 /* FUNNELKIT CHECKOUT EDITOR - SCRIPT AND CSS */
-add_action( 'wp_footer', function () {
-	?>
-    <script>
-       (function ($) {
-		   
-		$(document).ready(function () {
-				$("#div_block-135-1620").insertBefore("#payment");
-				$(".wfacp_internal_form_wrap.wfacp-comm-title.none.margin-top h2").text("Order Summary");
-				
-				var paymentLi = '#payment ul.wc_payment_methods li';
-				$(paymentLi).each(function () {
-					$this = $(this);
-
-					if ($this.hasClass('payment_li_active')) {
-						$this.removeClass("payment_li_active");
-					}
-					if ($(this).children("input[type=radio]").is(':checked')) {
-						$this.addClass("payment_li_active");
-					}
-
-				});
-
-			}
-
-			$(document.body).on('updated_checkout', function () {
-				add_active_class();
-				$("#div_block-135-1620").insertBefore("#payment");
-				$("#image-171-1620").insertBefore("#payment_method_stripe");	
-				$("#image-172-1620").insertBefore("#payment_method_paypal");
-				$(".wfacp_internal_form_wrap.wfacp-comm-title.none.margin-top h2").text("Order Summary");
-			
-				//$("#headline-114-52320").insertAfter('.wc_payment_methods.payment_methods.methods').css("display","inline-flex");
-
-
-
-			});
-
-			$(document.body).on('change', '#payment ul.wc_payment_methods li > input[type="radio"]', function () {
-				add_active_class();
-			});
-	});
-	(jQuery);
- 
-    </script>
-	<?php
-
-} );
-
 
 
 add_action( 'wp_head', function () {
 	?>
 
 <style>
-	
+	.wc_payment_methods.payment_methods.methods{
+		text-indent: 0px!important;
+	}
+	body .select2-results__options{
+		text-indent: 0px!important;
+	}
+	body #billing_last_name_field{
+		display: none!important;
+	}
+	body #billing_address_1_field{
+		display: none!important;
+	}
+	body #billing_city_field{
+		display: none!important;
+	}
+	body #billing_postcode_field{
+		display: none!important;
+	}
+	body #billing_phone_field{
+		display: none!important;
+	}
+	body #billing_state_field{
+		display: none!important;
+	}
+	body #billing_country_field{
+		width:100%!important;
+	}
 	body #billing_first_name_field {
 		width:100%!important;
 	}
 	body #shipping_country_field {
 		width:100%!important;
+	}
+	body .select2-results__option{
+		font-size:14px!important;
 	}
 	body .woocommerce-privacy-policy-text {
 		display:none;
@@ -1024,9 +1084,6 @@ add_action( 'wp_head', function () {
 	body .wfacp-notices-wrapper {
 		display:none;
 	}
-	body .wfacp-comm-form-detail.clearfix::before {
-		content:"lol";
-	}
 	body #wfacp-e-form .wfacp_main_form .wfacp-comm-title {
 		margin-bottom:20px!important;
 	}
@@ -1042,7 +1099,6 @@ add_action( 'wp_head', function () {
 	}
 	body #wfacp-e-form .wfacp_main_form .woocommerce-checkout .button.button#place_order {
 		background-color:#00AB30!important;
-		
 	}
 	
 	/*hide default payment options images*/
@@ -1051,112 +1107,33 @@ add_action( 'wp_head', function () {
 		display:none;
 	}
 	
-	body #wfacp-e-form .wfacp_order_summary td.product-name-area .product-name.wfacp_summary_img_true {
-				padding-left:0px!important;
-	}
-	body .wfacp-order-summary-label  {
-		display:flex!Important;
-	}
 	body .wfacp_internal_form_wrap.wfacp-comm-title.none.margin-top {
 		display:none!important;
 	}
-	body #wc-stripe-payment-request-wrapper {
-			padding-top:0px!important;
-	}
-	
-	
-	
+
 	
 	/*order summary above buy button*/
 	
-	@media only screen and (min-width: 768px) {
+	/*@media only screen and (min-width: 768px) {
 			body #wfacp_order_summary_in_payment {
 				display:none;
 			}
 			body .wfacp-order-summary-label {
 			display:none!Important;
 		}
-	}
-	
-	@media only screen and (max-width: 767px) {
-		body #wfacp-e-form .wfacp_main_form.woocommerce table.shop_table.woocommerce-checkout-review-order-table td.product-total {
-			width:41%!important;
-		}
-		body .product-image {
-			display:none;
-		}
-		body #wfacp-e-form table.shop_table.woocommerce-checkout-review-order-table tfoot tr:first-child th {
-   			padding-top: 20px;
-    		padding-bottom: 20px;
-		}
-		body #wfacp-e-form table.shop_table.woocommerce-checkout-review-order-table tr td {
-			padding: 13px 0px!important;
-		}
-		body #wfacp-e-form table.shop_table.woocommerce-checkout-review-order-table tr.order-total td small {
-			font-size: 11px!important;
-		}
-		body .cart-subtotal {
-			display:none!important;
-		}
-		body #wfacp-e-form .wfacp_main_form .wfacp_order_summary label.wfacp-order-summary-label {
-			font-size:28px;	
-			color:#131313;
-		}
-		body .wfacp_order_summary_item_total bdi:first-of-type {
-			color:#131313!important;
-		}
-		body .wfacp_order_summary_item_total span:nth-of-type(1) {
-			color:#131313!important;
-		}
-		body #wfacp-e-form .wfacp-form table.shop_table.woocommerce-checkout-review-order-table .product-name {
-			color:#131313!important;
-		}
-		body .order-total bdi:first-of-type {
-			color:#131313!important;
-		}
-		body #wfacp-e-form .wfacp-form table.shop_table.woocommerce-checkout-review-order-table tr.order-total th {
-			color:#131313!important;
-			font-size:25px;
-			font-weight:600;
-			padding-bottom: 0px;
-		}
-		body .wfacp_order_summary_item_total {
-			display: flex;
-    		flex-direction: column;
-		}
-		body #wfacp-e-form * {
-			font-size:14px;
-			color:#131313;
-		}
-		body .green-price {
-			font-size: 17px!Important;
-		}
-		body #wfacp-e-form table.shop_table.woocommerce-checkout-review-order-table tr th {
-			padding: 0px 0px!Important;
-		}
-		body #wfacp-e-form .wfacp-form table.shop_table.woocommerce-checkout-review-order-table td.product-total {
-    		color: #131313;
-		}
-		body #wfacp-e-form .wfacp-form .wfacp_order_summary {
-			padding: 20px 5px 0px 5px!important;
-		}
-		body #wfacp-e-form .wfacp-form table.shop_table.woocommerce-checkout-review-order-table tr span.amount {
-			color:#131313!Important;
-		}
-		body #wfacp-e-form .wfacp_main_form .woocommerce-checkout .button.button#place_order {
-			font-size:25px!important;
-		}
-		body .includes_tax span:nth-of-type(1) {
-			color:#131313!important;
-		}
-
-			
-}
+	}*/
 	
 	/*mini cart*/
 	
 	body #wfacp-e-form .wfacp_desktop .wfacp_mb_mini_cart_wrap {
 		display:none;
+	}
+	body .wfacp_mini_cart_start_h tr.cart_item.wfacp_delete_active td.product-total{
+		padding-bottom:0px!important;
+	}
+	
+	body .wfacp_mini_cart_start_h table.shop_table tr td{
+		padding:0px!important;
 	}
 	
 	body .product-image {
@@ -1171,43 +1148,14 @@ add_action( 'wp_head', function () {
 	body .wfacp_mini_cart_start_h .wfacp_order_sum td.product-name-area .product-name.wfacp_summary_img_true {
 		padding-left:0px!important;
 	}
-	body .order-total:first-child {
-		font-size:20px;
-	}
+
 	body .green-price {
-		padding-bottom: 8px;
-        padding-top: 8px;
-	}
-	body .wfacp_mini_cart_start_h table.shop_table.wfacp_mini_cart_reviews tr:nth-last-child(2) th {
 		padding-bottom: 8px!important;
+        padding-top: 8px!important;
 	}
-	body .wfacp_mini_cart_start_h table.shop_table.wfacp_mini_cart_reviews tr:nth-last-child(2) td {
-		padding-bottom:0px!important;
-		padding-top:0px!important;
-		
-	}
-	body .wfacp_mini_cart_start_h table.shop_table.wfacp_mini_cart_reviews tr:first-child th {
-		padding-top:8px!important;
-		padding-bottom:8px!important;
-	}
-	body .wfacp_mini_cart_start_h table.shop_table.wfacp_mini_cart_reviews tr:first-child td {
-		padding-top:0px!important;
-	}
-	body .wfacp_mini_cart_start_h table.shop_table tr.order-total td {
-		padding-top:8px!important;
-	}
-	body .wfacp_mini_cart_start_h .wfacp_mini_cart_elementor .cart_item {
-		border-bottom:none;
-	}
-	body .cart-subtotal {
-		display:none;
-	}
-	body .wfacp_mini_cart_start_h tr.cart_item.wfacp_delete_active td.product-total {
-		padding-bottom:8px!important;
-	}
-	body .wfacp_mini_cart_start_h table.shop_table tr td {
-		padding: 10px 0px 0px 0px;
-	}
+
+
+
 	body .green-discount bdi:first-of-type {
 			color:#00AB30!important;
 			font-weight:600;
@@ -1215,26 +1163,19 @@ add_action( 'wp_head', function () {
 	body .green-discount span:first-of-type {
 			color:#00AB30!important;
 	}
-	body .wfacp_form_cart table.shop_table tr.order-total td span {
-		font-weight: 600;
-        font-size: 17px;
-	}
-	body .wfacp_form_cart table.shop_table tr:not(:last-child) td span {
-		color: #00AB30;
-	}
+	
 
-	body .wfacp_main_form.woocommerce input[type=radio]:checked:before {
-		background-color:#00AB30!important;
-	}
 	body table.shop_table tr.order-total td strong>span {
 		font-size:24px!important;
 	}
 	body .wfob_pro_img_wrap {
 		border:none!important;
 	}
+
+
 	
 	body #wfacp-e-form .woocommerce-checkout #payment input#payment_method_stripe:first-child::after {
-			content:url("/wp-content/uploads/Group-2059-e1659022208308.png");
+			content:url("/wp-content/themes/courses-1/resources/images/Group-2059-e1659022208308.png");
 			display: inline-block;
             margin-left: 99px;
 			margin-top: -3px;
@@ -1249,34 +1190,47 @@ add_action( 'wp_head', function () {
                 position: absolute;
                 transform: scale(0.5);
 	}
+	body .wfob_wrap_start .wfob_checkbox:checked:before {
+			content: "\f147";
+			margin: -3px 0px 0px -2px!important;
+			color: transparent;
+			float: left;
+			display: inline-block;
+			vertical-align: middle;
+			width: 18px;
+			height: 20px;
+			font: normal 78px/1 dashicons;
+			speak: none;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			background: url("/wp-content/themes/courses-1/resources/images/icon-check-green.png") center center!important;
+			margin-top: -3px;
+			margin-left: -2px;
+			background-size: contain!important;
+			top:30%;
+		}
+
 	body .woocommerce-checkout #payment ul.payment_methods li .stripe-credit-card-brand {
 		display:none;
 	}
-	body .wfacp_internal_form_wrap.wfacp-comm-title.none.margin-top {
-		display:none;
-	}
+	
 	body #wfacp-e-form .wfacp_main_form .wfacp_section_title {
 		font-size:32px!important;
 		font-weight:400!important;
 		color: #131313!important;
 	}
-	body table.shop_table tr.order-total td strong>span.amount * {
-		    font-size: 24px!important;
-            color: #131313!important;
-			font-weight:600;
-	}
+
 	body .wfacp_form_cart table.shop_table tbody tr.cart_item td span:not(.wfacp-pro-count) {
 		color:#131313!important;
 		font-size:16px;
 		font-weight:400;
 	}
-	body #text_block-263-1620 {
-		padding-bottom:15px;
-	}
+
 	body .wfacp_form_cart table.shop_table tr.order-total th {
 		font-size:25px;
 		font-weight: 600;
 	}
+
 	body .wfacp_mini_cart_start_h table.shop_table tr.order-total th {
 		padding-top:0px!important;
 	}
@@ -1323,16 +1277,18 @@ add_action( 'wp_head', function () {
 	}
 	body .wfacp_form_cart table.shop_table tbody tr.cart_item td {
 		color:#131313!important;
+		padding-top:12px!important;
+		padding-bottom:12px!important;
 	}
 	body label[for="stripe-cvc-element"]::after {
 		content: url("/wp-content/uploads/hIO6HL.tif.png");
-		transform: scale(0.25);
+		transform: scale(0.20);
    		display: inline-block;
     	margin-left: -30px;
     	position: absolute;
-    	margin-top: -30px;
+    	margin-top: -33px;
 	}
-	}
+	
 	
 	@media (max-width:479px) {
 		body #wfacp-e-form .wfacp_main_form .wfacp_section_title {
@@ -1341,7 +1297,20 @@ add_action( 'wp_head', function () {
 		body .wfacp_form_cart table.shop_table tbody tr.cart_item td span:not(.wfacp-pro-count) {
 			padding-bottom:8px;
 		}
-
+		body .wfacp_form_cart{
+			padding:0px!important;
+		}
+	}
+	@media (max-width:744px) {
+		body #wfacp-e-form .wfacp_main_form .wfacp_section_title {
+			font-size:25px!important;
+		}
+		body .wfacp_form_cart table.shop_table tbody tr.cart_item td span:not(.wfacp-pro-count) {
+			padding-bottom:8px;
+		}
+		body .wfacp_form_cart{
+			padding:0px!important;
+		}
 	}
 	
 	@media (max-width:991px) {
@@ -1361,11 +1330,38 @@ add_action( 'wp_head', function () {
 	}
 	}
 	
+#shipping_same_as_billing_field{
+		display: none!important;
+	}
+	#wfacp_order_summary_in_payment{
+		display: none;
+	}
+	.wfacp-payment-dec{
+		display: none;
+	}
+	.wfacp_woocommerce_form_coupon{
+		display: none;
+	}
+	.cart-subtotal{
+		display: none;
+	}
+	body.wfacpef_page #wfacp-e-form .wfacp_main_form.woocommerce .wfacp-section.wfacp_order_coupon_box{
+		display:none;
+	}
+	.wfacp_order_summary_box{
+		display: none;
+	}
+	.wfacp_shipping_method{
+		display: none;
+	}
+	
+	
 </style>
 
 	<?php
 
 } );
+
 
 /* CUSTOM FORMATING FOR WYSIWYG EDITOR*/
 
@@ -1449,3 +1445,443 @@ function my_custom_styles( $init_array ) {
 } 
 // Attach callback to 'tiny_mce_before_init' 
 add_filter( 'tiny_mce_before_init', 'my_custom_styles' );
+
+
+
+//MINI CART PRICE ON CHECKOUT
+
+function show_sale_price_at_checkout( $subtotal, $cart_item, $cart_item_key ) {
+    
+    
+    $product = $cart_item['data'];
+    $quantity = $cart_item['quantity'];
+    if ( ! $product ) {
+        return $subtotal;
+    }
+    $regular_price ='';
+	$sale_price ='';
+    $suffix = '';
+    if ( $product->is_taxable() ) {
+        if ( 'excl' === WC()->cart->tax_display_cart ) {
+            $regular_price = wc_get_price_excluding_tax( $product, array( 'price' => $product->get_regular_price(), 'qty' => $quantity ) );
+            $sale_price    = wc_get_price_excluding_tax( $product, array( 'price' => $product->get_sale_price(), 'qty' => $quantity ) );
+            if ( WC()->cart->prices_include_tax && WC()->cart->tax_total > 0 ) {
+                $suffix .= ' ' . WC()->countries->ex_tax_or_vat() . '';
+            }
+        } else {
+            $regular_price = wc_get_price_including_tax( $product, array( 'price' => $product->get_regular_price(), 'qty' => $quantity ) );
+            $sale_price = wc_get_price_including_tax( $product, array( 'price' => $product->get_sale_price(), 'qty' => $quantity ) );
+            if ( ! WC()->cart->prices_include_tax && WC()->cart->tax_total > 0 ) {
+                $suffix .= ' ' . WC()->countries->inc_tax_or_vat() . '';
+            }
+        }
+    } else {        
+       $pr_pr   = $product->get_price();
+		$sale_pr = $product->get_sale_price();
+		if ( $sale_pr > 0 ) {
+			$sale_price = $sale_pr * $quantity;
+		}
+		if ( $pr_pr > 0 ) {
+			$regular_price = $pr_pr * $quantity;
+		}
+    }   
+    
+    $rg_price=$product->get_regular_price();
+	if ( $product->is_on_sale() && ! empty( $sale_price ) && ( round( $rg_price, 2 ) !== round( $sale_price, 2 ) ) ) {	    
+		$price = wc_format_sale_price( wc_get_price_to_display( $product, array(
+				'price' => $product->get_regular_price(),
+				'qty'   => $quantity
+			) ), wc_get_price_to_display( $product, array( 'qty' => $quantity ) ) ) . $product->get_price_suffix();
+	} else {
+		$price = wc_price( $regular_price ) . $product->get_price_suffix();
+	}
+   
+    $price = $price . $suffix;
+    return $price;
+}
+add_filter( 'woocommerce_cart_item_subtotal', 'show_sale_price_at_checkout', 10, 3 );
+
+//DISPLAY YOU SAVE PRICE IN MINI CART
+class WFACP_TempDisplay_Discount {
+
+	public $discount_price = 0;
+
+	public function __construct() {
+		add_filter( 'wfacp_woocommerce_cart_item_subtotal_except_subscription', '__return_false' );
+		add_action( 'wfacp_woocommerce_cart_item_subtotal_except_subscription_placeholder', [ $this, 'display_cut_price' ], 10, 3 );
+
+		add_action( 'woocommerce_review_order_before_order_total', [ $this, 'add_discount_row' ] );
+		add_filter( 'woocommerce_cart_subtotal', [ $this, 'cart_content_subtotal' ], 10, 3 );
+	}
+
+	public function display_cut_price( $_product, $cart_item, $cart_item_key ) {
+
+		$quantity              = $cart_item['quantity'];
+		$product_id            = $_product->get_id();
+		$product               = wc_get_product( $product_id );
+		$product_regular_price = $product->get_regular_price();
+		$product_regular_price *= $quantity;
+		$subtotal              = WFACP_Common::get_product_subtotal( $_product, $cart_item, true );
+
+
+		if ( $subtotal > 0 && $product_regular_price > 0 && ( round( $subtotal, 2 ) !== round( $product_regular_price, 2 ) ) ) {
+			if ( $subtotal > $product_regular_price ) {
+				echo wc_price( $subtotal );
+			} else {
+				echo wc_format_sale_price( $product_regular_price, $subtotal );
+			}
+		}
+	}
+
+	public function add_discount_row() {
+		$cart_contents = WC()->cart->get_cart_contents();
+		$regular_price = 0;
+
+		foreach ( $cart_contents as $content ) {
+			$product = $content['data'];
+
+			if ( $product instanceof WC_Product ) {
+
+				//	$product=wc_get_product($product->get_id());
+				//This line show discount base on the regular price of the price
+			    $quantity = $content['quantity'];
+				if ( wp_doing_ajax() && isset( $content['_wfacp_options'] ) ) {
+					$org_qty  = $content['_wfacp_options']['org_quantity'];
+					$quantity = $quantity / $org_qty;
+
+				}
+
+				$regular_price = $regular_price + ( $quantity * $product->get_regular_price() );
+
+				// if you want discount base on subtotal and coupon then comment above line of code and uncomment below line of code
+				//$regular_price = $regular_price + ( $content['line_subtotal']  );
+			}
+		}
+		
+		$tax = WC()->cart->get_subtotal_tax();
+		$total = WC()->cart->get_cart_contents_total();
+		if ( $regular_price > $total ) {
+			?>
+            <tr class="order-total">
+                <th class="green-price"><?php _e( '<span style=font-size:17px;font-weight:600;color:#00AB30;>You Save:</span>', 'woocommerce' ); ?></th>
+                <td class="green-discount"><?php echo wc_price( - ( $regular_price - $total - ($tax) )  ); ?></td>
+            </tr>
+			<?php
+		}
+	}
+
+	function cart_content_subtotal( $cart_subtotal, $compound, $cart ) {
+		$regular_price = 0;
+
+		$aelia = WFACP_Plugin_Compatibilities::get_compatibility_class( 'aelia_cs' );
+		foreach ( $cart->cart_contents as $content ) {
+			$product = $content['data'];
+
+			if ( $product instanceof WC_Product ) {
+
+				//This line show discount base on the regular price of the price
+				$quantity = $content['quantity'];
+
+				if ( wp_doing_ajax() && isset( $content['_wfacp_options'] ) ) {
+					$org_qty  = $content['_wfacp_options']['org_quantity'];
+					$quantity = $quantity / $org_qty;
+				}
+
+				$regular_price = $regular_price + ( $quantity* $product->get_regular_price() );
+				//$regular_price = $regular_price + ( $quantity * $product->get_price() );
+			}
+		}
+
+		//$regular_price=$aelia->get_price_in_currency($regular_price);
+
+		/**
+		 * If the cart has compound tax, we want to show the subtotal as cart + shipping + non-compound taxes (after discount).
+		 */
+		if ( $compound ) {
+			$cart_subtotal = wc_price( $regular_price + $cart->get_shipping_total() + $cart->get_taxes_total( false, false ) );
+
+		} elseif ( $cart->display_prices_including_tax() ) {
+			$cart_subtotal = wc_price( $regular_price + $cart->get_subtotal_tax() );
+
+			if ( $cart->get_subtotal_tax() > 0 && ! wc_prices_include_tax() ) {
+				$cart_subtotal .= ' <small class="tax_label">' . WC()->countries->inc_tax_or_vat() . '</small>';
+			}
+		} else {
+			$cart_subtotal = wc_price( $regular_price );
+
+			if ( $cart->get_subtotal_tax() > 0 && wc_prices_include_tax() ) {
+				$cart_subtotal .= ' <small class="tax_label">' . WC()->countries->ex_tax_or_vat() . '</small>';
+			}
+
+		}
+
+		return $cart_subtotal;
+	}
+
+
+}
+
+new WFACP_TempDisplay_Discount();
+
+
+/*change_text_on_order_summary*/
+function title_html() {
+	?>
+    <div class="wfacp_internal_form_wrap wfacp-comm-title none margin-top">
+        <h2 class="wfacp_section_heading wfacp_section_title wfacp-normal wfacp-text-left">
+			<?php echo __( 'SUMMARY OF YOUR ORDER', 'woofunnels-aero-checkout' ) ?></h2>
+    </div>
+	<?php
+}
+?>
+<?php
+add_action( 'wfacp_checkout_page_found', 'order_summary_position' );
+add_action( 'wfacp_before_process_checkout_template_loader', 'order_summary_position' );
+
+function order_summary_position() {
+	/* Add data in variables */
+	add_action( 'process_wfacp_html', 'layout_order_summary_1', 10, 4 );
+
+	/* display order summary below payment gateway  */
+	add_action( 'woocommerce_before_template_part', 'below_payment_sec', 99999, 2 );
+
+	add_action( 'wfacp_internal_css', 'internal_css_order_summary' );
+}
+
+add_filter( 'wfacp_html_fields_order_summary', function ( $val ) {
+	WFACP_Common::remove_actions( 'process_wfacp_html', 'WFACP_Common', 'order_summary_html' );
+
+	return false;
+}, 5 );
+
+add_filter( 'wfacp_html_fields_order_coupon', function ( $val ) {
+	WFACP_Common::remove_actions( 'process_wfacp_html', 'WFACP_Common', 'order_summary_html' );
+
+	return false;
+}, 10 );
+
+function layout_order_summary_1( $field, $key, $args, $value ) {
+
+	if ( 'order_summary' === $key ) {
+		WC()->session->set( 'wfacp_order_summary_' . WFACP_Common::get_id(), $args );
+
+	} elseif ( 'order_coupon' === $key ) {
+
+		WC()->session->set( 'wfacp_order_coupon_' . WFACP_Common::get_id(), $args );
+	}
+
+
+}
+
+function internal_css_order_summary() {
+	echo ' <style>';
+	printf( ' body .wfacp_order_summary{padding: 0;}' );
+	printf( ' body #order_coupon_field{padding: 0;}' );
+	printf( ' body #order_coupon_field .wfacp_custom_row_wrap{text-align: left;}' );
+	printf( ' body #wfacp_order_summary_in_payment {clear:both;}' );
+	printf( ' body .margin-top { margin-top: 20px;}' );
+	echo ' </style>';
+}
+
+function below_payment_sec( $template_name, $template_path ) {
+	if ( 'checkout/terms.php' === $template_name ) {
+		title_html();
+		$args1 = WC()->session->get( 'wfacp_order_summary_' . WFACP_Common::get_id() );
+
+		$instance = WFACP_Core()->template_loader->get_template_ins();
+
+        echo "<div id=wfacp_order_summary_in_payment>";
+		include WFACP_TEMPLATE_COMMON . '/order-coupon.php';
+		WFACP_Common::order_summary_html('');
+        echo "</div>";
+
+	}
+}
+
+//TERMS AND CONDITIONS CHECKED BY DEFAULT
+function patricks_wc_terms( $terms_is_checked ) { return true; } add_filter( 'woocommerce_terms_is_checked_default', '__return_true' );
+
+//CHECKOUT FIELDS 
+add_filter( 'woocommerce_checkout_fields', 'custom_override_checkout_fields' );
+add_filter( 'wfacp_checkout_fields', 'custom_override_checkout_fields' );
+function custom_override_checkout_fields( $fields ) {
+
+	unset( $fields['billing']['billing_address_1']['required'] );
+	unset( $fields['billing']['select2-billing_state-container']['required'] );
+	unset( $fields['billing']['billing_city']['required'] );
+	unset( $fields['billing']['billing_postcode']['required'] );
+	//unset( $fields['billing']['billing_country']['required'] );
+	unset( $fields['billing']['billing_last_name']['required'] );
+
+    return $fields;
+}
+
+
+//CHANGE ORDER TO COMPLETED
+add_action( 'woocommerce_order_status_processing', 'processing_to_completed');
+
+function processing_to_completed($order_id){
+
+    $order = new WC_Order($order_id);
+    $order->update_status('completed'); 
+
+}
+//DISPLAY PRODUCT NAMES IN ORDER
+add_action( 'manage_shop_order_posts_custom_column' , 'custom_orders_list_column_content', 20, 2 );
+function custom_orders_list_column_content( $column, $post_id ) {
+    global $the_order, $post;
+
+    if ( 'order_status' === $column ) {
+        $products_names = []; // Initializing
+
+        // Loop through order items
+        foreach ( $the_order->get_items() as $item ) {
+            $product = $item->get_product(); // Get the WC_Product object
+            $products_names[]  = $item->get_name(); // Store in an array
+        }
+        // Display
+        echo '<ul style="list-style: none;"><li>' . implode('</li><li>', $products_names) . '</li></ul>';
+    }
+}
+
+//FILTER BY PAYMENT METHOD
+defined( 'ABSPATH' ) or exit;
+
+// fire it up!
+add_action( 'plugins_loaded', 'wc_filter_orders_by_payment' );
+
+
+/** 
+ * Main plugin class
+ *
+ * @since 1.0.0
+ */
+class WC_Filter_Orders_By_Payment {
+
+
+	const VERSION = '1.0.0';
+
+	/** @var WC_Filter_Orders_By_Payment single instance of this plugin */
+	protected static $instance;
+
+	/**
+	 * Main plugin class constructor
+	 *
+	 * @since 1.0.0
+	 */
+	public function __construct() {
+
+		if ( is_admin() ) {
+
+			// add bulk order filter for exported / non-exported orders
+			add_action( 'restrict_manage_posts', array( $this, 'filter_orders_by_payment_method') , 20 );
+			add_filter( 'request',               array( $this, 'filter_orders_by_payment_method_query' ) );		
+		}
+	}
+
+
+	/** Plugin methods ***************************************/
+
+
+	/**
+	 * Add bulk filter for orders by payment method
+	 *
+	 * @since 1.0.0
+	 */
+	public function filter_orders_by_payment_method() {
+		global $typenow;
+
+		if ( 'shop_order' === $typenow ) {
+
+			// get all payment methods, even inactive ones
+			$gateways = WC()->payment_gateways->payment_gateways();
+
+			?>
+			<select name="_shop_order_payment_method" id="dropdown_shop_order_payment_method">
+				<option value="">
+					<?php esc_html_e( 'All Payment Methods', 'wc-filter-orders-by-payment' ); ?>
+				</option>
+
+				<?php foreach ( $gateways as $id => $gateway ) : ?>
+				<option value="<?php echo esc_attr( $id ); ?>" <?php echo esc_attr( isset( $_GET['_shop_order_payment_method'] ) ? selected( $id, $_GET['_shop_order_payment_method'], false ) : '' ); ?>>
+					<?php echo esc_html( $gateway->get_method_title() ); ?>
+				</option>
+				<?php endforeach; ?>
+			</select>
+			<?php
+		}
+	}
+
+
+	/**
+	 * Process bulk filter order payment method
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array $vars query vars without filtering
+	 * @return array $vars query vars with (maybe) filtering
+	 */
+	public function filter_orders_by_payment_method_query( $vars ) {
+		global $typenow;
+
+		if ( 'shop_order' === $typenow && isset( $_GET['_shop_order_payment_method'] ) && ! empty( $_GET['_shop_order_payment_method'] ) ) {
+
+			$vars['meta_key']   = '_payment_method';
+			$vars['meta_value'] = wc_clean( $_GET['_shop_order_payment_method'] );
+		}
+
+		return $vars;
+	}
+
+
+	/** Helper methods ***************************************/
+
+
+	/**
+	 * Main WC_Filter_Orders_By_Payment Instance, ensures only one instance is/can be loaded
+	 *
+	 * @since 1.0.0
+	 * @see wc_filter_orders_by_payment()
+	 * @return WC_Filter_Orders_By_Payment
+ 	*/
+	public static function instance() {
+
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+	}
+
+
+}
+
+
+/**
+ * Returns the One True Instance of WC_Filter_Orders_By_Payment
+ *
+ * @since 1.0.0
+ * @return WC_Filter_Orders_By_Payment
+ */
+function wc_filter_orders_by_payment() {
+    return WC_Filter_Orders_By_Payment::instance();
+}
+
+//PRICE DOESN'T CHANGE BASED ON TAX
+add_filter( 'woocommerce_adjust_non_base_location_prices', '__return_false' );
+
+
+add_filter( 'wfob_show_on_load', function ( $url ) {
+	if ( wp_doing_ajax() ) {
+		return false;
+	}
+
+	return true;
+}, 10 );
+
+add_filter( 'wfacp_disabled_order_bump_css_printing', function ($status) {
+	if(wp_doing_ajax()){
+		return true;
+	}
+	return $status;
+} );

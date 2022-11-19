@@ -19,7 +19,7 @@
 
         </div>
         <div class="md:!w-1/2 w-full p-2 ">
-            <div id="checkout-timer" class="bg-black text-white p-4 flex items-center mb-4 font-bold">Your order is reserver for: @include('partials.countdown-checkout')
+            <div id="checkout-timer" class="bg-black text-white p-4 flex items-center mb-4 font-semibold">Your order is reserver for: @include('partials.countdown-checkout')
             </div>
             <div id="shortcode-checkout">
                 @php(the_content())
