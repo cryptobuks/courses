@@ -2,7 +2,7 @@
 <section class="">
     <div>
         <h3 class="justify-items-center !font-extrabold md:text-center text-left md:p-4 text-4xl md:!text-6xl mb-4 text-black mt-10">{{$mainHeading}}</h3>
-        <h1 class=" justify-items-center !font-normal text-black md:text-center text-left mb-4 !text-xl md:!text-3xl">{{$subheading}}</h1>
+        <h1 class=" justify-items-center !font-normal text-black md:text-center text-left mb-4 !text-xl md:!text-2xl">{{$subheading}}</h1>
         <h3 class=" justify-items-center font-black text-center p-2">{{$thirdTitle}}</h3>
     </div>
     <div class="flex flex-wrap">
@@ -35,7 +35,7 @@
                     ?>
                     </div>
                         <div id="product-includes" class="mt-4 !text-sm"> {!! $productIncludes !!}</div>
-                        <div class="flex-auto relative mt-4 -mb-18">
+                        <div class="flex-auto relative mt-4 -mb-20">
                             <?php $form_shortcode = $formShortcode; echo do_shortcode($form_shortcode)?>
                         </div>
                         

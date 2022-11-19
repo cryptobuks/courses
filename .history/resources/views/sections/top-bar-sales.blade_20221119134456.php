@@ -1,9 +1,9 @@
 @if($phoneNumber)
 <header class="bg-black sticky top-0 z-50">
-    <div class="w-full p-2 items-center flex justify-between mx-auto max-w-pageWidth">
+    <div class="w-full p-4 items-center flex justify-between mx-auto max-w-pageWidth">
         <img class="h-10 no-lazyload hidden sm:flex" src="{{$logoColor}}"></img>
         <div class="text-center text-white font-bold text-xl flex w-full md:!w-auto justify-between items-center">
-            <div class="grid md:flex items-center text-sm md:!text-lg">
+            <div class="grid md:flex items-center">
                 {{$topBarText}} 
                 @include('partials.countdown-sales')   
             </div>

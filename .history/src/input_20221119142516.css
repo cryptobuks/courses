@@ -1155,6 +1155,4 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
   > body
   .wfacp_main_form.woocommerce
   input[type="checkbox"]:checked:before {
-  left: -2px !important;
-  margin-top: -4px !important;
 }

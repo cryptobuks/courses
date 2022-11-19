@@ -115,12 +115,12 @@ else if ($(window).width() > 767) {
 })
 
 </script>
-<div class="md:flex justify-between p-4 inline" id="money-back">
-    <div   class="flex mt-4 items-center">
+<div class="flex justify-between p-4" id="money-back">
+    <div   class="flex mt-4">
         <img class="h-8" src="/wp-content/uploads/money-bag-1.png" ></img>
         <div class="text-black text-base ml-2 font-bold"> 90-Day Money Back Guarantee</div>
     </div>
-    <div  id="secure" class="flex mt-4 items-center">
+    <div  id="secure" class="flex mt-4">
         <img class="h-8" src="/wp-content/uploads/padlock-1-1.png" ></img>
         <div class="text-black text-base ml-2 font-bold"> 100% Secure Purchase</div>
     </div>

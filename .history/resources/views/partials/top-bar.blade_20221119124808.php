@@ -1,7 +1,7 @@
 @if(get_post_type() != 'wfacp_checkout')
 @include('partials.scrolling-progress-bar')
 @endif
-<div class="bg-white w-full p-4 md:px-0  items-center flex justify-between mx-auto  max-w-pageWidth ">
+<div class="bg-white w-full p-4  items-center flex justify-between mx-auto  max-w-pageWidth ">
                 <img class="!h-10 no-lazyload" src="{{$logoColor}}"></img>
         @if(get_post_type() === 'wfocu_offer')
         <div class="flex items-center	">

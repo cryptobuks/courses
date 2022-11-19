@@ -348,8 +348,8 @@ html {
   right: 0.25rem;
 }
 
-.-top-5 {
-  top: -1.25rem;
+.-top-4 {
+  top: -1rem;
 }
 
 .bottom-4 {
@@ -462,16 +462,16 @@ html {
   margin-left: 1rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mr-4 {
   margin-right: 1rem;
 }
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
 }
 
 .mr-1 {
@@ -492,10 +492,6 @@ html {
 
 .mb-6 {
   margin-bottom: 1.5rem;
-}
-
-.-mb-20 {
-  margin-bottom: -5rem;
 }
 
 .mt-12 {
@@ -586,16 +582,20 @@ html {
   height: 1rem;
 }
 
-.h-10 {
-  height: 2.5rem;
+.\!h-10 {
+  height: 2.5rem !important;
 }
 
 .h-5 {
   height: 1.25rem;
 }
 
-.h-24 {
-  height: 6rem;
+.h-10 {
+  height: 2.5rem;
+}
+
+.\!h-24 {
+  height: 6rem !important;
 }
 
 .h-auto {
@@ -896,6 +896,10 @@ html {
   fill: #000;
 }
 
+.\!fill-yellow-400 {
+  fill: #facc15 !important;
+}
+
 .fill-white {
   fill: #fff;
 }
@@ -922,6 +926,11 @@ html {
 
 .p-8 {
   padding: 2rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .px-4 {
@@ -951,10 +960,6 @@ html {
 
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
 }
 
 .pl-4 {
@@ -2254,6 +2259,10 @@ li {
   .gform_wrapper.gravity-theme .gform_footer {
     width: 100% !important;
   }
+
+  #wc-stripe-payment-request-button-separator {
+    margin-bottom: -34px !important;
+  }
 }
 
 .aligncenter {
@@ -2293,6 +2302,18 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
 
 #wc-stripe-payment-request-button-separator {
   margin-bottom: 0px !important;
+}
+
+.woocommerce-page img {
+  height: 2.5rem !important;
+}
+
+.woocommerce-form__input.woocommerce-form__input-checkbox.input-checkbox
+  > body
+  .wfacp_main_form.woocommerce
+  input[type="checkbox"]:checked:before {
+  left: -2px !important;
+  margin-top: -4px !important;
 }
 
 .hover\:translate-y-1:hover {
@@ -2427,6 +2448,11 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
     padding-right: 5rem;
   }
 
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .md\:pl-10 {
     padding-left: 2.5rem;
   }
@@ -2471,16 +2497,13 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
     line-height: 1 !important;
   }
 
-  .md\:\!text-2xl {
-    font-size: 1.5rem !important;
-    line-height: 2rem !important;
+  .md\:\!text-3xl {
+    font-size: 1.875rem !important;
+    line-height: 2.25rem !important;
   }
-}
 
-@media (min-width: 1024px) {
-  .lg\:shadow {
-    --tw-shadow: var(--box-shadow);
-    --tw-shadow-colored: var(--box-shadow);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  .md\:\!text-lg {
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
   }
 }

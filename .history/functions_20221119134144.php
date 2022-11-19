@@ -1868,4 +1868,3 @@ function wc_filter_orders_by_payment() {
 }
 
 //PRICE DOESN'T CHANGE BASED ON TAX
-add_filter( 'woocommerce_adjust_non_base_location_prices', '__return_false' );

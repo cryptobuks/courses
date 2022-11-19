@@ -1105,9 +1105,6 @@ li {
   .gform_wrapper.gravity-theme .gform_footer {
     width: 100% !important;
   }
-  #wc-stripe-payment-request-button-separator {
-    margin-bottom: -34px !important;
-  }
 }
 
 .aligncenter {
@@ -1149,12 +1146,4 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
 
 .woocommerce-page img {
   height: 2.5rem !important;
-}
-
-.woocommerce-form__input.woocommerce-form__input-checkbox.input-checkbox
-  > body
-  .wfacp_main_form.woocommerce
-  input[type="checkbox"]:checked:before {
-  left: -2px !important;
-  margin-top: -4px !important;
 }
