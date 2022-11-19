@@ -1358,10 +1358,6 @@ add_action( 'wp_head', function () {
 	body #wfob_wrap .wfob_bgBox_table.no_table{
 		padding:2px!important;
 	}
-
-	body .wfob_bump_wrapper.wfacp_below_mini_cart_items{
-		display: none!important;
-	}
 	
 </style>
 

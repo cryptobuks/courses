@@ -1170,7 +1170,7 @@ body #wfacp-e-form .wfacp_main_form ul li {
   margin-top: 0px !important;
 }
 
-#shortcode-checkout p:first-child {
+#shortcode-checkout p {
   margin-bottom: 0px !important;
 }
 
@@ -1230,3 +1230,6 @@ body #wfacp-e-form .wfacp_main_form ul li {
   width: 50%;
   background-color: #ffe4bf;
 }
+
+
+wfacp_below_mini_cart_items
