@@ -2308,10 +2308,6 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
   display: none !important;
 }
 
-body .single-wffn_ty .woocommerce-page img {
-  height: 2.5rem !important;
-}
-
 .woocommerce-form__input.woocommerce-form__input-checkbox.input-checkbox
   > body
   .wfacp_main_form.woocommerce
@@ -2339,6 +2335,10 @@ body
 
 #form {
   margin-bottom: -70px !important;
+}
+
+#logo-img {
+  height: 40px !important;
 }
 
 .hover\:translate-y-1:hover {
