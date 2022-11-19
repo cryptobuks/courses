@@ -2,7 +2,7 @@
     <div class="flex">
         <img class="h-16"src="{{$expertProfilePhoto}}"></img>
         <div class="ml-4">
-            <div class="flex font-bold text-xl">{{$expertName}} <img class="h-4 mt-2 ml-2" src="/wp-content/uploads/verified.png"></img></div>
+            <div class="flex font-bold text-xl">{{$expertName}} <img class="h-10" src="/wp-content/uploads/verified.png"></img></div>
             <div class="flex text-stone-500	">{{$expertJob}}</div>
         </div>
     </div>
