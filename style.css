@@ -2271,6 +2271,10 @@ li {
   #wc-stripe-payment-request-button-separator {
     margin-bottom: -34px !important;
   }
+
+  body .wfacp_form_cart {
+    margin-bottom: 24px;
+  }
 }
 
 .aligncenter {
@@ -2326,6 +2330,11 @@ body .wfacp_main_form .wfob_bump_wrapper {
 
 body
   .wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway {
+  margin-top: 0px !important;
+}
+
+body #wfacp-e-form .wfacp_main_form ul li {
+  line-height: 1.5 !important;
   margin-top: 0px !important;
 }
 

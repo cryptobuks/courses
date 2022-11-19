@@ -1109,7 +1109,7 @@ li {
     margin-bottom: -34px !important;
   }
   body .wfacp_form_cart {
-    margin-bottom: 24px;
+    margin-bottom: 12px;
   }
 }
 
@@ -1165,15 +1165,9 @@ body
   margin-top: 0px !important;
 }
 
-body #wfacp-e-form .wfacp_main_form ul li {
-  line-height: 1.5 !important;
-  margin-top: 0px !important;
-}
-
 #what-you-get-checkout > ul > li {
   font-size: 16px !important;
 }
-
 #form {
   margin-bottom: -70px !important;
 }
