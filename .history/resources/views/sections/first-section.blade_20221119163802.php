@@ -35,7 +35,7 @@
                     ?>
                     </div>
                         <div id="product-includes" class="mt-4 !text-sm"> {!! $productIncludes !!}</div>
-                        <div id="form" class="flex-auto relative mt-4">
+                        <div class="flex-auto relative mt-4 -mb-18">
                             <?php $form_shortcode = $formShortcode; echo do_shortcode($form_shortcode)?>
                         </div>
                         

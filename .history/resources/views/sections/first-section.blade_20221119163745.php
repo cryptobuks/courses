@@ -15,12 +15,12 @@
         @endif
         @if($productTitle)
         <div class="md:!w-1/2 w-full">
-            <div id="product-info" class="border-4 border-primary !rounded-lg border-t-40 ">
+            <div id="product-info" class="border-4 border-primary rounded-lg border-t-40 ">
                 <div class="bg-primary p-4 relative">
                     @include('partials.black-friday')
                     <div class="text-white text-2xl text-center font-bold">{{$productTitle}}</div>
                 </div>
-                    <div class=" block !rounded-lg p-4 md:!pl-10 md:!pr-10">
+                    <div class=" block rounded-lg p-4 md:!pl-10 md:!pr-10">
                         <div class="flex justify-center mb-4 whitespace-nowrap">
                         <?php
                     $post_object = get_field('selected_product');
@@ -35,7 +35,7 @@
                     ?>
                     </div>
                         <div id="product-includes" class="mt-4 !text-sm"> {!! $productIncludes !!}</div>
-                        <div id="form" class="flex-auto relative mt-4">
+                        <div class="flex-auto relative mt-4 -mb-18">
                             <?php $form_shortcode = $formShortcode; echo do_shortcode($form_shortcode)?>
                         </div>
                         

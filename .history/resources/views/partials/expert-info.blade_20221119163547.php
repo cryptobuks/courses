@@ -6,9 +6,9 @@
             <div class="flex text-stone-500	">{{$expertJob}}</div>
         </div>
     </div>
-    <img class="h-24"src="{{$bestSellingAuthorBadge}}"></img>
+    <img class="h-20"src="{{$bestSellingAuthorBadge}}"></img>
 </div>
-<div class="flex -mt-5">
+<div class="flex">
     <img class="h-12 mr-4" src="/wp-content/uploads/testimonials.png"></img>
     <div>
         <div class="text-black font-bold text-l">{{$satisfiedCustomersNumber}}</div>

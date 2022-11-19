@@ -8,7 +8,7 @@
             <div class="shadow rounded p-4 md:p-8">
                 <h1 id="product-name"class="!text-3xl">{{$productNameCheckout}}</h1>
                 <img class="mb-4 mt-4" src="{{$productImageCheckout}}"></img>
-                <div id="what-you-get-checkout">{!! $whatYouGetCheckout !!}</div>
+                <div class="font-md">{!! $whatYouGetCheckout !!}</div>
             </div>
             <div id="shortcode-mini-cart" class="relative shadow md:!block rounded p-4 mt-4">
                 <?php $form_shortcode = "[wfacp_mini_cart]"; echo do_shortcode($form_shortcode)?>
