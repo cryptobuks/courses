@@ -1366,9 +1366,6 @@ add_action( 'wp_head', function () {
 	body #wfacp-e-form .wfacp_main_form.woocommerce .wfacp-form-control-wrapper{
 		margin-bottom: 14px!important;
 	}
-	body .wfacp_main_form.woocommerce input[type=checkbox]:checked:before{
-		margin-top: -4px!important;
-	}
 	
 </style>
 
