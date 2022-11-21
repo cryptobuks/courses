@@ -47,7 +47,7 @@
                 <div class="mr-0.5 h-full !fill-yellow-400">@include('icons.rating-star')</div>
                 <div class="mr-0.5 h-full !fill-yellow-400">@include('icons.rating-star')</div>
                 <div class="mr-0.5 h-full !fill-yellow-400">@include('icons.rating-star')</div>
-                <div class="font-bold">4.92 / 5 based on 241 reviews</div>
+                <div class="font-bold">4.92 / 5</div>
             </div>
         </div>
 

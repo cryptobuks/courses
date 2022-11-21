@@ -373,12 +373,6 @@ function my_acf_add_local_field_groups() {
 				'name' => 'first_content',
 				'type' => 'wysiwyg',
 			),
-			array (
-				'key' => 'field_1_13_1',
-				'label' => 'Second content',
-				'name' => 'second_content',
-				'type' => 'wysiwyg',
-			),
             array (
 				'key' => 'field_1_14',
 				'label' => 'Title yellow box',
@@ -1910,4 +1904,4 @@ add_filter( 'wfacp_disabled_order_bump_css_printing', function ($status) {
 
 
 //Agree to terms and conditions checked by default
-function patricks_wc_terms( $terms_is_checked ) { return true; } add_filter( 'woocommerce_terms_is_checked_default', '__return_true' );
+

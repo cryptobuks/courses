@@ -373,12 +373,6 @@ function my_acf_add_local_field_groups() {
 				'name' => 'first_content',
 				'type' => 'wysiwyg',
 			),
-			array (
-				'key' => 'field_1_13_1',
-				'label' => 'Second content',
-				'name' => 'second_content',
-				'type' => 'wysiwyg',
-			),
             array (
 				'key' => 'field_1_14',
 				'label' => 'Title yellow box',
