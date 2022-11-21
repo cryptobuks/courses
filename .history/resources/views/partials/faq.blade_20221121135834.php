@@ -1,7 +1,7 @@
 <?php
 if(have_rows('product_faq')):?>
     <div class="max-w-contentwidth flex flex-col w-full content ">
-        <h2 class="text-4xl justify-center flex">Frequently Asked Questions</h2>
+        <h2 class="text-4xl justify-center">Frequently Asked Questions</h2>
     <?php
     while(have_rows('product_faq')):
         the_row();
