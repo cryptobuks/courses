@@ -1150,6 +1150,11 @@
           "color": "var(--secondary)"
         },
         {
+          "name": "Third",
+          "slug": "third",
+          "color": "var(--third)"
+        },
+        {
           "name": "Hover",
           "slug": "hover",
           "color": "var(--hover)"
