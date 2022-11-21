@@ -19,7 +19,7 @@ function timer(expiry) {
 		setInterval(() => {
 		  this.setRemaining();
 		}, 1000);
-        if(expiry < 0){
+        if(expiry <= 0){
             minutes:this.format(this.minutes().value);
 		    seconds:this.format(this.seconds().value);
         }

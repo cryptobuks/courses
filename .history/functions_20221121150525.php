@@ -99,12 +99,6 @@ function customizer_settings( $wp_customize ){
         'transport' => 'refresh',
         
     ));
-    $wp_customize->add_setting( 'third_color' , array(
-
-        'default'   => '#fdeed980',
-        'transport' => 'refresh',
-        
-    ));
 
     $wp_customize->add_setting( 'hover_color' , array(
 
@@ -244,7 +238,6 @@ function cd_customizer_css()
              body { 
                 --primary: <?php echo get_theme_mod('primary_color', '#FDA843'); ?>;
                 --secondary: <?php echo get_theme_mod('--secondary_color', '#fff5d2'); ?>;
-                --third: <?php echo get_theme_mod('--third', '#fff5d2'); ?>;
                 --hover: <?php echo get_theme_mod('hover_color', '#e08107'); ?>;
                 --default-font-size: <?php echo get_theme_mod('font_size', '20px'); ?>;
                 --default-font-family: <?php echo get_theme_mod('font_family', 'barlow'); ?>; 

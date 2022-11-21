@@ -19,13 +19,9 @@ function timer(expiry) {
 		setInterval(() => {
 		  this.setRemaining();
 		}, 1000);
-        if(expiry < 0){
-            minutes:this.format(this.minutes().value);
-		    seconds:this.format(this.seconds().value);
-        }
 	  },
 	  setRemaining() {
-		const diff = this.expiry - new Date().getTime() + 1 * 60 * 1000;
+		const diff = this.expiry - new Date().getTime() + 7 * 60 * 1000;
 		this.remaining =  parseInt(diff / 1000);
 	  },
 	  days() {
@@ -62,6 +58,9 @@ function timer(expiry) {
 		  seconds:this.format(this.seconds().value),
 		}
 	  },
+      if(expiry < 0){
+        
+      }
 	}
   }
         </script>

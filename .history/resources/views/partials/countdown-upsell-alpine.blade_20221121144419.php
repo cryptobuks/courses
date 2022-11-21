@@ -25,7 +25,7 @@ function timer(expiry) {
         }
 	  },
 	  setRemaining() {
-		const diff = this.expiry - new Date().getTime() + 1 * 60 * 1000;
+		const diff = this.expiry - new Date().getTime() + 7 * 60 * 1000;
 		this.remaining =  parseInt(diff / 1000);
 	  },
 	  days() {

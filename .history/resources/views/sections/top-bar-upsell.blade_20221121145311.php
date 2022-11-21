@@ -1,5 +1,5 @@
 @if($phoneNumber)
-<header class="shadow">
+<header class="shadow-md">
 @include('partials.top-bar')
 </header>
 @endif

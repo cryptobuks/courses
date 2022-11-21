@@ -101,7 +101,7 @@ function customizer_settings( $wp_customize ){
     ));
     $wp_customize->add_setting( 'third_color' , array(
 
-        'default'   => '#fdeed980',
+        'default'   => '#fdeed980		',
         'transport' => 'refresh',
         
     ));
