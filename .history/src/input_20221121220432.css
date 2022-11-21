@@ -1117,9 +1117,7 @@ li {
   .gform_wrapper.gravity-theme .gform_footer {
     width: 100% !important;
   }
-  #wc-stripe-payment-request-button-separator {
-    margin-bottom: -34px !important;
-  }
+
   body .wfacp_form_cart {
     margin-bottom: 24px;
   }
