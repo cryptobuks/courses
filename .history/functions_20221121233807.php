@@ -1942,10 +1942,9 @@ add_filter( 'wfacp_disabled_order_bump_css_printing', function ($status) {
 //REMOVE PRODUCT LINK IN EMAIL
 add_filter( 'woocommerce_order_item_permalink', '__return_false' );
 
-//REDIRECT HOME PAGE TO CUSTOM PAGE
 add_action('template_redirect', 'default_page');
 function default_page(){
     if(is_home() or is_front_page()){
-       exit( wp_redirect("https://strategicparenting.com/28-day-no-yelling-parenting-challenge/"));
+       exit( wp_redirect("http://path/to/your/html/file"));
     }
 }
