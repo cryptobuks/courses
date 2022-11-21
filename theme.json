@@ -1288,6 +1288,11 @@
           "name": "h1",
           "slug": "h1",
           "size": "var(--default-h1-size)"
+        },
+        {
+          "name": "4.5xl",
+          "slug": "4.5xl",
+          "size": "2.5rem"
         }
       ]
     }

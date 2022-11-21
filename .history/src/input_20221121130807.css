@@ -85,7 +85,7 @@
   width: 800px;
 }
 .headline-h2-sales-page {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 600;
   line-height: 40px;
   text-align: center !important;
@@ -808,18 +808,11 @@ video {
   list-style: inherit !important;
   padding-left: 42px !important;
 }
-ul {
+ul,
+ol {
   list-style: none;
   text-indent: -14px;
   margin-left: 28px;
-  margin-bottom: 24px;
-}
-ol {
-  margin-left: 28px;
-  margin-bottom: 24px;
-}
-ol li {
-  padding-left: 12px !important;
 }
 .ld-tabs-content ul {
   list-style: inherit !important;
@@ -851,6 +844,7 @@ p {
 }
 li {
   margin-top: 16px;
+  padding-left: 24px !important;
 }
 
 #moving-buy-button {

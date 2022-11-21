@@ -11,7 +11,7 @@
 <div class="flex -mt-5">
     <img class="h-12 mr-4" src="/wp-content/uploads/testimonials.png"></img>
     <div>
-        <div class="text-black font-bold text-base">{{$satisfiedCustomersNumber}}</div>
-        <div class="text-black text-xs">satisfied customers</div>
+        <div class="text-black font-bold text-l">{{$satisfiedCustomersNumber}}</div>
+        <div class="text-black text-xs	">satisfied customers</div>
     </div>
 </div>
