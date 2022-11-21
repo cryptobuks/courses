@@ -2312,14 +2312,6 @@ body .wfacp_main_form.woocommerce input[type="radio"]:checked:before {
   display: none !important;
 }
 
-.woocommerce-form__input.woocommerce-form__input-checkbox.input-checkbox
-  > body
-  .wfacp_main_form.woocommerce
-  input[type="checkbox"]:checked:before {
-  left: -2px !important;
-  margin-top: -4px !important;
-}
-
 body .wfacp-e-form .clearfix:before {
   display: none !important;
 }
@@ -2506,10 +2498,6 @@ body #wfacp-e-form .wfacp_main_form ul li {
 
   .md\:w-3\/5 {
     width: 60%;
-  }
-
-  .md\:w-80 {
-    width: 20rem;
   }
 
   .md\:\!w-auto {
