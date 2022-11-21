@@ -896,6 +896,10 @@ html {
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
+.bg-third {
+  background-color: var(--third);
+}
+
 .fill-primary {
   fill: var(--primary);
 }
@@ -1181,12 +1185,6 @@ html {
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-\[0px_8px_16px_rgba\(0\2c 0\2c 0\2c 0\.2\)\] {
-  --tw-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  --tw-shadow-colored: 0px 8px 16px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2294,7 +2292,7 @@ li {
   }
 
   #wc-stripe-payment-request-button-separator {
-    margin-bottom: -34px !important;
+    margin-bottom: -75px !important;
   }
 
   body .wfacp_form_cart {
