@@ -38,6 +38,7 @@ $(document).ready(function() {
    // $(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").insertBefore(".wfacp-section.wfacp-hg-by-box.step_0.form_section_single_step_0_embed_forms_2 ");
     $(".wfacp-order-summary-label").text("Order Summary");
     $(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").insertBefore("#wc-stripe-payment-request-wrapper");
+    $("#money-back").insertAfter(".wfacp-order-place-btn-wrap");   
 
     //$('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').slice(0).css( "background", "red" );
     //$(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").hide();    
@@ -47,7 +48,7 @@ $(document).ready(function() {
 $(document.body).on('updated_checkout', function () {
     $(".wfacp_internal_form_wrap.wfacp-comm-title.none.margin-top h2").text("Order Summary");
     $(".wfacp-order-summary-label").text("Order Summary");
-    $("#money-back").appendTo(".wfacp-order-place-btn-wrap");   
+    $("#money-back").insertAfter(".wfacp-order-place-btn-wrap");   
 
 
     //$("#headline-114-52320").insertAfter('.wc_payment_methods.payment_methods.methods').css("display","inline-flex");

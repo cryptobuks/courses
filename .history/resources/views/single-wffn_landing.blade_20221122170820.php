@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
-@include('sections.top-bar-sales')
 @include('partials.scrolling-progress-bar')
+@include('sections.top-bar-sales')
 
 <section class="mx-auto container">
 

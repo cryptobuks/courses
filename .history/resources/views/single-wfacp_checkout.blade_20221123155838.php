@@ -47,7 +47,7 @@ $(document).ready(function() {
 $(document.body).on('updated_checkout', function () {
     $(".wfacp_internal_form_wrap.wfacp-comm-title.none.margin-top h2").text("Order Summary");
     $(".wfacp-order-summary-label").text("Order Summary");
-    $("#money-back").appendTo(".wfacp-order-place-btn-wrap");   
+    $("#money-back").insertBefore(".wfacp-order-place-btn-wrap");   
 
 
     //$("#headline-114-52320").insertAfter('.wc_payment_methods.payment_methods.methods').css("display","inline-flex");

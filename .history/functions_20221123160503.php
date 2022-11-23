@@ -1337,9 +1337,6 @@ add_action( 'wp_head', function () {
 		body .wfacp_form_cart{
 			padding:0px!important;
 		}
-		body .wfacp-section.wfacp-hg-by-box.step_0.form_section_single_step_0_embed_forms_2{
-		margin-top:-42px!important;
-	}
 	}
 	
 	@media (max-width:991px) {
@@ -1403,7 +1400,9 @@ add_action( 'wp_head', function () {
 	body .wfob_bump .wfob_contentBox ul li{
 		margin-top:6px!important;
 	}
-
+	body .wfacp-section.wfacp-hg-by-box.step_0.form_section_single_step_0_embed_forms_2{
+		margin-top:-42px!important;
+	}
 </style>
 
 	<?php
