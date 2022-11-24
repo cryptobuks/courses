@@ -1925,7 +1925,7 @@ function wc_filter_orders_by_payment() {
 add_filter( 'woocommerce_adjust_non_base_location_prices', '__return_false' );
 
 //Show Bump on load page and disable Css printing in ajax call
-/*
+
 add_filter( 'wfob_show_on_load', function ( $url ) {
 	if ( wp_doing_ajax() ) {
 		return false;
@@ -1939,11 +1939,11 @@ add_filter( 'wfacp_disabled_order_bump_css_printing', function ($status) {
 		return true;
 	}
 	return $status;
-} );*/
+} );
 
 
 //REMOVE PRODUCT LINK IN EMAIL
-//add_filter( 'woocommerce_order_item_permalink', '__return_false' );
+add_filter( 'woocommerce_order_item_permalink', '__return_false' );
 
 //REDIRECT HOME PAGE TO CUSTOM PAGE
 add_action('template_redirect', 'default_page');
