@@ -1104,9 +1104,9 @@ add_action( 'wp_head', function () {
 	body .woocommerce-notices-wrapper {
 		display:none;
 	}
-	/*body .wfacp-coupon-section.wfacp_custom_row_wrap.clearfix {
+	body .wfacp-coupon-section.wfacp_custom_row_wrap.clearfix {
 		display:none;
-	}*/
+	}
 	body .wfacp-notices-wrapper {
 		display:none;
 	}
