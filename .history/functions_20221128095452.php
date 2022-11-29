@@ -693,6 +693,38 @@ function my_acf_add_local_field_groups3() {
                 'multiple' => True,
                 'post_type' => 'testimonials',
             ),
+			/*array (
+				'key' => 'field_3_4',
+				'label' => 'Testimonial checkout',
+				'name' => 'testimonial_checkout',
+				'type' => 'repeater',
+                'sub_fields' => array (
+                    array (
+						'key' => 'field_3_4_1',
+						'label' => 'Testimonial name checkout',
+						'name' => 'testimonial_name_checkout',
+						'type' => 'text',
+					),
+					array (
+						'key' => 'field_3_4_2',
+						'label' => 'Testimonial headline checkout',
+						'name' => 'testimonial_headline_checkout',
+						'type' => 'text',
+					),
+					array (
+						'key' => 'field_3_4_3',
+						'label' => 'Testimonial text checkout',
+						'name' => 'testimonial_text_checkout',
+						'type' => 'text',
+					),
+					array (
+						'key' => 'field_3_4_4',
+						'label' => 'Testimonial image checkout',
+						'name' => 'testimonial_image_checkout',
+						'type' => 'image',
+					),
+				),
+			),*/
 			array (
 				'key' => 'field_3_5',
 				'label' => 'FAQ',
@@ -989,152 +1021,6 @@ function my_acf_add_local_field_groups6() {
 }
 
 add_action('acf/init', 'my_acf_add_local_field_groups6');
-
-function my_acf_add_local_field_groups7() {
-	
-	acf_add_local_field_group(array(
-		'key' => 'group_7',
-		'title' => 'Home page',
-		'fields' => array (
-            array (
-				'key' => 'field_7_1',
-				'label' => 'Main image home',
-				'name' => 'main_image_home',
-				'type' => 'image',
-            ),
-            array (
-				'key' => 'field_7_2',
-				'label' => 'First text',
-				'name' => 'first_text_home',
-				'type' => 'text',
-			),
-
-			array (
-				'key' => 'field_7_3',
-				'label' => 'Second text',
-				'name' => 'second_text_home',
-				'type' => 'text',
-			),
-			array (
-				'key' => 'field_7_3_1',
-				'label' => 'Third text',
-				'name' => 'third_text_home',
-				'type' => 'text',
-			),
-			array (
-				'key' => 'field_7_4',
-				'label' => 'Form shortcode',
-				'name' => 'form_shortcode_home',
-				'type' => 'wysiwyg',
-			),
-			array (
-				'key' => 'field_7_5',
-				'label' => 'Headline second sections',
-				'name' => 'headline_second_sections_home',
-				'type' => 'text',
-			),
-			array (
-				'key' => 'field_7_5_1',
-				'label' => 'Products',
-				'name' => 'products',
-				'type' => 'post_object',
-                'multiple' => True,
-                'post_type' => 'product',
-            ),
-			array (
-				'key' => 'field_7_6',
-				'label' => 'Courses',
-				'name' => 'courses',
-				'type' => 'repeater',
-                'sub_fields' => array (
-                    array (
-                        'key' => 'field_7_6_1',
-                        'label' => 'Course image',
-				        'name' => 'course_image',
-				        'type' => 'image',
-                    ),
-                    array (
-                        'key' => 'field_7_6_2',
-                        'label' => 'Course headline',
-				        'name' => 'course_headline',
-				        'type' => 'text',
-                    ),
-                    array (
-                        'key' => 'field_7_6_3',
-                        'label' => 'Course text',
-				        'name' => 'course_text',
-				        'type' => 'wysiwyg',
-                    ),
-				),
-			),
-			array (
-				'key' => 'field_7_7',
-				'label' => 'Headline third section',
-				'name' => 'headline_third_section_home',
-				'type' => 'text',
-			),
-			array (
-				'key' => 'field_7_7_1',
-				'label' => 'Image third section',
-				'name' => 'image_third_section_home',
-				'type' => 'image',
-			),
-			array (
-				'key' => 'field_7_8',
-				'label' => 'Content third section',
-				'name' => 'content_third_section_home',
-				'type' => 'wysiwyg',
-			),
-			
-			array (
-				'key' => 'field_7_9',
-				'label' => 'Headline fourth Section',
-				'name' => 'headline_fourth_section_home',
-				'type' => 'text',
-			),
-			array (
-				'key' => 'field_7_10',
-				'label' => 'Content fourth section',
-				'name' => 'content_fourth_section_home',
-				'type' => 'wysiwyg',
-			),
-			array (
-				'key' => 'field_7_11',
-				'label' => 'Testimonials',
-				'name' => 'testimonials',
-				'type' => 'post_object',
-                'multiple' => True,
-                'post_type' => 'testimonials',
-            ),
-			array (
-				'key' => 'field_7_12',
-				'label' => 'Headline fifth Section',
-				'name' => 'headline_fifth_section_home',
-				'type' => 'text',
-			),
-			array (
-				'key' => 'field_7_13',
-				'label' => 'Content fifth section',
-				'name' => 'content_fifth_section_home',
-				'type' => 'wysiwyg',
-			),
-			
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'page',
-				),
-			),
-		),
-	),
-);
-	
-}
-
-add_action('acf/init', 'my_acf_add_local_field_groups7');
 
 
 
@@ -2066,8 +1952,3 @@ function default_page(){
        exit( wp_redirect("https://strategicparenting.com/28-day-no-yelling-parenting-challenge/"));
     }
 }
-
-//ADD PREVEIW TO CART ABANDONMENT EMAIL
-add_filter( 'bwfan_email_enable_pre_header_preview_only', function () {
-	return true;
-} );
