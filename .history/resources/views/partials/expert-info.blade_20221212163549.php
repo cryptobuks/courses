@@ -1,0 +1,22 @@
+<div class="flex flex-row bg-white justify-between mt-2">
+    <div class="flex">
+        <div class="relative">
+            <img class="h-20"src="{{$expertProfilePhoto}}"></img>
+            <img class="h-14 absolute -right-6 top-10"src="{{$bestSellingAuthorBadge}}"></img>
+        </div>
+        <div class="ml-4 block mt-4">
+            <div class="flex font-bold text-xl">{{$expertName}} 
+                <img class="h-4 mt-2 ml-2" src="/wp-content/themes/courses-1/resources/images/check-blue.png"></img>
+            </div>
+            <div class="flex text-stone-500	leading-none">{{$expertJob}}</div>
+        </div>
+    </div>
+    <div class="flex items-end">
+    <img class="h-10 mr-4" src="/wp-content/themes/courses-1/resources/images/testimonials.png"></img>
+    <div>
+        <div class="text-black font-bold text-xl leading-none">{{$satisfiedCustomersNumber}}</div>
+        <div class="text-black text-xs leading-none">satisfied customers</div>
+    </div>
+</div>
+</div>
+
