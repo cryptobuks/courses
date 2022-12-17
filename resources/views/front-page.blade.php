@@ -15,7 +15,6 @@
             <?php $form_shortcode = $formShortcodeHome; echo do_shortcode($form_shortcode)?>
             </div>
         </div>
-
     </div>
 
 </div>
