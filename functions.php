@@ -2155,12 +2155,12 @@ add_filter( 'wfob_show_on_load', function ( $url ) {
 //add_filter( 'woocommerce_order_item_permalink', '__return_false' );
 
 //REDIRECT HOME PAGE TO CUSTOM PAGE
-/*add_action('template_redirect', 'default_page');
+add_action('template_redirect', 'default_page');
 function default_page(){
     if(is_home() or is_front_page()){
        exit( wp_redirect("https://strategicparenting.com/28-day-no-yelling-parenting-challenge/"));
     }
-}*/
+}
 
 //ADD PREVEIW TO CART ABANDONMENT EMAIL
 add_filter( 'bwfan_email_enable_pre_header_preview_only', function () {
