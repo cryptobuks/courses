@@ -1168,6 +1168,11 @@
           "name": "GoogleRatingStar",
           "slug": "googleratingstar",
           "color": "#e08107"
+        },
+        {
+          "name": "BorderColorRed",
+          "slug": "bordercolorred",
+          "color": "#ff0000"
         }
       ]
     },
