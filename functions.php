@@ -1613,6 +1613,9 @@ add_action( 'wp_head', function () {
 		padding: 20px;
         box-shadow: 0px 8px 16px rgb(0 0 0 / 8%);
 	}
+	body #wfacp-e-form .wfacp_main_form p{
+		font-size:14px!important;
+	}
 </style>
 
 	<?php
