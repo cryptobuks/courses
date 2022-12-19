@@ -310,13 +310,13 @@ function my_acf_add_local_field_groups() {
 				'key' => 'field_1_1_0',
 				'label' => 'Heading',
 				'name' => 'main_heading',
-				'type' => 'text',
+				'type' => 'wysiwyg',
             ),
 			array (
 				'key' => 'field_1_2',
 				'label' => 'Subheading',
 				'name' => 'subheading',
-				'type' => 'text',
+				'type' => 'wysiwyg',
             ),
             array (
 				'key' => 'field_1_7',
@@ -2185,3 +2185,15 @@ add_filter( 'woocommerce_checkout_coupon_message', function () {
 	$html = ' <span  class="wfacp_main_showcoupon">' . __( 'Do you have a coupon?', 'woocommerce' ) . ' ' . __( 'Click here ', 'woocommerce' ) . '</span>';
 	return $html;
 } );
+
+
+
+add_filter( 'gform_confirmation_anchor', '__return_false' );
+
+
+add_filter( 'gform_submit_button', 'dw_add_span_tags', 10, 2 );
+function dw_add_span_tags ( $button, $form ) {
+
+return $button .= "<span aria-hidden='true'></span>";
+
+}

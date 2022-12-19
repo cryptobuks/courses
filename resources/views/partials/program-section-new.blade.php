@@ -20,7 +20,7 @@
                             @endfor
                             <div class="font-bold text-xs">4.92 / 5 based on 241 reviews</div>
                         </div>
-                            <div class="flex justify-center mb-4 whitespace-nowrap">
+                            <div class="flex justify-center whitespace-nowrap">
                             <?php
                                 $post_object = get_field('selected_product');
                                 $price = get_post_meta( $post_object -> ID, '_regular_price', true);
@@ -33,7 +33,7 @@
                                 }
                                 ?>
                             </div>
-                        <div id="product-includes" class="mt-4 !text-sm p-2"> {!! $productIncludes !!}</div>
+                        <div id="product-includes" class=" !text-sm p-2"> {!! $productIncludes !!}</div>
                         <div id="form" class="flex-auto relative mt-4">
                             <?php $form_shortcode = $formShortcode; echo do_shortcode($form_shortcode)?>
                         </div>    

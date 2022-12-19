@@ -1,25 +1,85 @@
 <div class="timer" x-data="timer(new Date().setDate(new Date().getDate() + 1))" x-init="init();">
     <div class="countdown ml-4 absolute -top-8 right-0">
       <div class="countdown-number">
-        <div class="font-bold" x-text="time().days"></div>
+        <div class="font-bold days" id="days" x-text="time().days"></div>
         <div class="uppercase text-[8px] leading-tight">Days</div>
       </div>
       <div class="countdown-number">
-        <div class="font-bold" x-text="time().hours"></div>
+        <div class="font-bold hours" id="hours" x-text="time().hours"></div>
         <div class="uppercase text-[8px] leading-tight">Hours</div>
       </div>
       <div class="countdown-number">
-        <div class="font-bold" x-text="time().minutes"></div>
+        <div class="font-bold minutes" id="minutes" x-text="time().minutes"></div>
         <div class="uppercase text-[8px] leading-tight">Minutes</div>
       </div>
       <div class="countdown-number">
-        <div class="font-bold" x-text="time().seconds"></div>
+        <div class="font-bold seconds" id="seconds" x-text="time().seconds"></div>
         <div class="uppercase text-[8px] leading-tight">Seconds</div>
       </div>
     </div>
         
 <script>
+/*
+$(function(){
+		dT = new Date()
+    function timer(settings){
+        var config = {
+            endDate:  dT.getFullYear() + "-" +  prependZero(dT.getMonth() + 1) + "-" + prependZero(dT.getDate()) + ' 23:59',
+            timeZone: 'Europe/Dublin',
+            hours: $('#hours'),
+            minutes: $('#minutes'),
+            seconds: $('#seconds'),
+            newSubMessage: 'and should be back online in a few minutes...'
+        };
+        function prependZero(number){
+            return number < 10 ? '0' + number : number;
+        }
+        $.extend(true, config, settings || {});
+        var currentTime = moment();
+        var endDate = moment.tz(config.endDate, config.timeZone);
+        var diffTime = endDate.valueOf() - currentTime.valueOf();
+        var duration = moment.duration(diffTime, 'milliseconds');
+        var days = duration.days();
+        var interval = 1000;
+        var subMessage = $('.sub-message');
+        var clock = $('.clock');
+        if(diffTime < 0){
+            endEvent(subMessage, config.newSubMessage, clock);
+            return;
+        }
+        if(days > 0){
+            $('#days').text(prependZero(days));
+            $('.days').css('display', 'inline-block');
+        }
+        var intervalID = setInterval(function(){
+            duration = moment.duration(duration - interval, 'milliseconds');
+            var hours = duration.hours(),
+                minutes = duration.minutes(),
+                seconds = duration.seconds();
+            days = duration.days();
+            if(hours  <= 0 && minutes <= 0 && seconds  <= 0 && days <= 0){
+                clearInterval(intervalID);
+                endEvent(subMessage, config.newSubMessage, clock);
+                window.location.reload();
+            }
+            if(days === 0){
+                $('.days').hide();
+            }
+            $('#days').text(prependZero(days));
+            config.hours.text(prependZero(hours));
+            config.minutes.text(prependZero(minutes));
+            config.seconds.text(prependZero(seconds));
+        }, interval);
+    }
+    function endEvent($el, newText, hideEl){
+        $el.text(newText);
+        hideEl.hide();
+    }
+    timer();
+});*/
+  
                 /* UPSELL TIMER*/
+				
 function timer(expiry) {
 	return {
 	  expiry: expiry,

@@ -895,6 +895,25 @@ li {
   background-color: #039d00 !important;
 }
 
+/*.gform_wrapper FORM .gform_footer SPAN:after {
+  background: url("/wp-content/themes/courses-1/resources/images/arrow-right.png")
+    no-repeat scroll 0 1px transparent;
+  background-position: right;
+  background-size: 24px;
+}*/
+.gform_wrapper FORM .gform_footer SPAN:after {
+  color: #ffffff;
+  background-image: url("/wp-content/themes/courses-1/resources/images/arrow-right.png");
+  display: inline-block;
+  width: 42px;
+  height: 16px;
+  content: "";
+  margin-left: -42px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: contain;
+}
+
 .ginput_container.ginput_container_email {
   border-color: #cacaca;
   border-style: solid;

@@ -1,7 +1,7 @@
 <button id="moving-buy-button" class="relative block  md:w-1/2  text-center cursor-pointer" onclick="toggleModal('modal-id')">
       <!-- black background shadow -->
       <!-- text -->
-      <div class=" drop-shadow-lg relative bottom-1 text-xl font-semibold leading-none tracking-wider p-4 md:py-4 md:px-20 bg-primary border border-primary rounded-full transform ">
+      <div class=" drop-shadow-lg relative bottom-1 text-xl font-semibold leading-none tracking-wider p-4 md:py-4 md:px-20 bg-primary border border-primary rounded-full transform hover:bg-hover hover:border-hover">
       <?php
         $post_object = get_field('selected_product');
         $price = get_post_meta( $post_object -> ID, '_regular_price', true);

@@ -1,5 +1,5 @@
 {
-  "app.css": "css/app.f34db7.css",
+  "app.css": "css/app.5375cf.css",
   "app.js": "js/app.726518.js",
   "editor.css": "css/editor.31d6cf.css",
   "editor.js": "js/editor.ca0ffb.js",
@@ -25,5 +25,6 @@
   "images/paypal.png": "images/paypal.8b1daa.png",
   "images/lock.png": "images/lock.605e55.png",
   "images/credit-card.png": "images/credit-card.5aaf74.png",
+  "images/arrow-right.png": "images/arrow-right.9b3fba.png",
   "images/icon-check-green.png": "images/icon-check-green.cc81fc.png"
 }
