@@ -1015,6 +1015,11 @@ html {
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#DF1400\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(223 20 0 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#FFF6F6\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 246 246 / var(--tw-bg-opacity));
@@ -1022,11 +1027,6 @@ html {
 
 .bg-third {
   background-color: var(--third);
-}
-
-.bg-\[\#DF1400\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(223 20 0 / var(--tw-bg-opacity));
 }
 
 .fill-white {
@@ -1152,6 +1152,10 @@ html {
 
 .text-left {
   text-align: left;
+}
+
+.\!text-left {
+  text-align: left !important;
 }
 
 .text-center {
@@ -2901,11 +2905,6 @@ ol {
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
-  }
-
-  .md\:py-1 {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
   }
 
   .md\:pl-10 {
