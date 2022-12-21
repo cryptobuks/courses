@@ -5,10 +5,10 @@
         @include('partials.satisfied-customers')
     </div>
     <div class="flex items-center object-cover	">
-        <img class=" h-14" src="/wp-content/themes/courses-1/resources/images/seen-on-tv.png"></img>
-        <img class=" h-14" src="/wp-content/themes/courses-1/resources/images/facebook-reviews.png"></img>
-        <img class=" h-14" src="/wp-content/themes/courses-1/resources/images/google-reviews.png"></img>
-        <img class=" h-14" src="/wp-content/themes/courses-1/resources/images/trustpilot.png"></img>
+        <img class=" h-10" src="/wp-content/themes/courses-1/resources/images/seen-on-tv.png"></img>
+        <img class=" h-10" src="/wp-content/themes/courses-1/resources/images/facebook-reviews.png"></img>
+        <img class=" h-10" src="/wp-content/themes/courses-1/resources/images/google-reviews.png"></img>
+        <img class=" h-10" src="/wp-content/themes/courses-1/resources/images/trustpilot.png"></img>
     </div>
 </div>
 </div>
