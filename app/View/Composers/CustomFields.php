@@ -71,6 +71,9 @@ class CustomFields extends Composer
             'bestSellingAuthorBadge' => $this->bestSellingAuthorBadge(),  
             'moneyBackImage' => $this->moneyBackImage(),  
             'secondContent' => $this->secondContent(),  
+            'badgeText' => $this->badgeText(),  
+            'topHeading' => $this->topHeading(),  
+            'beforeFirstContent' => $this->beforeFirstContent(),  
 
             
             /* CHECKOUT PAGE */
@@ -316,6 +319,15 @@ class CustomFields extends Composer
     }
     public function satisfactionGuaranteeCheckout(){
         return get_field("satisfaction_guarantee_checkout");
+    }
+    public function badgeText(){
+        return get_field("badge_text");
+    }
+    public function topHeading(){
+        return get_field("top_heading");
+    }
+    public function beforeFirstContent(){
+        return get_field("before_first_content");
     }
 
 

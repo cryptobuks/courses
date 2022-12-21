@@ -44,7 +44,7 @@
             <button class="bg-green-600 hover:bg-green-700 flex w-full mb-4 drop-shadow-md animate-rocking">
                 <div class="text-xl text-white p-6 font-bold w-full">
                     <?php
-                    echo "Add the " . $title . " to the order";
+                    echo "Add " . $title . " to the order";
                     ?>
                 </div>
             </button>

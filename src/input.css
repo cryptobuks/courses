@@ -84,15 +84,7 @@
 .width-780 {
   width: 800px;
 }
-.headline-h2-sales-page {
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 40px;
-  text-align: center !important;
-  margin-top: 40px;
-  width: 100%;
-  display: inline-block;
-}
+
 /*
 ! tailwindcss v3.1.4 | MIT License | https://tailwindcss.com
 */
@@ -743,6 +735,36 @@ video {
 }
 
 /*SALES PAGES CUSTOM CLASSES*/
+.headline-h1-sales-page {
+  font-size: 3rem !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+  text-align: center;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
+}
+.subheading-h2-sales-page {
+  font-weight: 500 !important;
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+  text-align: center;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 600px) {
+  .headline-h1-sales-page {
+    font-size: 2rem !important;
+    text-align: left;
+  }
+  .subheading-h2-sales-page {
+    font-weight: 400 !important;
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+    text-align: left;
+  }
+}
+
 .headline-h2-sales-page {
   font-size: 32px;
   font-weight: 600;
@@ -752,6 +774,7 @@ video {
   margin-bottom: 20px;
   width: 100%;
   display: inline-block;
+  color: #d20000;
 }
 .headline-h2-sales-page-no-margin-top {
   font-size: 32px;
@@ -1127,7 +1150,7 @@ li {
 
 @media (max-width: 768px) {
   .countdown-number {
-    width: 45px;
+    width: 38px;
     font-size: 18px;
     margin-right: 4px;
   }

@@ -344,14 +344,6 @@ html {
   right: 0px;
 }
 
-.right-1 {
-  right: 0.25rem;
-}
-
-.-top-4 {
-  top: -1rem;
-}
-
 .bottom-1 {
   bottom: 0.25rem;
 }
@@ -390,6 +382,14 @@ html {
 
 .top-2 {
   top: 0.5rem;
+}
+
+.left-1 {
+  left: 0.25rem;
+}
+
+.-top-6 {
+  top: -1.5rem;
 }
 
 .top-0 {
@@ -743,6 +743,10 @@ html {
   max-width: 1180px;
 }
 
+.max-w-\[150px\] {
+  max-width: 150px;
+}
+
 .max-w-full {
   max-width: 100%;
 }
@@ -991,11 +995,6 @@ html {
   background-color: var(--primary);
 }
 
-.bg-pink-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 72 153 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1023,6 +1022,11 @@ html {
 
 .bg-third {
   background-color: var(--third);
+}
+
+.bg-\[\#DF1400\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(223 20 0 / var(--tw-bg-opacity));
 }
 
 .fill-white {
@@ -1057,12 +1061,12 @@ html {
   padding: 1rem;
 }
 
-.p-1 {
-  padding: 0.25rem;
-}
-
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .p-8 {
@@ -1097,6 +1101,16 @@ html {
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .px-4 {
@@ -1188,14 +1202,13 @@ html {
   line-height: 2.5rem;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-\[6px\] {
+  font-size: 6px;
 }
 
 .text-\[8px\] {
@@ -1210,6 +1223,11 @@ html {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-\[12px\] {
@@ -1392,16 +1410,6 @@ html {
 
 .width-780 {
   width: 800px;
-}
-
-.headline-h2-sales-page {
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 40px;
-  text-align: center !important;
-  margin-top: 40px;
-  width: 100%;
-  display: inline-block;
 }
 
 /*
@@ -2054,6 +2062,38 @@ video {
 
 /*SALES PAGES CUSTOM CLASSES*/
 
+.headline-h1-sales-page {
+  font-size: 3rem !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+  text-align: center;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
+}
+
+.subheading-h2-sales-page {
+  font-weight: 500 !important;
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+  text-align: center;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 600px) {
+  .headline-h1-sales-page {
+    font-size: 2rem !important;
+    text-align: left;
+  }
+
+  .subheading-h2-sales-page {
+    font-weight: 400 !important;
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+    text-align: left;
+  }
+}
+
 .headline-h2-sales-page {
   font-size: 32px;
   font-weight: 600;
@@ -2063,6 +2103,7 @@ video {
   margin-bottom: 20px;
   width: 100%;
   display: inline-block;
+  color: #d20000;
 }
 
 .headline-h2-sales-page-no-margin-top {
@@ -2464,7 +2505,7 @@ li {
 
 @media (max-width: 768px) {
   .countdown-number {
-    width: 45px;
+    width: 38px;
     font-size: 18px;
     margin-right: 4px;
   }
@@ -2927,9 +2968,18 @@ ol {
     line-height: 2rem;
   }
 
+  .md\:text-\[8px\] {
+    font-size: 8px;
+  }
+
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .md\:text-base {
@@ -2958,5 +3008,15 @@ ol {
 
   .md\:\!font-semibold {
     font-weight: 600 !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
   }
 }

@@ -1,20 +1,20 @@
 <div class="timer" x-data="timer(new Date().setDate(new Date().getDate() + 1))" x-init="init();">
     <div class="countdown ml-4 absolute -top-8 right-0">
       <div class="countdown-number">
-        <div class="font-bold days" id="days" x-text="time().days"></div>
-        <div class="uppercase text-[8px] leading-tight">Days</div>
+        <div class="font-bold days" x-text="time().days"></div>
+        <div class="uppercase md:text-[8px] text-[6px] leading-tight">Days</div>
       </div>
       <div class="countdown-number">
-        <div class="font-bold hours" id="hours" x-text="time().hours"></div>
-        <div class="uppercase text-[8px] leading-tight">Hours</div>
+        <div class="font-bold hours" x-text="time().hours"></div>
+        <div class="uppercase md:text-[8px] text-[6px] leading-tight">Hours</div>
       </div>
       <div class="countdown-number">
-        <div class="font-bold minutes" id="minutes" x-text="time().minutes"></div>
-        <div class="uppercase text-[8px] leading-tight">Minutes</div>
+        <div class="font-bold minutes" x-text="time().minutes"></div>
+        <div class="uppercase md:text-[8px] text-[6px] leading-tight">Minutes</div>
       </div>
       <div class="countdown-number">
-        <div class="font-bold seconds" id="seconds" x-text="time().seconds"></div>
-        <div class="uppercase text-[8px] leading-tight">Seconds</div>
+        <div class="font-bold seconds" x-text="time().seconds"></div>
+        <div class="uppercase md:text-[8px] text-[6px] leading-tight">Seconds</div>
       </div>
     </div>
         

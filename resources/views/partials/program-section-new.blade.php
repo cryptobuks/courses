@@ -9,7 +9,7 @@
         <div class="md:!w-1/2 w-full">
             <div id="product-info" class="border-4 border-primary !rounded-lg border-t-40 relative">
                 <div class="bg-primary p-2 relative">
-                   <!-- @include('partials.black-friday')-->
+                    @include('partials.promo-text')
                    @include('partials.countdown-sales')
                     <div class="text-white text-2xl text-center font-bold">{{$productTitle}}</div>
                 </div>

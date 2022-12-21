@@ -307,6 +307,12 @@ function my_acf_add_local_field_groups() {
 		'title' => 'Sales Pages',
 		'fields' => array (
 			array (
+				'key' => 'field_1_1_0_1',
+				'label' => 'Top Heading',
+				'name' => 'top_heading',
+				'type' => 'text',
+            ),
+			array (
 				'key' => 'field_1_1_0',
 				'label' => 'Heading',
 				'name' => 'main_heading',
@@ -322,6 +328,12 @@ function my_acf_add_local_field_groups() {
 				'key' => 'field_1_7',
 				'label' => 'Product title',
 				'name' => 'product_title',
+				'type' => 'text',
+			),
+			array (
+				'key' => 'field_1_7_1',
+				'label' => 'Badge text',
+				'name' => 'badge_text',
 				'type' => 'text',
 			),
             array (
@@ -349,6 +361,12 @@ function my_acf_add_local_field_groups() {
 				'key' => 'field_1_12_1',
 				'label' => 'Form shortcode modal',
 				'name' => 'form_shortcode_modal',
+				'type' => 'wysiwyg',
+			),
+            array (
+				'key' => 'field_1_13_0',
+				'label' => 'Before First content',
+				'name' => 'before_first_content',
 				'type' => 'wysiwyg',
 			),
             array (
@@ -1641,6 +1659,18 @@ function my_custom_styles( $init_array ) {
             'title' => 'Headline h2 - sales page',  
             'block' => 'span',  
             'classes' => 'headline-h2-sales-page',
+            'wrapper' => true,
+        ),
+        array(  
+            'title' => 'Headline h1 - sales page',  
+            'block' => 'span',  
+            'classes' => 'headline-h1-sales-page',
+            'wrapper' => true,
+        ),
+        array(  
+            'title' => 'Subheading h2 - sales page',  
+            'block' => 'span',  
+            'classes' => 'subheading-h2-sales-page',
             'wrapper' => true,
         ),
 		array(  

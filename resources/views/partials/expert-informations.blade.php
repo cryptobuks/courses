@@ -7,6 +7,6 @@
         <div class="flex font-bold text-xl">{{$expertName}} 
             <img class="h-4 mt-2 ml-2" src="/wp-content/themes/courses-1/resources/images/check-blue.png"></img>
         </div>
-        <div class="flex text-stone-500	leading-none">{{$expertJob}}</div>
+        <div class="flex text-xs text-stone-500	leading-none max-w-[150px]">{{$expertJob}}</div>
     </div>
 </div>
