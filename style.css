@@ -1154,10 +1154,6 @@ html {
   text-align: left;
 }
 
-.\!text-left {
-  text-align: left !important;
-}
-
 .text-center {
   text-align: center;
 }
@@ -1238,11 +1234,6 @@ html {
   font-size: 12px;
 }
 
-.\!text-xl {
-  font-size: 1.25rem !important;
-  line-height: 1.75rem !important;
-}
-
 .font-semibold {
   font-weight: 600;
 }
@@ -1257,14 +1248,6 @@ html {
 
 .font-medium {
   font-weight: 500;
-}
-
-.\!font-extrabold {
-  font-weight: 800 !important;
-}
-
-.\!font-normal {
-  font-weight: 400 !important;
 }
 
 .uppercase {
@@ -2096,6 +2079,10 @@ video {
     line-height: 1.75rem !important;
     text-align: left;
   }
+
+  .gform_wrapper FORM .gform_footer SPAN:after {
+    margin-top: 25px;
+  }
 }
 
 .headline-h2-sales-page {
@@ -2275,12 +2262,13 @@ li {
   background-image: url("/wp-content/themes/courses-1/resources/images/arrow-right.png");
   display: inline-block;
   width: 42px;
-  height: 16px;
+  height: 22px;
   content: "";
   margin-left: -42px;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: contain;
+  margin-top: 20px;
 }
 
 .ginput_container.ginput_container_email {
@@ -2784,10 +2772,6 @@ ol {
     margin-left: 0.5rem;
   }
 
-  .md\:mb-14 {
-    margin-bottom: 3.5rem;
-  }
-
   .md\:\!block {
     display: block !important;
   }
@@ -2939,10 +2923,6 @@ ol {
     padding-right: 2.5rem !important;
   }
 
-  .md\:text-center {
-    text-align: center;
-  }
-
   .md\:\!text-2xl {
     font-size: 1.5rem !important;
     line-height: 2rem !important;
@@ -2990,11 +2970,6 @@ ol {
     font-size: 200px !important;
   }
 
-  .md\:\!text-5xl {
-    font-size: 3rem !important;
-    line-height: 1 !important;
-  }
-
   .md\:\!text-lg {
     font-size: 1.125rem !important;
     line-height: 1.75rem !important;
@@ -3003,10 +2978,6 @@ ol {
   .md\:\!text-4xl {
     font-size: 2.25rem !important;
     line-height: 2.5rem !important;
-  }
-
-  .md\:\!font-semibold {
-    font-weight: 600 !important;
   }
 }
 
