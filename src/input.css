@@ -763,6 +763,9 @@ video {
     line-height: 1.75rem !important;
     text-align: left;
   }
+  .gform_wrapper FORM .gform_footer SPAN:after {
+    margin-top: 25px;
+  }
 }
 
 .headline-h2-sales-page {
@@ -929,12 +932,13 @@ li {
   background-image: url("/wp-content/themes/courses-1/resources/images/arrow-right.png");
   display: inline-block;
   width: 42px;
-  height: 16px;
+  height: 22px;
   content: "";
   margin-left: -42px;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: contain;
+  margin-top: 20px;
 }
 
 .ginput_container.ginput_container_email {

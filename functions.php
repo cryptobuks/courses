@@ -649,6 +649,12 @@ function my_acf_add_local_field_groups2() {
 				'name' => 'expert_job',
 				'type' => 'text',
 			),
+			array (
+				'key' => 'field_2_1_5_1',
+				'label' => 'Expert salespage description',
+				'name' => 'expert_salespage_description',
+				'type' => 'text',
+			),
             array (
 				'key' => 'field_2_1_6',
 				'label' => 'Expert profile photo',

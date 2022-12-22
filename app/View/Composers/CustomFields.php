@@ -74,6 +74,7 @@ class CustomFields extends Composer
             'badgeText' => $this->badgeText(),  
             'topHeading' => $this->topHeading(),  
             'beforeFirstContent' => $this->beforeFirstContent(),  
+            'expertSalespageDescription' => $this->expertSalespageDescription(),  
 
             
             /* CHECKOUT PAGE */
@@ -293,6 +294,9 @@ class CustomFields extends Composer
         if(get_field("money_back_image")){
             return get_field("money_back_image")['url'];
         }
+    }
+    public function expertSalespageDescription(){
+        return get_field("expert_salespage_description");
     }
 
     /* CHECKOUT PAGE */
