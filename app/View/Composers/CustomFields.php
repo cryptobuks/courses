@@ -75,6 +75,8 @@ class CustomFields extends Composer
             'topHeading' => $this->topHeading(),  
             'beforeFirstContent' => $this->beforeFirstContent(),  
             'expertSalespageDescription' => $this->expertSalespageDescription(),  
+            'personalAssistance' => $this->personalAssistance(),  
+            'redTextYellowBox' => $this->redTextYellowBox(),  
 
             
             /* CHECKOUT PAGE */
@@ -173,6 +175,16 @@ class CustomFields extends Composer
     }
     public function textYellowBox(){
         return get_field("text_yellow_box");
+    }
+    public function productBonus(){
+        if(have_rows("product_bonus")):
+            while(have_rows("product_bonus")) :the_row();
+              $productBonusImage = get_sub_field("product_bonus_image")['url'];  
+              $productBonusTitle = get_sub_field("product_bonus_title");  
+              $productBonusContent = get_sub_field("product_bonus_content");  
+              $productBonusValue = get_sub_field("product_bonus_value");  
+            endwhile;
+        endif;
     }
     public function guaranteeUnderButton(){
         return get_field("guarantee_button");
@@ -298,6 +310,9 @@ class CustomFields extends Composer
     public function expertSalespageDescription(){
         return get_field("expert_salespage_description");
     }
+    public function personalAssistance(){
+        return get_field("personal_assistance");
+    }
 
     /* CHECKOUT PAGE */
     public function productNameCheckout(){
@@ -332,6 +347,9 @@ class CustomFields extends Composer
     }
     public function beforeFirstContent(){
         return get_field("before_first_content");
+    }
+    public function redTextYellowBox(){
+        return get_field("red_text_yellow_box");
     }
 
 

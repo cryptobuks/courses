@@ -290,54 +290,9 @@
           "color": "#1c1917"
         },
         {
-          "name": "Red 50",
-          "slug": "red-50",
-          "color": "#fef2f2"
-        },
-        {
-          "name": "Red 100",
-          "slug": "red-100",
-          "color": "#fee2e2"
-        },
-        {
-          "name": "Red 200",
-          "slug": "red-200",
-          "color": "#fecaca"
-        },
-        {
-          "name": "Red 300",
-          "slug": "red-300",
-          "color": "#fca5a5"
-        },
-        {
-          "name": "Red 400",
-          "slug": "red-400",
-          "color": "#f87171"
-        },
-        {
-          "name": "Red 500",
-          "slug": "red-500",
-          "color": "#ef4444"
-        },
-        {
-          "name": "Red 600",
-          "slug": "red-600",
-          "color": "#dc2626"
-        },
-        {
-          "name": "Red 700",
-          "slug": "red-700",
-          "color": "#b91c1c"
-        },
-        {
-          "name": "Red 800",
-          "slug": "red-800",
-          "color": "#991b1b"
-        },
-        {
-          "name": "Red 900",
-          "slug": "red-900",
-          "color": "#7f1d1d"
+          "name": "Red",
+          "slug": "red",
+          "color": "var(--red)"
         },
         {
           "name": "Orange 50",
@@ -540,54 +495,9 @@
           "color": "#365314"
         },
         {
-          "name": "Green 50",
-          "slug": "green-50",
-          "color": "#f0fdf4"
-        },
-        {
-          "name": "Green 100",
-          "slug": "green-100",
-          "color": "#dcfce7"
-        },
-        {
-          "name": "Green 200",
-          "slug": "green-200",
-          "color": "#bbf7d0"
-        },
-        {
-          "name": "Green 300",
-          "slug": "green-300",
-          "color": "#86efac"
-        },
-        {
-          "name": "Green 400",
-          "slug": "green-400",
-          "color": "#4ade80"
-        },
-        {
-          "name": "Green 500",
-          "slug": "green-500",
-          "color": "#22c55e"
-        },
-        {
-          "name": "Green 600",
-          "slug": "green-600",
-          "color": "#16a34a"
-        },
-        {
-          "name": "Green 700",
-          "slug": "green-700",
-          "color": "#15803d"
-        },
-        {
-          "name": "Green 800",
-          "slug": "green-800",
-          "color": "#166534"
-        },
-        {
-          "name": "Green 900",
-          "slug": "green-900",
-          "color": "#14532d"
+          "name": "Green",
+          "slug": "green",
+          "color": "var(--green)"
         },
         {
           "name": "Emerald 50",

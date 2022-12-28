@@ -12,6 +12,8 @@ module.exports = {
         secondary: "var(--secondary)",
         third: "var(--third)",
         hover: "var(--hover)",
+        green: "var(--green)",
+        red: "var(--red)",
         text: "#333333",
         13: "#131313",
         googleRatingStar: "#e08107",

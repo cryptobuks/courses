@@ -6,7 +6,7 @@
         <div>{!!$subheading!!}</div>
     </div>
    @include('partials.program-section-new')
-   @include('partials.as-seen-on')
+   @include('partials.image-reviews')
 
 </section>
 

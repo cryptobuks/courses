@@ -112,6 +112,18 @@ function customizer_settings( $wp_customize ){
         'transport' => 'refresh',
         
     ));
+	$wp_customize->add_setting( 'green_color' , array(
+
+        'default'   => '#04C100',
+        'transport' => 'refresh',
+        
+    ));
+	$wp_customize->add_setting( 'red_color' , array(
+
+        'default'   => '#DF1400',
+        'transport' => 'refresh',
+        
+    ));
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array(
 
@@ -139,6 +151,20 @@ function customizer_settings( $wp_customize ){
         'label'      => 'Hover Color',
         'section'    => 'colors',
         'settings'   => 'hover_color',
+        
+    )));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'green_color', array(
+
+        'label'      => 'Green Color',
+        'section'    => 'colors',
+        'settings'   => 'green_color',
+        
+    )));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'red_color', array(
+
+        'label'      => 'Red Color',
+        'section'    => 'colors',
+        'settings'   => 'red_color',
         
     )));
 
@@ -245,6 +271,8 @@ function cd_customizer_css()
                 --primary: <?php echo get_theme_mod('primary_color', '#FDA843'); ?>;
                 --secondary: <?php echo get_theme_mod('--secondary_color', '#fff5d2'); ?>;
                 --third: <?php echo get_theme_mod('--third', '#fdeed980'); ?>;
+                --red: <?php echo get_theme_mod('--red', '#DF1400'); ?>;
+                --green: <?php echo get_theme_mod('--green', '#04C100'); ?>;
                 --hover: <?php echo get_theme_mod('hover_color', '#e08107'); ?>;
                 --default-font-size: <?php echo get_theme_mod('font_size', '20px'); ?>;
                 --default-font-family: <?php echo get_theme_mod('font_family', 'barlow'); ?>; 
@@ -336,6 +364,12 @@ function my_acf_add_local_field_groups() {
 				'name' => 'badge_text',
 				'type' => 'text',
 			),
+			array (
+				'key' => 'field_1_8_1',
+				'label' => 'Personal assistance',
+				'name' => 'personal_assistance',
+				'type' => 'wysiwyg',
+			),
             array (
 				'key' => 'field_1_8',
 				'label' => 'Product includes',
@@ -404,6 +438,12 @@ function my_acf_add_local_field_groups() {
 				'type' => 'text',
 			),
             array (
+				'key' => 'field_1_16_1',
+				'label' => 'Red text yellow box',
+				'name' => 'red_text_yellow_box',
+				'type' => 'text',
+			),
+            array (
 				'key' => 'field_1_17',
 				'label' => 'Toggle subtitle yellow box',
 				'name' => 'toggle_subtitle_yellow_box',
@@ -424,6 +464,38 @@ function my_acf_add_local_field_groups() {
 				'label' => 'Text yellow box',
 				'name' => 'text_yellow_box',
 				'type' => 'wysiwyg',
+			),
+			array (
+				'key' => 'field_1_19_1',
+				'label' => 'Bonuses',
+				'name' => 'product_bonus',
+				'type' => 'repeater',
+                'sub_fields' => array (
+                    array (
+                        'key' => 'field_1_19_1_1',
+                        'label' => 'Product Bonus Image',
+				        'name' => 'product_bonus_image',
+				        'type' => 'image',
+                    ),
+                    array (
+                        'key' => 'field_1_19_1_2',
+                        'label' => 'Product Bonus Title',
+				        'name' => 'product_bonus_title',
+				        'type' => 'text',
+                    ),
+                    array (
+                        'key' => 'field_1_19_1_3',
+                        'label' => 'Product Bonus Content',
+				        'name' => 'product_bonus_content',
+				        'type' => 'text',
+                    ),
+                    array (
+                        'key' => 'field_1_19_1_4',
+                        'label' => 'Product Bonus Value',
+				        'name' => 'product_bonus_value',
+				        'type' => 'text',
+                    ),
+				),
 			),
             array (
 				'key' => 'field_1_20',
@@ -2194,12 +2266,12 @@ add_filter( 'wfob_show_on_load', function ( $url ) {
 //add_filter( 'woocommerce_order_item_permalink', '__return_false' );
 
 //REDIRECT HOME PAGE TO CUSTOM PAGE
-add_action('template_redirect', 'default_page');
+/*add_action('template_redirect', 'default_page');
 function default_page(){
     if(is_home() or is_front_page()){
        exit( wp_redirect("https://strategicparenting.com/28-day-no-yelling-parenting-challenge/"));
     }
-}
+}*/
 
 //ADD PREVEIW TO CART ABANDONMENT EMAIL
 add_filter( 'bwfan_email_enable_pre_header_preview_only', function () {

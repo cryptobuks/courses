@@ -11,11 +11,13 @@
         @if($textRumen)
         <div class="text-left" >{!! $textRumen !!}</div>
         @endif
+        @include('partials.red-text')
+        @include('partials.bonuses-sales-page')
         @if(get_post_type() === 'wffn_landing')
         @include('partials.button-buy')
         @endif
         @include('partials.satisfaction-guarantee')
+        @include('partials.personal-assistance')
     </div>
-    
 </section>
 @endif

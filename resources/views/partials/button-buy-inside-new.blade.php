@@ -6,6 +6,7 @@
         $post_object = get_field('selected_product');
         $price = get_post_meta( $post_object -> ID, '_regular_price', true);
         $price_sales = get_post_meta( $post_object -> ID, '_sale_price', true);?>
+    
         <div class="flex flex-col md:flex-row items-center">
         <div class="flex flex-row">
                 <div class="h-6 mt-1 whitespace-nowrap text-white fill-white">@include('icons.shopping-cart')</div>

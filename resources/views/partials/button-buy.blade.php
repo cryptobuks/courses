@@ -1,5 +1,5 @@
-<section class="md:w-fit mx-auto animate-rocking w-full">
+<section class="md:w-fit mx-auto block w-full">
     <!--<a href="{{ $link }}">-->
-        @include('partials.button-buy-inside-new')
+    @include('partials.button-buy-inside')
     <!--</a>-->
 </section>
