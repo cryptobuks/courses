@@ -1501,7 +1501,7 @@ add_action( 'wp_head', function () {
 			content:url("/wp-content/themes/courses-1/resources/images/credit-card.png");
 			display: inline-block;
             margin-left: 99px;
-			margin-top: -3px;
+			margin-top: -15px;
             position: absolute;
             transform: scale(0.5);
 	}

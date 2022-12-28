@@ -11,7 +11,7 @@ if(have_rows('product_bonus')):?>
         <div class="w-full flex mb-4">
             <img src="{{$bonus_image}}" class="h-32 mr-4" ></img>
             <div class="block w-full">
-                <div class="bg-black px-4 py-1 text-white font-semibold w-fit rounded-sm mb-2 text-sm md:text-base">
+                <div class="bg-black px-4 py-1 text-white text-left font-semibold w-fit rounded-sm mb-2 text-sm md:text-base">
                 🎁 {{$bonus_title}}
                 </div>
                 <div class="text-left w-11/12">
