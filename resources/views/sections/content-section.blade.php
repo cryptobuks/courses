@@ -6,9 +6,4 @@
         {!! $secondContent !!}
         @include('partials.modal')
     </div>
-    <!--@include('partials.program-section-new')
-    <div class=" max-w-contentwidth mt-20 m-auto">
-
-    </div>-->
-
 </section>  

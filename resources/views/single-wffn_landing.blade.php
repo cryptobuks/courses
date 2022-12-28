@@ -15,7 +15,6 @@ $imageRumen=$imageYellowBox;
 
 @include('sections.first-section')
 @include('sections.content-section')
-
 @include('sections.yellow-box')
 @include('partials.image-reviews')
 @include('sections.testimonial-section')

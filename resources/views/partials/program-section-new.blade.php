@@ -50,6 +50,4 @@
             <img class="h-4" src="/wp-content/themes/courses-1/resources/images/payment-methods.jpg"></img>
         </div>
 
-    </div>
-    <!--<div class="md:flex block md:!w-10/12 w-full mt-4 mx-auto"></div>-->
-</div>
+ </div>
