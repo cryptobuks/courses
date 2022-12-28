@@ -10,7 +10,7 @@ if(have_rows('product_bonus')):?>
         $bonus_value = get_sub_field('product_bonus_value'); ?>
         <div class="w-full flex mb-4">
             <img src="{{$bonus_image}}" class="h-32 mr-4" ></img>
-            <div class="block">
+            <div class="block w-full">
                 <div class="bg-black px-4 py-1 text-white font-semibold w-fit rounded-sm mb-2">
                 🎁 {{$bonus_title}}
                 </div>
