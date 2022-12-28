@@ -9,7 +9,7 @@
   <?php 
   if($price_sales > 0){
 
-    echo "<div class='flex'>" . "<div class='font-semibold text-3xl text-black'>". "ONLY" . "</div>". "<div class='text-3xl mr-2 ml-2 font-semibold !no-underline uppercase text-green items-center flex'>" . "<div class='text-sm'>" . "$" . "</div>" . $price_sales  . "</div>" . "</div>" ;
+    echo "<div class='flex justify-center'>" . "<div class='font-semibold text-3xl text-black'>". "ONLY" . "</div>". "<div class='text-3xl mr-2 ml-2 font-semibold !no-underline uppercase text-green items-center flex'>" . "<div class='text-sm'>" . "$" . "</div>" . $price_sales  . "</div>" . "</div>" ;
     echo "<div class='flex text-xl'>" . "<span class='mt-1'>Usually</span>" . "<div class='mr-2 ml-2 line-through pt-1' >" . "$" . $price . "</div>" . "<span class='font-bold text-red mt-1'>" . $format_number1 . "% OFF" ."</span>" . "</div>"; 
   }
   else{
