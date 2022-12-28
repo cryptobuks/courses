@@ -547,6 +547,10 @@ html {
   margin-top: 3rem;
 }
 
+.\!mb-6 {
+  margin-bottom: 1.5rem !important;
+}
+
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -1138,6 +1142,10 @@ html {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .align-middle {
   vertical-align: middle;
 }
@@ -1182,6 +1190,11 @@ html {
   line-height: 2.5rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1190,11 +1203,6 @@ html {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .text-\[6px\] {
@@ -2810,10 +2818,6 @@ ol {
     width: fit-content;
   }
 
-  .md\:\!w-10\/12 {
-    width: 83.333333% !important;
-  }
-
   .md\:\!w-auto {
     width: auto !important;
   }
@@ -2922,6 +2926,11 @@ ol {
     line-height: 1.75rem;
   }
 
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -2944,11 +2953,6 @@ ol {
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-
-  .md\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .md\:\!text-\[200px\] {
