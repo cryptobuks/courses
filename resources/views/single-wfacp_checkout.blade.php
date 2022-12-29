@@ -29,64 +29,51 @@
                 @php(the_content())
             </div>
             <div id="fast-delivery" class="flex items-stretch mb-4">
-    <div class="h-10">
-        @include('icons.clock')
-    </div>
-    <div class="text-xs ml-2">Choose to pay via credit card or Paypal for instant access to content without complications with the mail.</div> 
-</div>
-<div id="below-button">
-    <div id="money-back">
-        <div class="flex p-4  justify-center" >
-            <img class="h-14" src="/wp-content/themes/courses-1/resources/images/security.jpg"></img>
-        </div>
-        <div class="font-semibold md:text-xl text-lg mt-4 text-black flex justify-center w-full mx-auto">
-            <img class="h-14 mr-1" src="/wp-content/themes/courses-1/resources/images/guaranteed-money-back.png"></img>
-            <div>
-                <div class="text-left font-bold text-base ml-4" id="headline-checkout">{!! $moneyBackGuaranteeHeadlineCheckout !!}</div>
-                <div class="text-left font-normal !text-sm ml-4">{!! $moneyBackGuaranteeTextCheckout !!}</div>
+                <div class="h-10">
+                    @include('icons.clock')
+                </div>
+                <div class="text-xs ml-2">Choose to pay via credit card or Paypal for instant access to content without complications with the mail.</div> 
             </div>
+            <div id="below-button">
+                <div id="money-back">
+                    <div class="flex p-4  justify-center" >
+                        <img class="h-14" src="/wp-content/themes/courses-1/resources/images/security.jpg"></img>
+                    </div>
+                    <div class="font-semibold md:text-xl text-lg mt-4 text-black flex justify-center w-full mx-auto">
+                        <img class="h-14 mr-1" src="/wp-content/themes/courses-1/resources/images/guaranteed-money-back.png"></img>
+                        <div>
+                            <div class="text-left font-bold text-base ml-4" id="headline-checkout">{!! $moneyBackGuaranteeHeadlineCheckout !!}</div>
+                            <div class="text-left font-normal !text-sm ml-4">{!! $moneyBackGuaranteeTextCheckout !!}</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="personal-assistance">
+                    <div class="font-semibold md:text-xl text-lg mt-4 text-black flex justify-center mx-auto">
+                        <img class="h-14 mr-1" src="/wp-content/themes/courses-1/resources/images/personal-assistance.png"></img>
+                        <div>
+                            <div class="text-left font-bold text-base ml-4">{!! $personalAssistanceHeadlineCheckout !!}</div>
+                            <div class="text-left font-normal !text-sm ml-4">{!! $personalAssistanceTextCheckout !!}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
         </div>
     </div>
-    <div id="personal-assistance">
-        <div class="font-semibold md:text-xl text-lg mt-4 text-black flex justify-center mx-auto">
-            <img class="h-14 mr-1" src="/wp-content/themes/courses-1/resources/images/personal-assistance.png"></img>
-            <div>
-                <div class="text-left font-bold text-base ml-4">{!! $personalAssistanceHeadlineCheckout !!}</div>
-                <div class="text-left font-normal !text-sm ml-4">{!! $personalAssistanceTextCheckout !!}</div>
-            </div>
-        </div>
-    </div>
-</div>  
-        </div>
-    </div>
-
 <div id="faq" class=" w-full md:w-3/5 m-auto mt-20 mb-20 p-4">
-    @include('partials.faq')
-    
+    @include('partials.faq')   
 </div>
 </section>
 <script>
 $(document).ready(function() {
     $("#fast-delivery").insertBefore("#payment");
-
-   // $(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").insertBefore(".wfacp-section.wfacp-hg-by-box.step_0.form_section_single_step_0_embed_forms_2 ");
     $(".wfacp-order-summary-label").text("Order Summary");
     $(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").insertBefore("#wc-stripe-payment-request-wrapper");
-
-    //$('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').slice(0).css( "background", "red" );
-    //$(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").hide();    
-    //$("#money-back").insertAfter(".wfacp-order-place-btn-wrap");   
-    //$("#money-back").insertAfter("#payment");   
-   // $("#personal-assistance").appendTo("#money-back");   
 
 })
 $(document.body).on('updated_checkout', function () {
     $(".wfacp_internal_form_wrap.wfacp-comm-title.none.margin-top h2").text("Order Summary");
     $(".wfacp-order-summary-label").text("Order Summary");
-    //$("#money-back").insertAfter(".wfacp-order-place-btn-wrap");   
 
-
-    //$("#headline-114-52320").insertAfter('.wc_payment_methods.payment_methods.methods').css("display","inline-flex");
 });
 
 if ($(window).width() < 768) {
@@ -109,12 +96,6 @@ else if ($(window).width() > 767) {
         /* PRESTAVI GOOGLE/APPLE PAY POD BUY BUTTON > 767PX */
 		$("#wc-stripe-payment-request-wrapper").insertBefore(".wfacp-section.wfacp-hg-by-box.step_0.form_section_single_step_0_embed_forms_2");
         $("#wc-stripe-payment-request-button-separator").insertAfter("#wc-stripe-payment-request-wrapper");
-        
-        /* PRESTAVI BUMPE POD TIMER > 767PX */
-       // $(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").insertBefore("#wc-stripe-payment-request-wrapper");
-        
-        /* ODSTRANI VSE BUMP WRAPPERJE RAZEN ENEGA - DA SE NE PODVAJAJO */
-       // $('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').slice(1).remove();
 
 	}
     $(document).ready(function() {
@@ -151,21 +132,5 @@ else if ($(window).width() > 767) {
 })
 
 </script>
-
-
-
-    
-
-<!--
-<div   class="flex mt-4 items-center">
-        <img class="h-8" src="/wp-content/uploads/money-bag-1.png" ></img>
-        <div class="text-black text-base ml-2 font-bold"> 90-Day Money Back Guarantee</div>
-    </div>
-    <div  id="secure" class="flex mt-4 items-center">
-        <img class="h-8" src="/wp-content/uploads/padlock-1-1.png" ></img>
-        <div class="text-black text-base ml-2 font-bold"> 100% Secure Purchase</div>
-    </div>
-
--->
 @include('sections.before-footer')
 @include('sections.bottom-footer')

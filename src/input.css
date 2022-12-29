@@ -1328,3 +1328,6 @@ ol {
   position: relative;
   background: #fff;
 }
+#shortcode-checkout > p {
+  display: none !important;
+}

@@ -631,10 +631,6 @@ html {
   height: 3.5rem;
 }
 
-.h-8 {
-  height: 2rem;
-}
-
 .h-full {
   height: 100%;
 }
@@ -2652,6 +2648,10 @@ ol {
   z-index: 100 !important;
   position: relative;
   background: #fff;
+}
+
+#shortcode-checkout > p {
+  display: none !important;
 }
 
 .hover\:border-b-0:hover {
