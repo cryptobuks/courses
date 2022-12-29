@@ -13,10 +13,10 @@
         <div class="md:pl-10 md:pr-10 p-4">
             <div class="text-sm mt-2 mb-4"> Step 1 of 2 </div>
             <h3 class="md:text-4xl text-lg font-semibold mb-4 ">
-            Where Should I Send the {{$productTitle}} ?
+            {{$modalText}}
             </h3>
             <div class="relative flex-auto">
-            <?php $form_shortcode = $formShortcode; echo do_shortcode($form_shortcode)?>
+            <?php $form_shortcode_modal = $formShortcodeModal; echo do_shortcode($form_shortcode_modal)?>
             </div>
         </div>
         </div>

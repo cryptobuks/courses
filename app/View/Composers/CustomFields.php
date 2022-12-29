@@ -36,7 +36,8 @@ class CustomFields extends Composer
             'toggleSubtitleYellowBox' => $this->toggleSubtitleYellowBox(),
             'imageYellowBox' => $this->imageYellowBox(),
             'textYellowBox' => $this->textYellowBox(),
-            'guaranteeUnderButton' => $this->guaranteeUnderButton(),
+            'moneyBackGuarranteHeadline' => $this->moneyBackGuarranteHeadline(),
+            'moneyBackGuarranteText' => $this->moneyBackGuarranteText(),
             'testimonialContent' => $this->testimonialContent(),
             'toggleMoneyBack' => $this->toggleMoneyBack(),
             'toggleTestimonials' => $this->toggleTestimonials(),
@@ -75,17 +76,21 @@ class CustomFields extends Composer
             'topHeading' => $this->topHeading(),  
             'beforeFirstContent' => $this->beforeFirstContent(),  
             'expertSalespageDescription' => $this->expertSalespageDescription(),  
-            'personalAssistance' => $this->personalAssistance(),  
+            'personalAssistanceText' => $this->personalAssistanceText(),  
+            'personalAssistanceHeadline' => $this->personalAssistanceHeadline(),  
             'redTextYellowBox' => $this->redTextYellowBox(),  
+            'modalText' => $this->modalText(),  
 
             
             /* CHECKOUT PAGE */
             'productNameCheckout' => $this->productNameCheckout(),  
             'productImageCheckout' => $this->productImageCheckout(),  
             'whatYouGetCheckout' => $this->whatYouGetCheckout(),  
-            'productTestimonialsCheckout' => $this->productTestimonialsCheckout(),  
-            'satisfactionGuaranteeCheckout' => $this->satisfactionGuaranteeCheckout(),  
-
+            'moneyBackGuaranteeHeadlineCheckout' => $this->moneyBackGuaranteeHeadlineCheckout(),  
+            'moneyBackGuaranteeTextCheckout' => $this->moneyBackGuaranteeTextCheckout(),  
+            'personalAssistanceHeadlineCheckout' => $this->personalAssistanceHeadlineCheckout(),  
+            'personalAssistanceTextCheckout' => $this->personalAssistanceTextCheckout(),  
+           
             /* UPSELL PAGE */
             'productUpsell' => $this->productUpsell(),  
             'upsellName' => $this->upsellName(),  
@@ -186,8 +191,11 @@ class CustomFields extends Composer
             endwhile;
         endif;
     }
-    public function guaranteeUnderButton(){
-        return get_field("guarantee_button");
+    public function moneyBackGuarranteHeadline(){
+        return get_field("money_back_guarantee_headline");
+    }
+    public function moneyBackGuarranteText(){
+        return get_field("money_back_guarantee_text");
     }
     public function testimonialContent(){
         return get_field("testimonial_content");
@@ -310,34 +318,11 @@ class CustomFields extends Composer
     public function expertSalespageDescription(){
         return get_field("expert_salespage_description");
     }
-    public function personalAssistance(){
-        return get_field("personal_assistance");
+    public function personalAssistanceText(){
+        return get_field("personal_assistance_text");
     }
-
-    /* CHECKOUT PAGE */
-    public function productNameCheckout(){
-        return get_field("product_name_checkout");
-    }
-    public function productImageCheckout(){
-        if(get_field("product_image_checkout")){
-            return get_field("product_image_checkout")['url'];
-        }
-    }
-    public function whatYouGetCheckout(){
-        return get_field("what_you_get_checkout");
-    }
-    public function productTestimonialsCheckout(){
-        if(have_rows("testimonial_checkout")):
-            while(have_rows("testimonial_checkout")) :the_row();
-              $testimonialNameCheckout = get_sub_field("testimonial_name_checkout");  
-              $testimonialTextCheckout = get_sub_field("testimonial_text_checkout"); 
-              $testimonialHeadlineCheckout = get_sub_field("testimonial_headline_checkout"); 
-              $testimonialImageCheckout = get_sub_field("testimonial_image_checkout");  
-            endwhile;
-        endif;
-    }
-    public function satisfactionGuaranteeCheckout(){
-        return get_field("satisfaction_guarantee_checkout");
+    public function personalAssistanceHeadline(){
+        return get_field("personal_assistance_headline");
     }
     public function badgeText(){
         return get_field("badge_text");
@@ -351,6 +336,38 @@ class CustomFields extends Composer
     public function redTextYellowBox(){
         return get_field("red_text_yellow_box");
     }
+    public function modalText(){
+        return get_field("modal_text");
+    }
+
+
+
+
+    /* CHECKOUT PAGE */
+    public function productNameCheckout(){
+        return get_field("product_name_checkout");
+    }
+    public function productImageCheckout(){
+        if(get_field("product_image_checkout")){
+            return get_field("product_image_checkout")['url'];
+        }
+    }
+    public function whatYouGetCheckout(){
+        return get_field("what_you_get_checkout");
+    }
+    public function moneyBackGuaranteeHeadlineCheckout(){
+        return get_field("money_back_guarantee_headline_checkout");
+    }
+    public function moneyBackGuaranteeTextCheckout(){
+        return get_field("money_back_guarantee_text_checkout");
+    }
+    public function personalAssistanceHeadlineCheckout(){
+        return get_field("personal_assistance_headline_checkout");
+    }
+    public function personalAssistanceTextCheckout(){
+        return get_field("personal_assistance_text_checkout");
+    }
+   
 
 
 

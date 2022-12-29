@@ -1,7 +1,6 @@
 @extends('layouts.app')
-<section class="container mx-auto pageWidth max-w-pageWidth">
 @include('sections.top-bar-sales-white')
-</section>
+
 
 <section class="max-w-pageWidth m-auto mt-10">
     <div class="flex flex-wrap">
@@ -29,7 +28,35 @@
             <div id="shortcode-checkout">
                 @php(the_content())
             </div>
-            
+            <div id="fast-delivery" class="flex items-stretch mb-4">
+    <div class="h-10">
+        @include('icons.clock')
+    </div>
+    <div class="text-xs ml-2">Choose to pay via credit card or Paypal for instant access to content without complications with the mail.</div> 
+</div>
+<div id="below-button">
+    <div id="money-back">
+        <div class="flex p-4  justify-center" >
+            <img class="h-14" src="/wp-content/themes/courses-1/resources/images/security.jpg"></img>
+        </div>
+        <div class="font-semibold md:text-xl text-lg mt-4 text-black flex justify-center w-full mx-auto">
+            <img class="h-14 mr-1" src="/wp-content/themes/courses-1/resources/images/guaranteed-money-back.png"></img>
+            <div>
+                <div class="text-left font-bold text-base ml-4" id="headline-checkout">{!! $moneyBackGuaranteeHeadlineCheckout !!}</div>
+                <div class="text-left font-normal !text-sm ml-4">{!! $moneyBackGuaranteeTextCheckout !!}</div>
+            </div>
+        </div>
+    </div>
+    <div id="personal-assistance">
+        <div class="font-semibold md:text-xl text-lg mt-4 text-black flex justify-center mx-auto">
+            <img class="h-14 mr-1" src="/wp-content/themes/courses-1/resources/images/personal-assistance.png"></img>
+            <div>
+                <div class="text-left font-bold text-base ml-4">{!! $personalAssistanceHeadlineCheckout !!}</div>
+                <div class="text-left font-normal !text-sm ml-4">{!! $personalAssistanceTextCheckout !!}</div>
+            </div>
+        </div>
+    </div>
+</div>  
         </div>
     </div>
 
@@ -49,7 +76,8 @@ $(document).ready(function() {
     //$('.wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway').slice(0).css( "background", "red" );
     //$(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").hide();    
     //$("#money-back").insertAfter(".wfacp-order-place-btn-wrap");   
-    $("#money-back").insertAfter("#payment");   
+    //$("#money-back").insertAfter("#payment");   
+   // $("#personal-assistance").appendTo("#money-back");   
 
 })
 $(document.body).on('updated_checkout', function () {
@@ -123,21 +151,8 @@ else if ($(window).width() > 767) {
 })
 
 </script>
-<div id="fast-delivery" class="flex items-stretch mb-4">
-    <div class="h-10">
-        @include('icons.clock')
-    </div>
-    <div class="text-xs ml-2">Choose to pay via credit card or Paypal for instant access to content without complications with the mail.</div> 
-</div>
-<div id="money-back">
-    <div class="md:flex p-4 inline justify-center" >
-        <img class="h-6" src="/wp-content/themes/courses-1/resources/images/verified.png"></img>
-    </div>
-    <div class="font-semibold md:text-xl text-lg mt-4 text-black flex justify-center md:w-11/12 mx-auto">
-        <img class="h-14 mr-1" src="/wp-content/themes/courses-1/resources/images/guaranteed-money-back.png"></img>
-        <div class="text-left font-normal !text-sm ml-4">{!! $satisfactionGuaranteeCheckout !!}</div>
-    </div>
-</div>
+
+
 
     
 
@@ -154,4 +169,3 @@ else if ($(window).width() > 767) {
 -->
 @include('sections.before-footer')
 @include('sections.bottom-footer')
-

@@ -365,17 +365,23 @@ function my_acf_add_local_field_groups() {
 				'type' => 'text',
 			),
 			array (
-				'key' => 'field_1_8_1',
-				'label' => 'Personal assistance',
-				'name' => 'personal_assistance',
-				'type' => 'wysiwyg',
-			),
-            array (
 				'key' => 'field_1_8',
 				'label' => 'Product includes',
 				'name' => 'product_includes',
 				'type' => 'wysiwyg',
 			),
+			array (
+				'key' => 'field_1_8_1',
+				'label' => 'Personal assistance headline',
+				'name' => 'personal_assistance_headline',
+				'type' => 'text',
+			),
+			array (
+				'key' => 'field_1_8_2',
+				'label' => 'Personal assistance text',
+				'name' => 'personal_assistance_text',
+				'type' => 'text',
+			), 
             array (
 				'key' => 'field_1_9',
 				'label' => 'Selected product',
@@ -396,6 +402,12 @@ function my_acf_add_local_field_groups() {
 				'label' => 'Form shortcode modal',
 				'name' => 'form_shortcode_modal',
 				'type' => 'wysiwyg',
+			),
+			array (
+				'key' => 'field_1_12_2',
+				'label' => 'Modal text',
+				'name' => 'modal_text',
+				'type' => 'text',
 			),
             array (
 				'key' => 'field_1_13_0',
@@ -422,16 +434,6 @@ function my_acf_add_local_field_groups() {
 				'type' => 'text',
 			),
             array (
-				'key' => 'field_1_15',
-				'label' => 'Toggle title yellow box',
-				'name' => 'toggle_title_yellow_box',
-				'type' => 'true_false',
-                'default_value' => 0,
-		        'ui' => 1,
-		        'ui_on_text' => 'Display',
-		        'ui_off_text' => 'Hide',
-			),
-            array (
 				'key' => 'field_1_16',
 				'label' => 'Subtitle yellow box',
 				'name' => 'subtitle_yellow_box',
@@ -442,16 +444,6 @@ function my_acf_add_local_field_groups() {
 				'label' => 'Red text yellow box',
 				'name' => 'red_text_yellow_box',
 				'type' => 'text',
-			),
-            array (
-				'key' => 'field_1_17',
-				'label' => 'Toggle subtitle yellow box',
-				'name' => 'toggle_subtitle_yellow_box',
-				'type' => 'true_false',
-                'default_value' => 0,
-                'ui' => 1,
-                'ui_on_text' => 'Display',
-                'ui_off_text' => 'Hide',
 			),
             array (
 				'key' => 'field_1_18',
@@ -499,9 +491,15 @@ function my_acf_add_local_field_groups() {
 			),
             array (
 				'key' => 'field_1_20',
-				'label' => 'Guarantee under button',
-				'name' => 'guarantee_button',
-				'type' => 'wysiwyg',
+				'label' => 'Money back guarantee headline',
+				'name' => 'money_back_guarantee_headline',
+				'type' => 'text',
+			),
+            array (
+				'key' => 'field_1_20_1',
+				'label' => 'Money back guarantee text',
+				'name' => 'money_back_guarantee_text',
+				'type' => 'text',
 			),
             array (
 				'key' => 'field_1_21',
@@ -517,31 +515,11 @@ function my_acf_add_local_field_groups() {
                 'multiple' => True,
                 'post_type' => 'testimonials',
             ),
-			array (
-				'key' => 'field_1_23',
-				'label' => 'Toggle testimonial',
-				'name' => 'toggle_testimonial',
-				'type' => 'true_false',
-                'default_value' => 0,
-                'ui' => 1,
-                'ui_on_text' => 'Display',
-                'ui_off_text' => 'Hide',
-			),
             array (
 				'key' => 'field_1_24',
 				'label' => 'Who is for',
 				'name' => 'who_is_for',
 				'type' => 'wysiwyg',
-			),
-			array (
-				'key' => 'field_1_25',
-				'label' => 'Toggle who is for',
-				'name' => 'toggle_who_is_for',
-				'type' => 'true_false',
-                'default_value' => 0,
-                'ui' => 1,
-                'ui_on_text' => 'Display',
-                'ui_off_text' => 'Hide',
 			),
             array (
 				'key' => 'field_1_26',
@@ -555,34 +533,11 @@ function my_acf_add_local_field_groups() {
 				'name' => 'money_back_image',
 				'type' => 'image',
 			),
-
-            
-            array (
-				'key' => 'field_1_27',
-				'label' => 'Toggle Money back',
-				'name' => 'toggle_money_back',
-				'type' => 'true_false',
-                'default_value' => 0,
-                'ui' => 1,
-                'ui_on_text' => 'Display',
-                'ui_off_text' => 'Hide',
-			),
 			array (
 				'key' => 'field_1_28',
 				'label' => 'Limited offer',
 				'name' => 'limited_offer',
 				'type' => 'wysiwyg',
-			),
-            
-            array (
-				'key' => 'field_1_27_1',
-				'label' => 'Toggle Limited offer',
-				'name' => 'toggle_limited_offer',
-				'type' => 'true_false',
-                'default_value' => 0,
-                'ui' => 1,
-                'ui_on_text' => 'Display',
-                'ui_off_text' => 'Hide',
 			),
 			
             array (
@@ -597,16 +552,7 @@ function my_acf_add_local_field_groups() {
 				'name' => 'what_you_get_subtitle',
 				'type' => 'text',
 			),
-            array (
-				'key' => 'field_1_31',
-				'label' => 'Toggle what you get subtitle',
-				'name' => 'toggle_what_you_get_subtitle',
-				'type' => 'true_false',
-                'default_value' => 0,
-                'ui' => 1,
-                'ui_on_text' => 'Display',
-                'ui_off_text' => 'Hide',
-			),
+
             array (
 				'key' => 'field_1_32',
 				'label' => 'What you get image',
@@ -817,10 +763,28 @@ function my_acf_add_local_field_groups3() {
 			),
 			array (
 				'key' => 'field_3_6',
-				'label' => 'Satisfaction guarantee',
-				'name' => 'satisfaction_guarantee_checkout',
-				'type' => 'wysiwyg',
+				'label' => 'Money back guarantee headline checkout',
+				'name' => 'money_back_guarantee_headline_checkout',
+				'type' => 'text',
 			),
+            array (
+				'key' => 'field_3_7',
+				'label' => 'Money back guarantee text checkout',
+				'name' => 'money_back_guarantee_text_checkout',
+				'type' => 'text',
+			),
+			array (
+				'key' => 'field_3_8',
+				'label' => 'Personal assistance headline checkout',
+				'name' => 'personal_assistance_headline_checkout',
+				'type' => 'text',
+			),
+			array (
+				'key' => 'field_3_9',
+				'label' => 'Personal assistance text checkout',
+				'name' => 'personal_assistance_text_checkout',
+				'type' => 'text',
+			), 
 		),
 		'location' => array (
 			array (
@@ -1477,7 +1441,7 @@ add_action( 'wp_head', function () {
 		border:none!important;
 	}
 
-	body #wfacp-e-form .woocommerce-checkout #payment ul.payment_methods label[for="payment_method_bacs"]:before{
+	body #wfacp-e-form .woocommerce-checkout #payment ul.payment_methods label[for="payment_method_stripe"]:before{
 		content:"Popular Choice";
 		display:inline-flex;
 		background-color:#00AB30;
@@ -1564,8 +1528,9 @@ add_action( 'wp_head', function () {
    	    margin-bottom: 0;
     	margin-top: 20px;
         padding: 20px;
-        box-shadow: 0px 8px 16px rgb(0 0 0 / 8%);
+        box-shadow: 0px 8px 16px rgb(0 0 0 / 8%), inset 0px -1px 0px 0px rgba(0, 0, 0, 0);
         width: 100%;
+
 	}
 	body .wfacp-section.wfacp-hg-by-box.step_0.form_section_single_step_0_embed_forms_2 {
 		box-shadow: 0px 8px 16px rgb(0 0 0 / 8%);

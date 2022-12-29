@@ -475,14 +475,6 @@ html {
   margin-top: 2rem;
 }
 
-.mt-20 {
-  margin-top: 5rem;
-}
-
-.mb-20 {
-  margin-bottom: 5rem;
-}
-
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -493,6 +485,14 @@ html {
 
 .ml-4 {
   margin-left: 1rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .mb-2 {
@@ -627,10 +627,6 @@ html {
   height: 2.5rem;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
 .h-14 {
   height: 3.5rem;
 }
@@ -643,16 +639,20 @@ html {
   height: 100%;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
 .h-32 {
   height: 8rem;
 }
 
-.h-4 {
-  height: 1rem;
-}
-
 .h-12 {
   height: 3rem;
+}
+
+.h-4 {
+  height: 1rem;
 }
 
 .\!h-0\.5 {
@@ -2479,6 +2479,10 @@ li {
     margin-right: 4px;
   }
 
+  .single-wfacp_checkout .countdown-number {
+    width: 50px;
+  }
+
   .countdown {
     display: inline-flex;
   }
@@ -2633,6 +2637,21 @@ ol {
   background-size: 24px;
   padding: 15px !important;
   width: 100%;
+}
+
+#headline-checkout {
+  font-weight: 800;
+  font-size: 14px !important;
+}
+
+#below-button {
+  margin-top: -38px;
+  padding: 20px;
+  box-shadow: 0px 10px 16px rgb(0 0 0 / 8%);
+  width: 100%;
+  z-index: 100 !important;
+  position: relative;
+  background: #fff;
 }
 
 .hover\:border-b-0:hover {
@@ -2811,10 +2830,6 @@ ol {
     width: 60%;
   }
 
-  .md\:w-11\/12 {
-    width: 91.666667%;
-  }
-
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2823,6 +2838,10 @@ ol {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+
+  .md\:w-11\/12 {
+    width: 91.666667%;
   }
 
   .md\:\!w-auto {
