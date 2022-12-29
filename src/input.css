@@ -765,7 +765,7 @@ video {
     max-width: 100%;
   }
   .gform_wrapper FORM .gform_footer SPAN:after {
-    margin-top: 25px;
+    margin-top: 25px !important;
   }
   #product-includes {
     max-width: 100%;

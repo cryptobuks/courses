@@ -651,6 +651,10 @@ html {
   height: 1rem;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .\!h-0\.5 {
   height: 0.125rem !important;
 }
@@ -2046,7 +2050,7 @@ video {
   }
 
   .gform_wrapper FORM .gform_footer SPAN:after {
-    margin-top: 25px;
+    margin-top: 25px !important;
   }
 
   #product-includes {
