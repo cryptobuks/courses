@@ -2864,6 +2864,10 @@ ol {
     flex-direction: row;
   }
 
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
   .md\:border-2 {
     border-width: 2px;
   }

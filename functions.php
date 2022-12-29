@@ -1451,8 +1451,9 @@ add_action( 'wp_head', function () {
 		font-weight:600;
 		float: right;
 		position: absolute;
-		right: 70px;
+		right: 14px;
 		border-radius:2px;
+		top:16px;
 	}
 	body #wfacp-e-form .woocommerce-checkout #payment ul.payment_methods{
 		border: 0px!important;
@@ -1528,7 +1529,7 @@ add_action( 'wp_head', function () {
    	    margin-bottom: 0;
     	margin-top: 20px;
         padding: 20px;
-        box-shadow: 0px 8px 16px rgb(0 0 0 / 8%), inset 0px -1px 0px 0px rgba(0, 0, 0, 0);
+        box-shadow: 0px 8px 16px rgb(0 0 0 / 8%);
         width: 100%;
 
 	}
