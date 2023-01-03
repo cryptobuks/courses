@@ -16,7 +16,8 @@ module.exports = {
         red: "var(--red)",
         text: "#333333",
         13: "#131313",
-        googleRatingStar: "#e08107",
+        googleRatingStar: "#FFDB49",
+        facebookRatingStar: "#5892F8",
         borderColorRed: "#FF0000",
       }, // Extend Tailwind's default colors
       fontSize: {

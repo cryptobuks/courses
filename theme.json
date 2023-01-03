@@ -1077,7 +1077,12 @@
         {
           "name": "GoogleRatingStar",
           "slug": "googleratingstar",
-          "color": "#e08107"
+          "color": "#ffdb49"
+        },
+        {
+          "name": "FacebookRatingStar",
+          "slug": "facebookratingstar",
+          "color": "#5892f8"
         },
         {
           "name": "BorderColorRed",

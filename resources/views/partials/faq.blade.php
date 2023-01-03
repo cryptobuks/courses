@@ -11,7 +11,7 @@ if(have_rows('product_faq')):?>
         <div class="mb-4 border-solid border-black relative border-2	 w-full rounded-xl	" x-data="{ open: false }">
             <button class="flex text-left p-4 pr-8 w-full font-semibold text-xl" @click="open = ! open"><div :class="open ? 'font-bold' : ''" >
         <?php echo $faq_question ?></div>
-        <div class="absolute right-2 top-4" :class="open ? 'rotate-90' : ''" > 
+        <div class="absolute right-2 top-5" :class="open ? 'rotate-90' : ''" > 
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
         <g>
         <path d="M8.58984 16.7563L13.1698 12.1428L8.58984 7.52943L9.99984 6.11224L15.9998 12.1428L9.99984 18.1735L8.58984 16.7563Z" fill="black"/>

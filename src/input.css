@@ -69,6 +69,11 @@
   }
   @font-face {
     font-family: "barlow";
+    src: url(/wp-content/themes/courses-1/resources/fonts/Barlow-Black.ttf);
+    font-weight: 900;
+  }
+  @font-face {
+    font-family: "barlow";
     src: url(/wp-content/themes/courses-1/resources/fonts/Barlow-SemiBoldItalic.ttf);
     font-weight: bold;
     font-style: italic;
@@ -774,7 +779,7 @@ video {
 
 .headline-h2-sales-page {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 40px;
   text-align: center;
   margin-top: 40px;
@@ -785,7 +790,7 @@ video {
 }
 .headline-h2-sales-page-no-margin-top {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 40px;
   text-align: center;
   margin-bottom: 12px;
@@ -922,6 +927,7 @@ li {
   overflow: hidden !important;
   outline-offset: -4px;
   text-transform: uppercase;
+  white-space: pre-line;
 }
 
 .gform_button.button:hover {
@@ -1308,7 +1314,7 @@ ol {
   background: url("/wp-content/themes/courses-1/resources/images/email.png")
     no-repeat scroll 0 1px transparent;
   display: block;
-  background-position: right;
+  background-position: right 15px bottom 15px;
   background-size: 24px;
   padding: 15px !important;
   width: 100%;
@@ -1330,4 +1336,10 @@ ol {
 }
 #shortcode-checkout > p {
   display: none !important;
+}
+
+body .wfacp_mini_cart_start_h .wfacp-coupon-section .wfacp-coupon-page {
+  border-bottom: none !important;
+  padding-bottom: 0px;
+  padding-top: 10px;
 }

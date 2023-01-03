@@ -942,7 +942,6 @@ function my_acf_add_local_field_groups4() {
 				'type' => 'text',
 				'instructions' => 'Number of minutes',
 			),
-			
 		),
 		'location' => array (
 			array (
@@ -989,6 +988,18 @@ function my_acf_add_local_field_groups5() {
 					'label' => 'Testimonial image',
 					'name' => 'testimonial_image',
 					'type' => 'image',
+				),
+				array (
+					'key' => 'field_5_5',
+					'label' => 'Testimonial style',
+					'name' => 'testimonial_style',
+					'type' => 'radio',
+					'return_format' => 'label',
+					'choices' => array(
+						'tripadvisor'	=> 'Tripadvisor',
+						'facebook'	=> 'Facebook',
+						'google'	=> 'Google',
+					),
 				),
 		),
 		'location' => array (
@@ -1283,6 +1294,12 @@ add_action( 'wp_head', function () {
 	?>
 
 <style>
+	body .wfacp_mini_cart_start_h:not(.oxy) table.shop_table tr.order-total:not(.recurring-total) th span:not(.woocommerce-Price-currencySymbol) {
+  		color: #000;
+	}
+	body .wfacp_mini_cart_start_h:not(.oxy) table.shop_table tr.order-total:not(.recurring-total) td span * {
+  		color: #000;
+	}
 	.wc_payment_method.payment_method_bacs{
 		border:1px solid #DADADA!important;
 		margin-bottom:20px!important;
@@ -1296,7 +1313,7 @@ add_action( 'wp_head', function () {
 
 	}
 
-	.wc_payment_method.payment_method_paypal{
+	.wc_payment_method.payment_method_ppcp-gateway{
 		border:1px solid #DADADA!important;
 		margin-bottom:20px!important;
 		border-radius:2px!important;
@@ -1463,40 +1480,40 @@ add_action( 'wp_head', function () {
 		border:1px solid #00AB30!important;
 	}
 	body #wfacp-e-form .woocommerce-checkout #payment input#payment_method_stripe:first-child::after {
-			content:url("/wp-content/themes/courses-1/resources/images/credit-card.png");
-			display: inline-block;
-            margin-left: 99px;
-			margin-top: -15px;
-            position: absolute;
-            transform: scale(0.5);
+		content:url("/wp-content/themes/courses-1/resources/images/credit-card.png");
+		display: inline-block;
+		margin-left: 99px;
+		margin-top: -15px;
+		position: absolute;
+		transform: scale(0.5);
 	}
-	body #wfacp-e-form .woocommerce-checkout #payment input#payment_method_paypal:first-child::after {
-			    content: url("/wp-content/themes/courses-1/resources/images/paypal.png");
-                display: inline-block;
-                margin-left: 55px;
-                margin-top: -7px;
-                position: absolute;
-                transform: scale(0.5);
+	body #wfacp-e-form .woocommerce-checkout #payment input#payment_method_ppcp-gateway:first-child::after {
+		content: url("/wp-content/themes/courses-1/resources/images/paypal.png");
+		display: inline-block;
+		margin-left: 55px;
+		margin-top: -7px;
+		position: absolute;
+		transform: scale(0.5);
 	}
 	body .wfob_wrap_start .wfob_checkbox:checked:before {
-			content: "\f147";
-			margin: -3px 0px 0px -2px!important;
-			color: transparent;
-			float: left;
-			display: inline-block;
-			vertical-align: middle;
-			width: 18px;
-			height: 20px;
-			font: normal 78px/1 dashicons;
-			speak: none;
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-			background: url("/wp-content/themes/courses-1/resources/images/icon-check-green.png") center center!important;
-			margin-top: -3px;
-			margin-left: -2px;
-			background-size: contain!important;
-			top:30%;
-		}
+		content: "\f147";
+		margin: -3px 0px 0px -2px!important;
+		color: transparent;
+		float: left;
+		display: inline-block;
+		vertical-align: middle;
+		width: 18px;
+		height: 20px;
+		font: normal 78px/1 dashicons;
+		speak: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		background: url("/wp-content/themes/courses-1/resources/images/icon-check-green.png") center center!important;
+		margin-top: -3px;
+		margin-left: -2px;
+		background-size: contain!important;
+		top:30%;
+	}
 
 	body .woocommerce-checkout #payment ul.payment_methods li .stripe-credit-card-brand {
 		display:none;
@@ -1677,6 +1694,13 @@ add_action( 'wp_head', function () {
 	}
 	body #wfacp-e-form .wfacp_main_form p{
 		font-size:14px!important;
+	}
+
+
+	body .wfacp_showcoupon {
+		color: var(--primary)!important;
+		text-decoration: underline;
+		font-weight: 700;
 	}
 </style>
 
@@ -2254,14 +2278,12 @@ add_action( 'init', 'myplugin_settings' );
 
 
 /* CHANGE COUPON TEXT */
-
 add_filter( 'woocommerce_checkout_coupon_message', function () {
-	$html = ' <span  class="wfacp_main_showcoupon">' . __( 'Do you have a coupon?', 'woocommerce' ) . ' ' . __( 'Click here ', 'woocommerce' ) . '</span>';
+	$html = ' <span class="text-black text-base">' . 'Do you have a coupon?' . '</span> ' . '<span class="wfacp_showcoupon">' .  __( 'Click here ', 'woocommerce' ) . '</span>';
 	return $html;
 } );
 
-
-
+/* GRAVITY FORMS SUBMIT BUTTON */
 add_filter( 'gform_confirmation_anchor', '__return_false' );
 
 
@@ -2270,4 +2292,12 @@ function dw_add_span_tags ( $button, $form ) {
 
 return $button .= "<span aria-hidden='true'></span>";
 
+}
+
+add_filter( 'woocommerce_order_button_text', 'change_button_text' ,999999);
+ 
+function change_button_text( $button_text ) {
+	$img ="/wp-content/themes/courses-1/resources/images/guaranteed-money-back.png";
+	$button_text = ' BUY NOW';
+   return  $button_text; 
 }

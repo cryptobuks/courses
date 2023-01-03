@@ -8,7 +8,9 @@
             <div class="shadow rounded p-4 md:p-8">
                 <h1 id="product-name"class="!text-3xl">{{$productNameCheckout}}</h1>
                 <img class="mb-4 mt-4" src="{{$productImageCheckout}}"></img>
+                <div class="flex justify-center">
                     @include('partials.expert-informations')
+                </div>
                 <div id="what-you-get-checkout" class="mt-8">{!! $whatYouGetCheckout !!}</div>
             </div>
             <div id="shortcode-mini-cart" class="relative shadow md:!block rounded p-4 mt-4">
@@ -42,7 +44,7 @@
                     <div class="font-semibold md:text-xl text-lg mt-4 text-black flex justify-center w-full mx-auto">
                         <img class="h-14 mr-1" src="/wp-content/themes/courses-1/resources/images/guaranteed-money-back.png"></img>
                         <div>
-                            <div class="text-left font-bold text-base ml-4" id="headline-checkout">{!! $moneyBackGuaranteeHeadlineCheckout !!}</div>
+                            <div class="text-left font-bold text-base ml-4">{!! $moneyBackGuaranteeHeadlineCheckout !!}</div>
                             <div class="text-left font-normal !text-sm ml-4">{!! $moneyBackGuaranteeTextCheckout !!}</div>
                         </div>
                     </div>
@@ -66,6 +68,7 @@
 <script>
 $(document).ready(function() {
     $("#fast-delivery").insertBefore("#payment");
+    $("#wfacp_mini_cart_reviews_wfacp_form_summary_shortcode").insertAfter("#wfacp_mini_cart_items_wfacp_form_summary_shortcode");
     $(".wfacp-order-summary-label").text("Order Summary");
     $(".wfob_bump_wrapper.woocommerce_checkout_order_review_below_payment_gateway").insertBefore("#wc-stripe-payment-request-wrapper");
 

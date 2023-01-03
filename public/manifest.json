@@ -1,5 +1,5 @@
 {
-  "app.css": "css/app.e273a9.css",
+  "app.css": "css/app.90ea02.css",
   "app.js": "js/app.726518.js",
   "editor.css": "css/editor.31d6cf.css",
   "editor.js": "js/editor.ca0ffb.js",
@@ -16,10 +16,14 @@
   "images/testimonials.png": "images/testimonials.b7c5ca.png",
   "images/personal-assistance.png": "images/personal-assistance.fe9758.png",
   "images/marko-juhant-obraz.jpeg": "images/marko-juhant-obraz.9eb323.jpeg",
+  "images/tripadvisor-logo.jpg": "images/tripadvisor-logo.deab10.jpg",
   "images/limited-time-offer.png": "images/limited-time-offer.9c2e3a.png",
   "images/seen-on-tv.png": "images/seen-on-tv.3792c9.png",
+  "images/google-logo.jpg": "images/google-logo.7656bb.jpg",
   "images/verified.png": "images/verified.331f94.png",
+  "images/facebook-logo.jpg": "images/facebook-logo.58c1ee.jpg",
   "images/security.png": "images/security.500ce0.png",
+  "images/tripadvisor-star.jpg": "images/tripadvisor-star.cacc1e.jpg",
   "images/money-bag.png": "images/money-bag.a7d7f3.png",
   "images/email.png": "images/email.3a67a6.png",
   "images/check-blue.png": "images/check-blue.8cab68.png",
@@ -27,6 +31,7 @@
   "images/lock.png": "images/lock.605e55.png",
   "images/credit-card.png": "images/credit-card.5aaf74.png",
   "images/arrow-right.png": "images/arrow-right.9b3fba.png",
+  "images/cart.png": "images/cart.10e069.png",
   "images/icon-check-green.png": "images/icon-check-green.cc81fc.png",
   "images/circle-orange.svg": "images/circle-orange.af8d4f.svg"
 }
