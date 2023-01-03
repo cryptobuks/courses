@@ -1,5 +1,5 @@
 @if($titleRumen)
-<section class="flex justify-center max-w-contentwidth mx-auto ">
+<section class="flex justify-center max-w-contentwidth mx-auto mb-4">
     <div class="text-center border-dashed border-4 border-primary rounded-md p-4 sm:p-8 bg-secondary w-full">
         <h2 class="!text-3xl md:!text-4xl">{{$titleRumen}}</h2>
         @if($subtitleRumen)

@@ -1,68 +1,17 @@
-<div class="timer" x-data="timer(new Date().setDate(new Date().getDate() + 0 + 0 + 5))" x-init="init();">
-            
-        <div class="countdown-number-black">
-                <div  x-text="time().minutes"></div>
-                <div class="text-[8px]">minutes</div>
-        </div>
-        <div class="countdown-number-black">
-                <div  x-text="time().seconds"></div>
-                <div class="text-[8px]">seconds</div>
-        </div>
-        <script>
-                /* UPSELL TIMER*/
-function timer(expiry) {
-	return {
-	  expiry: expiry,
-	  remaining:null,
-	  init() {
-		this.setRemaining()
-		setInterval(() => {
-		  this.setRemaining();
-		}, 1000);
-        if(expiry < 0){
-            minutes:this.format(this.minutes().value);
-		    seconds:this.format(this.seconds().value);
-        }
-	  },
-	  setRemaining() {
-		const diff = this.expiry - new Date().getTime() + 8 * 60 * 1000;
-		this.remaining =  parseInt(diff / 1000);
-	  },
-	  days() {
-		return {
-		  value:this.remaining / 86400,
-		  remaining:this.remaining % 86400
-		};
-	  },
-	  hours() {
-		return {
-		  value:this.days().remaining / 3600,
-		  remaining:this.days().remaining % 3600
-		};
-	  },
-	  minutes() {
-		  return {
-		  value:this.hours().remaining / 60,
-		  remaining:this.hours().remaining % 60
-		};
-	  },
-	  seconds() {
-		  return {
-		  value:this.minutes().remaining,
-		};
-	  },
-	  format(value) {
-		return ("0" + parseInt(value)).slice(-2)
-	  },
-	  time(){
-		  return {
-		  days:this.format(this.days().value),
-		  hours:this.format(this.hours().value),
-		  minutes:this.format(this.minutes().value),
-		  seconds:this.format(this.seconds().value),
-		}
-	  },
-	}
+<div class="text-xs text-gray-500" x-data x-init="const end = new Date().getTime() + 480000; setInterval(() => {
+  const remaining = Math.ceil((end - new Date().getTime()) / 1000);
+  $el.querySelector('#minutes').innerHTML = Math.floor(remaining / 60);
+  $el.querySelector('#seconds').innerHTML = remaining % 60;
+  if (remaining === 0) {
+    clearInterval($el.interval);
   }
-        </script>
+}, 1000)">
+	<div class="countdown-number-black">
+		<div  id="minutes"></div>
+		<div class="text-[8px]">minutes</div>
+	</div>
+	<div class="countdown-number-black">
+		<div  id="seconds"></div>
+		<div class="text-[8px]">seconds</div>
+	</div>
 </div>

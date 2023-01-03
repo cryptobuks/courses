@@ -3000,8 +3000,8 @@ body.wfacpef_page
     justify-content: space-between;
   }
 
-  .md\:gap-8 {
-    gap: 2rem;
+  .md\:gap-4 {
+    gap: 1rem;
   }
 
   .md\:border-2 {
