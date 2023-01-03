@@ -29,4 +29,3 @@ if(have_rows('product_bonus')):?>
     <?php
 endif;
 ?>
-

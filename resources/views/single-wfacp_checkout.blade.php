@@ -2,7 +2,7 @@
 @include('sections.top-bar-sales-white')
 
 
-<section class="max-w-pageWidth m-auto mt-10">
+<section class="max-w-pageWidth m-auto md:mt-10">
     <div class="flex flex-wrap">
         <div id="div-included" class="w-full md:!w-1/2 p-2">
             <div class="shadow rounded p-4 md:p-8">

@@ -1343,3 +1343,19 @@ body .wfacp_mini_cart_start_h .wfacp-coupon-section .wfacp-coupon-page {
   padding-bottom: 0px;
   padding-top: 10px;
 }
+
+body
+  .wfacp_mini_cart_start_h
+  .wfacp_order_summary_container
+  table.shop_table
+  tr.order-total
+  td
+  small.includes_tax {
+  color: #000;
+}
+body.wfacpef_page
+  #wfacp-e-form
+  .woocommerce-notices-wrapper
+  + .wfacp-coupon-section.clearfix {
+  margin-bottom: -15px !important;
+}

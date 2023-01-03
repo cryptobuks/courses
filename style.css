@@ -471,10 +471,6 @@ html {
   margin-right: 1rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -501,6 +497,10 @@ html {
 
 .mb-20 {
   margin-bottom: 5rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .mb-2 {
@@ -970,6 +970,16 @@ html {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
+.border-green-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(22 163 74 / var(--tw-border-opacity));
+}
+
+.border-red-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
 .border-gray-400 {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
@@ -985,9 +995,19 @@ html {
   background-color: rgb(129 140 248 / var(--tw-bg-opacity));
 }
 
+.bg-green-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+}
+
 .bg-yellow-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+}
+
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .bg-secondary {
@@ -1008,7 +1028,7 @@ html {
   background-color: var(--primary);
 }
 
-.bg-green {
+.bg-greenColor {
   background-color: var(--green);
 }
 
@@ -1017,7 +1037,22 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-red {
+.bg-green-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
+.bg-redColor {
   background-color: var(--red);
 }
 
@@ -1284,9 +1319,19 @@ html {
   color: rgb(238 242 255 / var(--tw-text-opacity));
 }
 
+.text-green-50 {
+  --tw-text-opacity: 1;
+  color: rgb(240 253 244 / var(--tw-text-opacity));
+}
+
 .text-yellow-50 {
   --tw-text-opacity: 1;
   color: rgb(254 252 232 / var(--tw-text-opacity));
+}
+
+.text-red-50 {
+  --tw-text-opacity: 1;
+  color: rgb(254 242 242 / var(--tw-text-opacity));
 }
 
 .text-primary {
@@ -1303,11 +1348,11 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-green {
+.text-greenColor {
   color: var(--green);
 }
 
-.text-red {
+.text-redColor {
   color: var(--red);
 }
 
@@ -1319,6 +1364,21 @@ html {
 .text-stone-500 {
   --tw-text-opacity: 1;
   color: rgb(120 113 108 / var(--tw-text-opacity));
+}
+
+.text-green-600 {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .text-facebookRatingStar {
@@ -2683,6 +2743,23 @@ body .wfacp_mini_cart_start_h .wfacp-coupon-section .wfacp-coupon-page {
   padding-top: 10px;
 }
 
+body
+  .wfacp_mini_cart_start_h
+  .wfacp_order_summary_container
+  table.shop_table
+  tr.order-total
+  td
+  small.includes_tax {
+  color: #000;
+}
+
+body.wfacpef_page
+  #wfacp-e-form
+  .woocommerce-notices-wrapper
+  + .wfacp-coupon-section.clearfix {
+  margin-bottom: -15px !important;
+}
+
 .hover\:border-b-0:hover {
   border-bottom-width: 0px;
 }
@@ -2693,6 +2770,11 @@ body .wfacp_mini_cart_start_h .wfacp-coupon-section .wfacp-coupon-page {
 
 .hover\:bg-hover:hover {
   background-color: var(--hover);
+}
+
+.hover\:bg-green-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
 }
 
 .hover\:text-primary:hover {
@@ -2791,6 +2873,10 @@ body .wfacp_mini_cart_start_h .wfacp-coupon-section .wfacp-coupon-page {
     margin-bottom: 0px !important;
   }
 
+  .md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .md\:mr-14 {
     margin-right: 3.5rem;
   }
@@ -2835,8 +2921,8 @@ body .wfacp_mini_cart_start_h .wfacp-coupon-section .wfacp-coupon-page {
     height: 6rem !important;
   }
 
-  .md\:\!h-3\/5 {
-    height: 60% !important;
+  .md\:\!h-28 {
+    height: 7rem !important;
   }
 
   .md\:\!h-20 {

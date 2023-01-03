@@ -9,8 +9,8 @@
   <?php 
   if($price_sales > 0){
 
-    echo "<div class='flex justify-center'>" . "<div class='font-semibold text-3xl text-black'>". "ONLY" . "</div>". "<div class='text-3xl mr-2 ml-2 font-semibold !no-underline uppercase text-green items-center flex'>" . "<div class='text-sm'>" . "$" . "</div>" . $price_sales  . "</div>" . "</div>" ;
-    echo "<div class='flex text-xl'>" . "<span class='mt-1'>Usually</span>" . "<div class='mr-2 ml-2 line-through pt-1' >" . "$" . $price . "</div>" . "<span class='font-bold text-red mt-1'>" . $format_number1 . "% OFF" ."</span>" . "</div>"; 
+    echo "<div class='flex justify-center'>" . "<div class='font-semibold text-3xl text-black'>". "ONLY" . "</div>". "<div class='text-3xl mr-2 ml-2 font-semibold !no-underline uppercase text-greenColor items-center flex'>" . "<div class='text-sm'>" . "$" . "</div>" . $price_sales  . "</div>" . "</div>" ;
+    echo "<div class='flex text-xl'>" . "<span class='mt-1'>Usually</span>" . "<div class='mr-2 ml-2 line-through pt-1' >" . "$" . $price . "</div>" . "<span class='font-bold text-redColor mt-1'>" . $format_number1 . "% OFF" ."</span>" . "</div>"; 
   }
   else{
       echo $price . "$";
@@ -18,9 +18,9 @@
 </div>
 <button id="moving-buy-button" class="relative block  w-1/2 text-center cursor-pointer animate-rocking mt-4" onclick="toggleModal('modal-id')">
       <!-- black background shadow -->
-      <div class="relative  bottom-6  bg-green border-1 border-black rounded-full">
+      <div class="relative  bottom-6  bg-greenColor border-1 border-black rounded-full">
       <!-- text -->
-      <div class=" drop-shadow-lg relative text-xl font-semibold leading-none tracking-wider p-4 md:py-4 md:px-20 bg-green border-b-4
+      <div class=" drop-shadow-lg relative text-xl font-semibold leading-none tracking-wider p-4 md:py-4 md:px-20 bg-greenColor border-b-4
 border-black rounded-full transform  hover:transition hover:duration-200 hover:ease-in-out hover:border-b-0 hover:bg-hover">
       <?php
         $post_object = get_field('selected_product');
