@@ -2278,8 +2278,12 @@ add_action( 'init', 'myplugin_settings' );
 
 
 /* CHANGE COUPON TEXT */
-add_filter( 'woocommerce_checkout_coupon_message', function () {
+/*add_filter( 'woocommerce_checkout_coupon_message', function () {
 	$html = ' <span class="text-black text-base">' . 'Do you have a coupon?' . '</span> ' . '<span class="wfacp_showcoupon">' .  __( 'Click here ', 'woocommerce' ) . '</span>';
+	return $html;
+} );*/
+add_filter( 'woocommerce_checkout_coupon_message', function () {
+	$html = ' <span  class="wfacp_main_showcoupon">' . __( 'Do you have a coupon?', 'woocommerce' ) . ' ' . __( 'Click here', 'woocommerce' ) . '</span>';
 	return $html;
 } );
 
