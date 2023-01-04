@@ -18,8 +18,8 @@ if(have_rows('product_bonus')):?>
                     {{$bonus_content}}
                 </div>
                 <div class="uppercase font-semibold text-black flex justify-end text-xl w-full text-right">
-                Value: <span class="line-through">{{$bonus_value}}</span>
-            </div>
+                Value: {{$bonus_value}}
+                </div>
             </div>
             
         </div>
