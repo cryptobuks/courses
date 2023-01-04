@@ -44,7 +44,7 @@ $testimonial_style = get_field('testimonial_style', $testimonial);
             </div>
             @elseif($testimonial_style=="Tripadvisor")
             <div class="flex justify-end w-full">
-              <img class= "h-6" src="/wp-content/themes/courses-1/resources/images/tripadvisor-logo.jpg"></img>
+              <img class= "h-6" src="/wp-content/themes/courses-1/resources/images/trustpilot-logo.png"></img>
             </div>
             @endif
         </div>

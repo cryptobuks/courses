@@ -28,7 +28,7 @@
                         $price = get_post_meta( $post_object -> ID, '_regular_price', true);
                         $price_sales = get_post_meta( $post_object -> ID, '_sale_price', true);
                         if($price_sales > 0){
-                            echo "<div class='text-red text-xl mr-2 ml-2 font-bold uppercase'> only " . "$"  . $price_sales ."</div>" ."<div class='text-red text-xl font-bold uppercase'> today" . "&nbsp" . "</div>" . "<div class='text-xs mr-2 mt-1 font-medium line-through flex items-center'>" .  "LIST PRICE" . " $" .  $price . "</div>";
+                            echo "<div class='text-redColor text-xl mr-2 ml-2 font-bold uppercase'> only " . "$"  . $price_sales ."</div>" ."<div class='text-redColor text-xl font-bold uppercase'> today" . "&nbsp" . "</div>" . "<div class='text-xs mr-2 mt-1 font-medium line-through flex items-center'>" .  "LIST PRICE" . " $" .  $price . "</div>";
                         }
                         else{
                             echo $price . "$";
