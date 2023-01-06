@@ -2305,3 +2305,4 @@ function change_button_text( $button_text ) {
 	$button_text = ' BUY NOW';
    return  $button_text; 
 }
+
