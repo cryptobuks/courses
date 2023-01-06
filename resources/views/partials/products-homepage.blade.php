@@ -2,7 +2,7 @@
 
 // args
 $args = array(
-    'numberposts'   => -1,
+    'posts_per_page'   => -1,
     'post_type'     => 'wffn_landing',
     'post_category' => 'homepage',
 );
