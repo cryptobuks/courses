@@ -109,6 +109,7 @@ class CustomFields extends Composer
             'testimonialText' => $this->testimonialText(),
             'testimonialImage' => $this->testimonialImage(),
             'testimonialHeadline' => $this->testimonialHeadline(),
+            'testimonialLink' => $this->testimonialLink(),
 
             /* THANK YOU PAGE */
             'firstHeadlineThankYou' => $this->firstHeadlineThankYou(),
@@ -133,7 +134,15 @@ class CustomFields extends Composer
             'headlineFifthSectionHome' => $this->headlineFifthSectionHome(),
             'contentFifthSectionHome' => $this->contentFifthSectionHome(),
             'imageThirdSectionHome' => $this->imageThirdSectionHome(),
+            'homepageButtonLink' => $this->homepageButton(),
+            'homepageButtonText' => $this->homepageButtonText(),
             
+            /** AUTHOR PAGE */
+            'authorIntroText' => $this->authorIntroText(),
+            'authorContentText' => $this->authorContentText(),
+            'authorEbookImage' => $this->authorEbookImage(),
+            'authorEbookContent' => $this->authorEbookContent(),
+            'authorSignature' => $this->authorSignature()
         ];
     }
     /* SALES PAGE */
@@ -420,6 +429,12 @@ public function testimonialImage(){
     return get_field("testimonial_image");
 }
 
+public function testimonialLink(){
+    if(get_field("testimonial_link")){
+        return get_field("testimonial_link")['url'];
+    }
+}
+
 /* THANK YOU PAGE */
 public function firstHeadlineThankYou(){
     return get_field("first_headline_thank_you");
@@ -490,4 +505,31 @@ public function headlineFifthSectionHome(){
 public function contentFifthSectionHome(){
     return get_field("content_fifth_section_home");
 }
+public function homepageButton(){
+    return get_field("homepageButton_link");
 }
+public function homepageButtonText(){
+    return get_field("homepageButton_text");
+}
+public function authorIntroText(){
+    return get_field("author_intro_text");
+}
+public function authorContentText(){
+    return get_field("author_content_text");
+}
+
+public function authorEbookImage() {
+    if(get_field("author_ebook_img")){
+        return get_field("author_ebook_img")['url'];
+    }
+}
+public function authorEbookContent(){
+    return get_field("author_ebook_content");
+}
+public function authorSignature() {
+    if(get_field("author_signature")){
+        return get_field("author_signature")['url'];
+    }
+}
+}
+

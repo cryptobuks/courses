@@ -4,27 +4,30 @@
 $args = array(
     'numberposts'   => -1,
     'post_type'     => 'wffn_landing',
-    'post_category' => 'sales-pages',
+    'post_category' => 'homepage',
 );
 
 
 // query
 $post_objects = new WP_Query( $args );
-$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_objects->ID ), 'single-post-thumbnail' )
 ?>
 <div class="md:grid-rows-3 grid-rows-1 gap-4 md:!inline-flex block w-full">
 
 <?php if( $post_objects->have_posts() ): ?>
     <?php while( $post_objects->have_posts() ) : $post_objects->the_post(); ?>
         <div class=" md:min-w-[32%] min-w-full">
-            <div class=" p-6 shadow rounded-lg">
-                    <img class="w-full object-cover" src="<?php echo $image[0]; ?>">
-                <a href="<?php the_permalink(); ?>">
-                   <div class="text-xl font-medium"> <?php the_title(); ?></div>
-                </a>
-                <div class="w-full md:max-w-xs">
-                    <?php the_content();?>
-                </div>    
+            <div class="shadow rounded-lg">
+                <?php $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');?>
+                <img class="w-full object-cover rounded-tl-lg rounded-tr-lg h-52" src="<?php echo $featured_image[0] ?>">
+                <div class="p-4">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="text-xl font-medium"> <?php the_title(); ?></div>
+                    </a>
+                    <p class="text-sm"><?php the_content() ?></p> 
+                    <div class="flex justify-end">
+                        <a href="<?php the_permalink(); ?>" class="bg-darkOrange hover:bg-hover text-white font-bold p-4 rounded-xl">READ MORE</a>
+                    </div>
+                </div>
             </div>
         </div>
     <?php endwhile; ?>

@@ -124,6 +124,18 @@ function customizer_settings( $wp_customize ){
         'transport' => 'refresh',
         
     ));
+	$wp_customize->add_setting( 'light_orange_color' , array(
+
+        'default'   => '#fff9f4',
+        'transport' => 'refresh',
+        
+    ));
+	$wp_customize->add_setting( 'dark_orange_color' , array(
+
+        'default'   => '#ff8f00',
+        'transport' => 'refresh',
+        
+    ));
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array(
 
@@ -167,7 +179,21 @@ function customizer_settings( $wp_customize ){
         'settings'   => 'red_color',
         
     )));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'light_orange_color', array(
 
+        'label'      => 'Light Orange Color',
+        'section'    => 'colors',
+        'settings'   => 'light_orange_color',
+        
+    )));
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'dark_orange_color', array(
+
+        'label'      => 'Dark Orange Color',
+        'section'    => 'colors',
+        'settings'   => 'dark_orange_color',
+        
+    )));
     $wp_customize->add_section( 'fonts', array(
         'title' => 'Fonts',
         'priority' => 30,
@@ -273,6 +299,8 @@ function cd_customizer_css()
                 --third: <?php echo get_theme_mod('--third', '#fdeed980'); ?>;
                 --red: <?php echo get_theme_mod('--red', '#DF1400'); ?>;
                 --green: <?php echo get_theme_mod('--green', '#04C100'); ?>;
+				--lightOrange: <?php echo get_theme_mod('light_orange', '#fff9f4'); ?>;
+				--darkOrange: <?php echo get_theme_mod('dark_orange', '#ff8f00'); ?>;
                 --hover: <?php echo get_theme_mod('hover_color', '#e08107'); ?>;
                 --default-font-size: <?php echo get_theme_mod('font_size', '20px'); ?>;
                 --default-font-family: <?php echo get_theme_mod('font_family', 'barlow'); ?>; 
@@ -321,6 +349,7 @@ function cptui_register_my_cpts_testimonial() {
 		"query_var" => true,
 		"supports" => [ "title", "editor", "thumbnail" ],
 		"show_in_graphql" => false,
+		'taxonomies'  => array( 'category' ),
 	];
 
 	register_post_type( "testimonials", $args );
@@ -1001,6 +1030,12 @@ function my_acf_add_local_field_groups5() {
 						'google'	=> 'Google',
 					),
 				),
+				array (
+					'key' => 'field_5_6',
+					'label' => 'Testimonial link',
+					'name' => 'testimonial_link',
+					'type' => 'link',
+				),
 		),
 		'location' => array (
 			array (
@@ -1112,7 +1147,7 @@ function my_acf_add_local_field_groups7() {
 			),
 			array (
 				'key' => 'field_7_5',
-				'label' => 'Headline second sections',
+				'label' => 'Headline main section',
 				'name' => 'headline_second_sections_home',
 				'type' => 'text',
 			),
@@ -1152,23 +1187,34 @@ function my_acf_add_local_field_groups7() {
 			),
 			array (
 				'key' => 'field_7_7',
-				'label' => 'Headline third section',
+				'label' => 'Name section',
 				'name' => 'headline_third_section_home',
 				'type' => 'text',
 			),
 			array (
 				'key' => 'field_7_7_1',
-				'label' => 'Image third section',
+				'label' => 'Round photo section',
 				'name' => 'image_third_section_home',
 				'type' => 'image',
 			),
 			array (
 				'key' => 'field_7_8',
-				'label' => 'Content third section',
+				'label' => 'Content 1',
 				'name' => 'content_third_section_home',
 				'type' => 'wysiwyg',
 			),
-			
+			array (
+				'key' => 'field_7_14',
+				'label' => 'Homepage button',
+				'name' => 'homepageButton_link',
+				'type' => 'link',
+			),
+			array (
+				'key' => 'field_7_15',
+				'label' => 'Homepage button text',
+				'name' => 'homepageButton_text',
+				'type' => 'text',
+			),
 			array (
 				'key' => 'field_7_9',
 				'label' => 'Headline fourth Section',
@@ -1202,6 +1248,7 @@ function my_acf_add_local_field_groups7() {
 				'type' => 'wysiwyg',
 			),
 			
+			
 		),
 		'location' => array (
 			array (
@@ -1219,7 +1266,58 @@ function my_acf_add_local_field_groups7() {
 
 add_action('acf/init', 'my_acf_add_local_field_groups7');
 
+function my_acf_add_local_field_groups8() {
+	
+	acf_add_local_field_group(array(
+		'key' => 'group_8',
+		'title' => 'Author page',
+		'fields' => array (
+            array (
+				'key' => 'field_8_1',
+				'label' => 'Author intro text',
+				'name' => 'author_intro_text',
+				'type' => 'wysiwyg',
+			),
+			array (
+				'key' => 'field_8_2',
+				'label' => 'Author content',
+				'name' => 'author_content_text',
+				'type' => 'wysiwyg',
+			),
+			array (
+				'key' => 'field_8_3',
+				'label' => 'Author e-book image',
+				'name' => 'author_ebook_img',
+				'type' => 'image',
+			),
+			array (
+				'key' => 'field_8_4',
+				'label' => 'Author e-book content',
+				'name' => 'author_ebook_content',
+				'type' => 'wysiwyg',
+			),
+			array (
+				'key' => 'field_8_5',
+				'label' => 'Author signature',
+				'name' => 'author_signature',
+				'type' => 'image',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_template',
+					'operator' => '==',
+					'value' => 'template-author.blade.php',
+				),
+			),
+		),
+	),
+);
+	
+}
 
+add_action('acf/init', 'my_acf_add_local_field_groups8');
 
 if( function_exists('acf_add_options_page') ) {
 	
@@ -1800,6 +1898,24 @@ function my_custom_styles( $init_array ) {
             'classes' => 'highlight-text',
             'wrapper' => true,
         ),
+		array(  
+            'title' => 'List numbers',  
+            'block' => 'div',  
+            'classes' => 'list-numbers',
+            'wrapper' => true,
+        ),
+		array(  
+            'title' => 'Arrow right - author page',  
+            'block' => 'span',  
+            'classes' => 'arrow-r-author',
+            'wrapper' => true,
+        ),
+		array(  
+            'title' => 'Headline h2 - author page',  
+            'block' => 'span',  
+            'classes' => 'headline-h2-author-page',
+            'wrapper' => true,
+        ),
     );  
     // Insert the array, JSON ENCODED, into 'style_formats'
     $init_array['style_formats'] = json_encode( $style_formats );  
@@ -2256,12 +2372,12 @@ add_filter( 'wfob_show_on_load', function ( $url ) {
 //add_filter( 'woocommerce_order_item_permalink', '__return_false' );
 
 //REDIRECT HOME PAGE TO CUSTOM PAGE
-add_action('template_redirect', 'default_page');
-function default_page(){
-    if(is_home() or is_front_page()){
-       exit( wp_redirect("https://strategicparenting.com/28-day-no-yelling-parenting-challenge/"));
-    }
-}
+// add_action('template_redirect', 'default_page');
+// function default_page(){
+//     if(is_home() or is_front_page()){
+//        exit( wp_redirect("https://strategicparenting.com/28-day-no-yelling-parenting-challenge/"));
+//     }
+// }
 
 //ADD PREVEIW TO CART ABANDONMENT EMAIL
 add_filter( 'bwfan_email_enable_pre_header_preview_only', function () {
@@ -2306,3 +2422,15 @@ function change_button_text( $button_text ) {
    return  $button_text; 
 }
 
+/** HEADING IN 2 COLORS */
+function headingColors() { ?>
+	<script>
+	$( document ).ready(function() {
+		let homepageHeading = $("#hp-heading").text();
+		let text = homepageHeading.split(" ");
+		$("#hp-heading").html("<span class='text-darkOrange'>"+ text[0] + "</span> <span class='text-black'>" + text[1]);
+	});
+	</script>
+<?php } 
+add_action( 'wp_footer', 'headingColors' );
+?>

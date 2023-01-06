@@ -1,5 +1,5 @@
-<section class="  mx-auto flex justify-center ">
-    <div class=" mt-12 max-w-contentwidth w-full">
+<section class="mx-auto container">
+    <div class="mt-12 flex flex-wrap">
         {!! $testimonialContent !!}
         @include('partials.testimonials')
     </div>

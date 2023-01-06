@@ -4,8 +4,9 @@ $testimonial_content = get_field('testimonial_text', $testimonial);
 $testimonial_image = get_field('testimonial_image', $testimonial);
 $testimonial_headline = get_field('testimonial_headline', $testimonial);
 $testimonial_style = get_field('testimonial_style', $testimonial);
+$testimonial_link = get_field('testimonial_link', $testimonial);
 ?>
-<div class="inline-flex">
+<div class="inline-flex w-full md:w-1/2">
     <div class=" p-6 shadow rounded-lg">
         <div class="flex relative mb-5 items-center w-full ">
             @if($testimonial_image)
@@ -13,9 +14,9 @@ $testimonial_style = get_field('testimonial_style', $testimonial);
             @endif
             <div>
             @if($testimonial_style=="Facebook")
-                <div class="font-semibold text-facebookRatingStar"><?php echo $testimonial_name; ?></div>
+                <div class="font-semibold text-facebookRatingStar w-max"><?php echo $testimonial_name; ?></div>
             @else
-              <div class="font-semibold"><?php echo $testimonial_name; ?></div>
+              <div class="font-semibold w-max"><?php echo $testimonial_name; ?></div>
               @endif
               <div class="fill-primary mt-2 flex h-4">
                 @if($testimonial_style=="Google")
@@ -36,15 +37,33 @@ $testimonial_style = get_field('testimonial_style', $testimonial);
             </div>
             @if($testimonial_style=="Google")
             <div class="flex justify-end w-full">
-              <img class= "h-6" src="/wp-content/themes/courses-1/resources/images/google-logo.jpg"></img>
-            </div>
+              @if($testimonial_link)
+                <a href="<?php echo ($testimonial_link["url"]); ?>">
+                  <img class= "h-6" src="/wp-content/themes/courses-1/resources/images/google-logo.jpg"></img>
+                </a>
+              @else 
+                <img class= "h-6" src="/wp-content/themes/courses-1/resources/images/google-logo.jpg"></img>
+              @endif
+              </div>
             @elseif($testimonial_style=="Facebook")
             <div class="flex justify-end w-full">
-              <img class= "h-6" src="/wp-content/themes/courses-1/resources/images/facebook-logo.jpg"></img>
-            </div>
+              @if($testimonial_link)
+                <a href="<?php echo ($testimonial_link["url"]); ?>">
+                  <img class= "h-6" src="/wp-content/themes/courses-1/resources/images/facebook-logo.jpg"></img>
+                </a>
+              @else 
+                <img class= "h-6" src="/wp-content/themes/courses-1/resources/images/facebook-logo.jpg"></img>  
+              @endif
+              </div>
             @elseif($testimonial_style=="Tripadvisor")
             <div class="flex justify-end w-full">
-              <img class= "h-6" src="/wp-content/themes/courses-1/resources/images/trustpilot-logo.png"></img>
+              @if($testimonial_link)
+                <a href="<?php echo ($testimonial_link["url"]); ?>">
+                  <img class= "h-6" src="/wp-content/themes/courses-1/resources/images/trustpilot-logo.png"></img>
+                </a>
+              @else 
+                <img class= "h-6" src="/wp-content/themes/courses-1/resources/images/trustpilot-logo.png"></img>
+              @endif
             </div>
             @endif
         </div>
