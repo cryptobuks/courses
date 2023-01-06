@@ -6,7 +6,7 @@
 <section class="py-10 ">
 <div class=" mx-auto container">
     <div class="text-black text-5xl font-normal mb-10">{{$headlineSecondSectionHome}}</div>
-    @include('partials.products')
+    @include('partials.products-homepage')
 </div>
 </section>
 

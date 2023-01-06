@@ -14,6 +14,8 @@ module.exports = {
         hover: "var(--hover)",
         greenColor: "var(--green)",
         redColor: "var(--red)",
+        lightOrange: "var(--lightOrange)",
+        darkOrange: "var(--darkOrange)",
         text: "#333333",
         13: "#131313",
         googleRatingStar: "#FFDB49",
