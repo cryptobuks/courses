@@ -4625,6 +4625,10 @@ body.wfacpef_page
     min-width: 32%;
   }
 
+  .md\:max-w-xs{
+    max-width: 20rem;
+  }
+
   .md\:columns-2{
     -moz-columns: 2;
          columns: 2;
