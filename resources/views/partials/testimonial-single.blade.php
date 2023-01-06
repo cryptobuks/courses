@@ -6,7 +6,7 @@ $testimonial_headline = get_field('testimonial_headline', $testimonial);
 $testimonial_style = get_field('testimonial_style', $testimonial);
 $testimonial_link = get_field('testimonial_link', $testimonial);
 ?>
-<div class="inline-flex w-full md:w-1/2">
+<div class="inline-flex">
     <div class=" p-6 shadow rounded-lg">
         <div class="flex relative mb-5 items-center w-full ">
             @if($testimonial_image)
