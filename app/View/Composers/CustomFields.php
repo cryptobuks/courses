@@ -136,6 +136,7 @@ class CustomFields extends Composer
             'imageThirdSectionHome' => $this->imageThirdSectionHome(),
             'homepageButtonLink' => $this->homepageButton(),
             'homepageButtonText' => $this->homepageButtonText(),
+            'productCardButton' => $this->productCardButton(),
             
             /** AUTHOR PAGE */
             'authorIntroText' => $this->authorIntroText(),
@@ -511,6 +512,10 @@ public function homepageButton(){
 public function homepageButtonText(){
     return get_field("homepageButton_text");
 }
+public function productCardButton(){
+    return get_field("product_card_button_text");
+}
+
 public function authorIntroText(){
     return get_field("author_intro_text");
 }

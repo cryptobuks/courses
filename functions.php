@@ -1160,6 +1160,12 @@ function my_acf_add_local_field_groups7() {
                 'post_type' => 'product',
             ),
 			array (
+				'key' => 'field_7_5_2',
+				'label' => 'Product card button text',
+				'name' => 'product_card_button_text',
+				'type' => 'text',
+            ),
+			array (
 				'key' => 'field_7_6',
 				'label' => 'Courses',
 				'name' => 'courses',

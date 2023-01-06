@@ -2752,6 +2752,11 @@ body.wfacpef_page
 .homepage-ebook_form_wrapper FORM .gform_footer SPAN:after {
   background-image: url("/wp-content/themes/courses-1/resources/images/download.svg") !important;
 } 
+/* PRODUCT CARDS*/
+.product-card p {
+  font-size: 16px !important;
+  padding: 10px 0;
+}
 
 /* AUTHOR PAGE */
 .headline-h2-author-page {

@@ -19,13 +19,15 @@ $post_objects = new WP_Query( $args );
             <div class="shadow rounded-lg">
                 <?php $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');?>
                 <img class="w-full object-cover rounded-tl-lg rounded-tr-lg h-52" src="<?php echo $featured_image[0] ?>">
-                <div class="p-4">
+                <div class="product-card p-4">
                     <a href="<?php the_permalink(); ?>">
                         <div class="text-xl font-medium"> <?php the_title(); ?></div>
                     </a>
-                    <p class="text-sm"><?php the_content() ?></p> 
+                    <?php the_content() ?>
                     <div class="flex justify-end">
-                        <a href="<?php the_permalink(); ?>" class="bg-darkOrange hover:bg-hover text-white font-bold p-4 rounded-xl">READ MORE</a>
+                        <a href="<?php the_permalink(); ?>" class="bg-darkOrange hover:bg-hover text-white font-bold p-4 rounded-xl">
+                            {{$productCardButton}}
+                        </a>
                     </div>
                 </div>
             </div>

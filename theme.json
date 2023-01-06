@@ -1170,6 +1170,16 @@
           "color": "var(--red)"
         },
         {
+          "name": "LightOrange",
+          "slug": "lightorange",
+          "color": "var(--lightorange)"
+        },
+        {
+          "name": "DarkOrange",
+          "slug": "darkorange",
+          "color": "var(--darkorange)"
+        },
+        {
           "name": "Text",
           "slug": "text",
           "color": "#333333"
