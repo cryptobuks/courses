@@ -2752,9 +2752,7 @@ body.wfacpef_page
 .homepage-ebook_form_wrapper FORM .gform_footer SPAN:after {
   background-image: url("/wp-content/themes/courses-1/resources/images/download.svg") !important;
 } 
-.homepage-ebook_form_wrapper.gravity-theme input[type="text"] {
-  background: transparent !important;
-}
+
 
 /* PRODUCT CARDS*/
 .product-card p {
