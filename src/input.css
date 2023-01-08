@@ -2753,7 +2753,6 @@ body.wfacpef_page
   background-image: url("/wp-content/themes/courses-1/resources/images/download.svg") !important;
 } 
 
-
 /* PRODUCT CARDS*/
 .product-card p {
   font-size: 16px !important;
@@ -2783,6 +2782,8 @@ body.wfacpef_page
   font-weight: 500 !important;
   font-size: 22px !important;
 }
+
+
 
 body .wfacp_mini_cart_start_h:not(.oxy) table.shop_table tr.order-total:not(.recurring-total) th span:not(.woocommerce-Price-currencySymbol) {
   color: #000;

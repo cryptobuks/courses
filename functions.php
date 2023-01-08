@@ -2022,4 +2022,29 @@ function headingColors() { ?>
 	</script>
 <?php } 
 add_action( 'wp_footer', 'headingColors' );
+
+add_filter( 'gform_submit_button_3', 'form_submit_button3', 15, 2 );
+function form_submit_button3( $button, $form ) {
+	return "<button class='gform_button button gform-button--width-full'>YES! I want my kids to listen to me without yelling! 
+	<span class='sales-form-button'>Try the challenge risk-free: 100% 90-day money-back guarantee</span></button>";
+}
 ?>
+<style>
+/* SALES FORM BUTTON*/
+.salespage-form_wrapper .gform_button {
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  height: auto;
+}
+.salespage-form_wrapper FORM .gform_footer SPAN {
+  color: white;
+  font-size: 12px;
+  display: inline-grid;
+}
+
+.salespage-form_wrapper FORM .gform_footer SPAN:after {
+	display: none !important;
+}
+</style>
+
