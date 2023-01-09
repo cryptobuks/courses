@@ -2544,8 +2544,7 @@ li {
   .gform_wrapper.gravity-theme .gform_footer {
     width: 100% !important;
   }
-
-
+}
 
 #shortcode-checkout p:first-child {
   margin-bottom: 0px !important;
@@ -2669,16 +2668,17 @@ body.wfacpef_page
   margin-bottom: -15px !important;
 }
 /* ORANGE NUMBERS FOR <LI> ELEMENTS IN EDITOR */
-.list-numbers ol > li:before{
-  color:#ff8f00;
+.list-numbers ol > li:before {
+  color: #ff8f00;
   font-size: 24px;
   font-weight: 600;
 }
 /* HOMEPAGE FORM e-book */
 
-.homepage-ebook_form .ginput_container.ginput_container_email, .homepage-ebook_form .ginput_container_text {
+.homepage-ebook_form .ginput_container.ginput_container_email,
+.homepage-ebook_form .ginput_container_text {
   border: 1px solid #ff8f00;
-  background-color:white;
+  background-color: white;
   border-radius: 4px;
 }
 .homepage-ebook_form input {
@@ -2696,11 +2696,10 @@ body.wfacpef_page
 }
 .homepage-ebook_form .gform_button:hover {
   background-color: #e08107 !important;
-} 
+}
 .homepage-ebook_form_wrapper FORM .gform_footer SPAN:after {
   background-image: url("/wp-content/themes/courses-1/resources/images/download.svg") !important;
-} 
-
+}
 
 /* PRODUCT CARDS*/
 .product-card p {
@@ -2732,7 +2731,6 @@ body.wfacpef_page
   font-size: 22px !important;
 }
 
-
 #form {
   margin-bottom: -60px !important;
 }
@@ -2746,6 +2744,10 @@ body.wfacpef_page
   width: 100%;
 }
 
-.ginput_container.ginput_container_email{
-	padding-right:0px!important;
+.ginput_container.ginput_container_email {
+  padding-right: 0px !important;
+}
+
+#gform_submit_button_3 {
+  width: auto !important;
 }
