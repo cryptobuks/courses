@@ -1877,6 +1877,13 @@ body #wfacp-e-form .wfacp_main_form ul li {
   line-height: 1.5 !important;
   margin-top: 0px !important;
 }
+
+body .wfob_bump.wfob_clear.wfob_img_position_left{
+	border:3px dashed red!important;
+}
+body #wfob_wrap .wfob_bgBox_table .wfob_bgBox_cell span{
+	font-size:14px!important;
+}
 	</style>
 	<?php
 });
