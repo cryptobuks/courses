@@ -42,7 +42,7 @@
                         <img class="h-14" src="/wp-content/themes/courses-1/resources/images/security.jpg"></img>
                     </div>
                     <div class="font-semibold md:text-xl text-lg mt-4 text-black flex justify-center w-full mx-auto">
-                        <img class="h-14 mr-1" src="/wp-content/themes/courses-1/resources/images/guaranteed-money-back.png"></img>
+                        <img class="h-20 mr-1" src="/wp-content/themes/courses-1/resources/images/guaranteed-money-back.png"></img>
                         <div>
                             <div class="text-left font-bold text-base ml-4">{!! $moneyBackGuaranteeHeadlineCheckout !!}</div>
                             <div class="text-left font-normal !text-sm ml-4">{!! $moneyBackGuaranteeTextCheckout !!}</div>
@@ -51,7 +51,7 @@
                 </div>
                 <div id="personal-assistance">
                     <div class="font-semibold md:text-xl text-lg mt-4 text-black flex justify-center mx-auto">
-                        <img class="h-14 mr-1" src="/wp-content/themes/courses-1/resources/images/personal-assistance.png"></img>
+                        <img class="h-20 mr-1" src="/wp-content/themes/courses-1/resources/images/personal-assistance.png"></img>
                         <div>
                             <div class="text-left font-bold text-base ml-4">{!! $personalAssistanceHeadlineCheckout !!}</div>
                             <div class="text-left font-normal !text-sm ml-4">{!! $personalAssistanceTextCheckout !!}</div>
