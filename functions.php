@@ -1884,6 +1884,10 @@ body .wfob_bump.wfob_clear.wfob_img_position_left{
 body #wfob_wrap .wfob_bgBox_table .wfob_bgBox_cell span{
 	font-size:14px!important;
 }
+
+body .wfob_bump .wfob_bgBox_table .wfob_title{
+	font-size:14px!important;
+}
 	</style>
 	<?php
 });
